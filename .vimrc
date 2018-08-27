@@ -5,3 +5,7 @@ set expandtab
 set term=xterm
 filetype plugin on
 syntax on
+imap zz <esc>:update<CR>
+nmap zz :update<CR>
+nmap zzz :wq<CR> 
+nmap <CR> o<Esc>
