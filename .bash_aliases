@@ -1,5 +1,6 @@
+alias ll='ls -alF'
 alias tmuxn='tmux new -s'
-alias tmuxa='tmux a -t'
+alias tmuxa='tmux a -d -t'
 alias tmuxk='tmux kill-session -t'
 alias tmuxl='tmuxp load'
 function tmuxr(){
