@@ -8,5 +8,5 @@ function tmuxr(){
     tmux kill-session -t  $1
     tmuxp load $1.json
 }
-
+alias dc_sh='term=x10term dc_shell'
 
