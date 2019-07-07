@@ -10,6 +10,8 @@ nmap zz :update<CR>
 nmap zzz :wq<CR> 
 nmap <CR><CR> o<Esc>
 nmap <CR> o
+
+"relative line number display"
 set number relativenumber
 
 augroup numbertoggle
@@ -17,3 +19,4 @@ augroup numbertoggle
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
+

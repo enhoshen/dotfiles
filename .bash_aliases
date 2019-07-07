@@ -9,4 +9,4 @@ function tmuxr(){
     tmuxp load $1.json
 }
 alias dc_sh='term=x10term dc_shell'
-
+alias reload=' sh ~/myconf/reload.sh'
