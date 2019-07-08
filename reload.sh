@@ -1,4 +1,7 @@
 #!/bin/bash
+echo -e "Usage: $ sh reload.sh [-e] [file] \n -e: print out the command; default history file:.myhistory;"
+echo -e "To add new command to a file, just bring up the command use $ echo {command} >> {file} \n"  
+# -e argument enable interpretation of backslash escapes for echo
 _echo=0
 file=.myhistory
 for i in "$@"
@@ -19,7 +22,7 @@ done
 readarray commands < $file
 for i in "${!commands[@]}"
 do
-    echo $i ${commands[i]}
+    echo ${i} ${commands[i]}
 done
 
 echo "choose commands"
@@ -29,5 +32,5 @@ if [[ $_echo == 1 ]];
 then
     echo ${commands[IN]}
 else
-    ${commands[IN]}
+    eval ${commands[IN]}
 fi
