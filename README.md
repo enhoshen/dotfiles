@@ -1,11 +1,11 @@
 ## Setup
 * dynamic link `.*` files in this project in the home directory
-## gitsetup script
+## Gitsetup script
 * Initialize a git repo named the argument
 ```shell
 sh gitsetup.sh MYHARDWARE
 ```
-## Reload scripty
+## Reload script
 * Read in a file line by line of previously executed lengthy commands for you to chooose.
 `reload` alias is added in .bash_alias, and one option `-e` is provided if you only wish to
 print out the command. At default the read in file is the .myhistory file in the current 
