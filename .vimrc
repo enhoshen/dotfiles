@@ -1,3 +1,4 @@
+language en_US.utf8
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
@@ -20,3 +21,5 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
+"cmder, conemu escape replace mode by a esc on startup"
+autocmd VimEnter wincmd <esc>
