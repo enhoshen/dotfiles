@@ -1,4 +1,4 @@
-dir=${PWD}
+dir=$MYWORKSPACE
 echo ${dir}
 ln -sf ${dir}/.vimrc ~/.vimrc
 ln -sf ${dir}/.bash_aliases ~/.bash_aliases

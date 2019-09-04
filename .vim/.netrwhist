@@ -1,8 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/enho.shen/Slave-wrapper/rtl/APB'
-let g:netrw_dirhist_2='/home/enho.shen/myworkspace'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/enho.shen/Slave-wrapper/rtl'
+let g:netrw_dirhist_2='/home/enho.shen/Slave-wrapper'
 let g:netrw_dirhist_3='/home/enho.shen'
-let g:netrw_dirhist_4='/home/enho.shen/myworkspace'
-let g:netrw_dirhist_5='/home/enho.shen/myworkspace/.vim'
-let g:netrw_dirhist_6='/home/enho.shen/myworkspace'
+let g:netrw_dirhist_4='/home'
+let g:netrw_dirhist_5='/home/enho.shen'
+let g:netrw_dirhist_6='/home/enho.shen/.vim'
+let g:netrw_dirhist_7='/home/enho.shen'
+let g:netrw_dirhist_8='/home/enho.shen/myworkspace'
