@@ -11,6 +11,7 @@ nmap zz :update<CR>
 nmap zzz :wq<CR> 
 nmap <CR><CR> o<Esc>
 nmap <CR> o
+set virtualedit
 
 "relative line number display"
 set number relativenumber
@@ -23,3 +24,7 @@ augroup END
 
 "cmder, conemu escape replace mode by a esc on startup"
 autocmd VimEnter wincmd <esc>
+
+"color scheme"
+highlight Pmenu ctermbg=gray
+highlight PmenuSel ctermbg=red

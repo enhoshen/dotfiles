@@ -25,7 +25,7 @@ do
     echo ${i} ${commands[i]}
 done
 
-echo "choose commands"
+echo -n "choose commands "
 read IN
 
 if [[ $_echo == 1 ]];
