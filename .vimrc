@@ -11,7 +11,6 @@ nmap zz :update<CR>
 nmap zzz :wq<CR> 
 nmap <CR><CR> o<Esc>
 nmap <CR> o
-set virtualedit
 
 "relative line number display"
 set number relativenumber
@@ -28,3 +27,4 @@ autocmd VimEnter wincmd <esc>
 "color scheme"
 highlight Pmenu ctermbg=gray
 highlight PmenuSel ctermbg=red
+highlight Visual ctermbg=6

@@ -1,6 +1,6 @@
 #!/bin/bash
 echo -e "Usage: $ sh reload.sh [-e] [file] \n -e: print out the command; default history file:.myhistory;"
-echo -e "To add new command to a file, just bring up the command use $ echo {command} >> {file} \n"  
+echo -e "To add new command to a file, just bring up the command use $ echo \"command\" >> {file} \n"  
 # -e argument enable interpretation of backslash escapes for echo
 _echo=0
 file=.myhistory
