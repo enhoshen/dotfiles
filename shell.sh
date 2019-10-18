@@ -22,6 +22,16 @@ function tmuxr(){
     tmux kill-session -t  $1
     tmuxp load $1.json
 }
+function display(){
+    if [ $1 ]
+    then
+        export DISPLAY=localhost:$1.0
+        echo "DISPLAY changed to $DISPLAY"
+    else
+        echo $DISPLAY
+    fi
+    
+}
 alias dc_sh='term=x10term dc_shell'
 alias reload=' sh $MYWORKSPACE/reload.sh'
 

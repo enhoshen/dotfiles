@@ -30,7 +30,7 @@ read IN
 
 if [[ $_echo == 1 ]];
 then
-    echo ${commands[IN]}
+    echo ${commands[IN]} | xclip
 else
     eval ${commands[IN]}
 fi
