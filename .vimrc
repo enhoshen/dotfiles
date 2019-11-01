@@ -28,3 +28,6 @@ autocmd VimEnter wincmd <esc>
 highlight Pmenu ctermbg=gray
 highlight PmenuSel ctermbg=red
 highlight Visual ctermbg=6
+
+"virtual edit beyond end of line"
+set virtualedit=block
