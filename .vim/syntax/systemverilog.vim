@@ -83,8 +83,10 @@ syn keyword systemverilogStatement   std
 syn keyword systemverilogStatement   get put try_get try_put peek try_peek
 syn keyword systemverilogStatement   status kill self await suspend resume
 " LRM Annex D List methods
-syn keyword systemverilogStatement   next prev eq neq data
-syn keyword systemverilogStatement   size empty push_front push_back
+syn keyword systemverilogStatement   next prev eq neq 
+""removed data by myself
+syn keyword systemverilogStatement   size push_front push_back
+""removed empty by myself
 syn keyword systemverilogStatement   front back pop_front pop_back
 syn keyword systemverilogStatement   start finish insert insert_range
 syn keyword systemverilogStatement   erase erase_range set swap clear purge
@@ -97,6 +99,7 @@ syn match   systemverilogNumber "\<[0-9_]\+step\>"
 " Original systemverilog syntax below here
 
 syn keyword systemverilogTodo contained TODO
+syn keyword systemverilogTodo contained Draft
 
 syn match   systemverilogOperator "[&|~><!)(*#%@+/=?:;}{,.\^\-\[\]]"
 
