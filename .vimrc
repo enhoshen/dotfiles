@@ -32,3 +32,7 @@ highlight Search  term=bold,reverse cterm=bold,reverse gui=bold,reverse
 
 "virtual edit beyond end of line"
 set virtualedit=block
+
+"vim pane zoom in"
+noremap Zz <c-w>_ \| <c-w>\| 
+noremap Zo <c-w>=
