@@ -81,7 +81,7 @@ syn keyword systemverilogStatement   index
 syn keyword systemverilogStatement   std
 " LRM Annex C standard library
 syn keyword systemverilogStatement   get put try_get try_put peek try_peek
-syn keyword systemverilogStatement   status kill self await suspend resume
+" syn keyword systemverilogStatement   status kill self await suspend resume "
 " LRM Annex D List methods
 syn keyword systemverilogStatement   next prev eq neq 
 ""removed data by myself
