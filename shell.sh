@@ -8,7 +8,7 @@ ln -sf ${dir}/.tmux.conf ~/.tmux.conf
 
 case $TERM in cygwin) TERM=xterm-256color;; esac
 
-export DISPLAY=localhost:11.0
+#export DISPLAY=localhost:11.0
 
 #========== alias ==========
 

@@ -17,7 +17,7 @@ set number relativenumber
 
 augroup numbertoggle
   autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufEnter,FocusGained,InsertLeave,CursorMoved * set relativenumber
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
@@ -27,7 +27,7 @@ autocmd VimEnter wincmd <esc>
 "color scheme"
 highlight Pmenu ctermbg=gray
 highlight PmenuSel ctermbg=red
-highlight Visual ctermbg=6
+highlight Visual ctermbg=5 term=reverse cterm=bold
 highlight Search  term=bold,reverse cterm=bold,reverse gui=bold,reverse
 
 "virtual edit beyond end of line"
