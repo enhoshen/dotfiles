@@ -1,6 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/enho.shen/GZE200'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/enho.shen/GZE200/sim/Peripheral/I2CMaster'
 let g:netrw_dirhist_2='/home/enho.shen/GZE200/sim'
-let g:netrw_dirhist_3='/home/enho.shen/SVutil/Example/sim'
-let g:netrw_dirhist_4='/home/enho.shen/myworkspace'
+let g:netrw_dirhist_3='/home/enho.shen/GZE200'
+let g:netrw_dirhist_4='/home/enho.shen/GZE200/include'
+let g:netrw_dirhist_5='/home/enho.shen/GZE200/include/Peripheral'
+let g:netrw_dirhist_6='/home/enho.shen/GZE200/include/Peripheral/I2CSlave'
+let g:netrw_dirhist_7='/home/enho.shen/myworkspace'
