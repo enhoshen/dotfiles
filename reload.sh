@@ -53,7 +53,7 @@ fi
 if [[ $_echo == 1 ]];
 then
     echo -e $color $IN $colorrst ${commands[IN]}
-    echo -e $color ${commands[IN]} $colorrst | xclip
+    echo -e ${commands[IN]} | xclip
 else
     eval ${commands[IN]}
 fi
