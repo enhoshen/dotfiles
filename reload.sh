@@ -10,26 +10,12 @@ echo -e "To add new command to a file, just bring up the command and use ${color
 _echo=0
 file=.myhistory
 IN=''
-#for i in "$@"
-#do
-#    case $i in
-#        -e)
-#        _echo=1
-#        ;;
-#        *)
-#            if [ $i!='' ];
-#            then
-#                file=$i      
-#            fi
-#        ;;
-#    esac
-#done
-while getopts 'efc:' opt
+while getopts 'ef:c:' opt
 do
     case "$opt" in
-        e ) _echo=1 ;;
-        f ) file="$OPTARG" ;;
-        c ) IN="$OPTARG" ;;
+        e) _echo=1 ;;
+        f) file="$OPTARG" ;;
+        c) IN="$OPTARG" ;;
         #? ) helpFunction ;; # Print helpFunction in case parameter is non-existent
         ?) : ;;
     esac
