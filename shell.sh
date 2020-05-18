@@ -38,3 +38,5 @@ alias reload=' sh $MYWORKSPACE/reload.sh'
 #========== python3 ==========
 
 alias python='/opt/rh/rh-python36/root/bin/python3.6'
+
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'

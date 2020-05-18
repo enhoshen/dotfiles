@@ -36,3 +36,15 @@ set virtualedit=block
 "vim pane zoom in"
 noremap Zz <c-w>_ \| <c-w>\| 
 noremap Zo <c-w>=
+
+"fzf"
+set rtp+=~/.fzf
+
+"vim-plug"
+call plug#begin('~/.vim/plugged')
+
+    Plug 'junegunn/fzf'
+    Plug 'junegunn/fzf.vim'
+
+" Initialize plugin system
+call plug#end()
