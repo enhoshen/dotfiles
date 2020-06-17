@@ -19,8 +19,13 @@ alias tmuxk='tmux kill-session -t'
 alias tmuxl='tmuxp load'
 function tmuxr(){
     echo $1
-    tmux kill-session -t  $1
-    tmuxp load $1.json
+    if [[ $(tmux display-message -p '#S') == $1 ]]
+    then
+		echo inside session $1, leaving 
+	else
+		tmux kill-session -t  $1
+		tmuxp load $1.json
+	fi
 }
 function display(){
     if [ $1 ]
