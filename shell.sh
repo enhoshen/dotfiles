@@ -19,9 +19,9 @@ alias tmuxk='tmux kill-session -t'
 alias tmuxl='tmuxp load'
 function tmuxr(){
     echo $1
-    if [[ $(tmux display-message -p '#S') == $1 ]]
+    if [[ $(tmux display-message -p '#S') == $1 ]] && [[ -n "$TMUX" ]]
     then
-		echo inside session $1, leaving 
+		echo session $1 already attached, detatch first 
 	else
 		tmux kill-session -t  $1
 		tmuxp load $1.json
