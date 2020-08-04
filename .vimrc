@@ -25,6 +25,7 @@ augroup END
 autocmd VimEnter wincmd <esc>
 
 "color scheme"
+set hlsearch
 highlight Pmenu ctermbg=gray
 highlight PmenuSel ctermbg=red
 highlight Visual ctermbg=5 term=reverse cterm=bold
@@ -37,7 +38,18 @@ set virtualedit=block
 noremap Zz <c-w>_ \| <c-w>\| 
 noremap Zo <c-w>=
 
-"netrw"
+"backspace"
+set backspace=indent,eol,start
+
+"new file"
+augroup templates
+    au!
+    autocmd BufNewFile *.* silent! execute
+        \'0r ~/.vim/templates/skeleton.'.expand("<afile>:e")
+    autocmd BufNewFile * 
+        \%substitute#\[:VIM_EVAL:\]\(.\{-}\)\[:END_EVAL:\]#\=eval(submatch(1))#ge
+augroup END
+
 
 "auto indent"
 set autoindent
@@ -45,6 +57,7 @@ set pastetoggle=<F3>
 
 "fzf"
 set rtp+=~/.fzf
+
 
 "vim-plug"
 if empty(glob('~/.vim/autoload/plug.vim'))
