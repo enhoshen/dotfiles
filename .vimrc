@@ -56,11 +56,16 @@ augroup END
 set autoindent
 set pastetoggle=<F3>
 
+"filetype"
+let g:tex_flavor = "latex"
+
+
 "fzf"
 set rtp+=~/.fzf
 
 "tabline"
-" (Based on http://stackoverflow.com/questions/5927952/whats-implementation-of-vims-default-tabline-function)
+" (Based on 
+" http://stackoverflow.com/questions/5927952/whats-implementation-of-vims-default-tabline-function)
 if exists("+showtabline")
     function! MyTabLine()
         let s = ''
@@ -115,6 +120,8 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'junegunn/fzf'
     Plug 'junegunn/fzf.vim'
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
 
 " Initialize plugin system
 call plug#end()
