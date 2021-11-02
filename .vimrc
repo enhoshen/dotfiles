@@ -3,15 +3,14 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set expandtab
-set term=xterm
 set ruler
 filetype plugin on
 syntax on
 imap zz <esc>:update<CR>
 nmap zz :update<CR>
 nmap zzz :wq<CR> 
-nmap <CR><CR> o<Esc>
-nmap <CR> o
+set nocursorline
+
 
 "relative line number display"
 set number relativenumber
@@ -122,6 +121,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
+    Plug 'preservim/nerdtree'
 
 " Initialize plugin system
 call plug#end()
