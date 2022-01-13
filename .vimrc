@@ -6,13 +6,14 @@ set expandtab
 set ruler
 filetype plugin on
 syntax on
-imap zz <esc>:update<CR>
-nmap zz :update<CR>
-nmap zzz :wq<CR> 
 set nocursorline
 
+" timeout
+set timeoutlen=250
+set ttimeoutlen=5
 
-"relative line number display"
+
+" relative line number display"
 set number relativenumber
 
 augroup numbertoggle
@@ -120,8 +121,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf'
     Plug 'junegunn/fzf.vim'
     Plug 'SirVer/ultisnips'
+    "Plug 'neoclide/coc.nvim'
+    "Plug 'neoclide/coc-snippets'
     Plug 'honza/vim-snippets'
-    Plug 'preservim/nerdtree'
+    "Plug 'preservim/nerdtree'
 
 " Initialize plugin system
 call plug#end()
