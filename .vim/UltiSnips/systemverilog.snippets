@@ -10,7 +10,7 @@ always_ff @(posedge ${1:i_clk} or negedge ${2:i_rst_n}) begin
 	if (!$2) begin
 		${3:${VISUAL}}_r <= '0;
 	end
-	else begin
+	else${4: if (${5:$3_r != $3_w}) }begin
 		$3_r <= $3_w;
 	end
 end
@@ -18,7 +18,7 @@ endsnippet
 
 snippet "beg(in)?" "" r
 begin
-	${1}
+	${1:${VISUAL}}
 end
 endsnippet
 
@@ -29,6 +29,10 @@ case ()
 endcase
 endsnippet
 
+snippet state ""
+state_$1_r, state_$1_w$0
+endsnippet
+
 snippet <=0 ""
 ${1}_r <= '0; 
 endsnippet
@@ -37,17 +41,8 @@ snippet <= ""
 ${1}_r <= $1_w; 
 endsnippet
 
-snippet module ""
-module ${1}
-#(
-)(
-);
-
-endmodule
-endsnippet
-
 snippet -1 ""
-[$1-1:0]
+[${1:${VISUAL}}-1:0]
 endsnippet
 
 snippet logic ""
@@ -62,7 +57,7 @@ endgenerate
 endsnippet
 
 snippet for ""
-for (${1}; $1<${2}; ++$1) begin${3}
+for (int ${1}=0; $1<${2}; ++$1) begin${3}
 	${4}
 end
 endsnippet
@@ -78,7 +73,59 @@ snippet "(\s+|^)_" "" r
 ${1:${VISUAL}}_${2|BW,DEFAULT|}
 endsnippet
 
+snippet "str(u(ct)?)?" "" r
+struct packed {
+	${2}
+} ${1};
+endsnippet
+
+snippet "typ(e(def)?)?" "" r
+typedef
+endsnippet
+
 snippet q
 Your age: ${1|<18,18~60,>60|}
 Your height: ${2|<120cm,120cm~180cm,>180cm|}
 endsnippet
+
+# -- construct --
+
+snippet module ""
+module ${1:${VISUAL}}
+#(
+)(
+     input i_clk
+	,input i_rst_n
+);
+    $0
+    //-- parameter -- //
+
+    //-- logic -- //
+
+    //-- combinational -- //
+
+    //-- sequential -- //
+
+endmodule
+endsnippet
+
+snippet package ""
+package ${1:${VISUAL}};
+    $0
+endpackage
+endsnippet
+
+#-- one-shot state machine --#
+snippet ositem ""
+$1_r[$2]: begin
+	if () $1_w[$3] 1'b1;
+	else $1_w[$2] = 1'b1;
+end
+endsnippet
+
+#-- temporary --
+snippet arrreg ""
+,${1}_${2} = $1_$3 + $1_$3_NUM //RW //ARR
+endsnippet
+
+

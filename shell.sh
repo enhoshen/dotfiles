@@ -1,6 +1,7 @@
 dir=$MYWORKSPACE
 echo ${dir}
 ln -sf ${dir}/.vimrc ~/.vimrc
+ln -sf ${dir}/init.vim ~/.config/nvim/init.vim
 ln -sf ${dir}/.bash_aliases ~/.bash_aliases
 ln -sf ${dir}/.vim ~/.vim
 ln -sf ${dir}/.tmux.conf ~/.tmux.conf
@@ -42,6 +43,6 @@ alias reload=' sh $MYWORKSPACE/reload.sh'
 
 #========== python3 ==========
 
-alias python='/opt/rh/rh-python36/root/bin/python3.6'
+alias python='/opt/rh/rh-python36/root/usr/bin/python3.6'
 
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
