@@ -62,6 +62,7 @@ let g:tex_flavor = "latex"
 
 "fzf"
 set rtp+=~/.fzf
+let $FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
 "tabline"
 " (Based on 

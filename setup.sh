@@ -34,3 +34,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # python
 python -m pip install neovim
 python -m pip install tmuxp 
+
+# silver searcher
+apt install silversearcher-ag
+
