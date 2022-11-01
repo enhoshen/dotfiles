@@ -1,6 +1,9 @@
 dir=$MYWORKSPACE
 echo ${dir}
+
+# link dotfiles
 ln -sf ${dir}/.vimrc ~/.vimrc
+mkdir ~/.config/nvim -p
 ln -sf ${dir}/init.vim ~/.config/nvim/init.vim
 ln -sf ${dir}/.bash_aliases ~/.bash_aliases
 ln -sf ${dir}/.vim ~/.vim
@@ -10,6 +13,11 @@ ln -sf ${dir}/.tmux.conf ~/.tmux.conf
 case $TERM in cygwin) TERM=xterm-256color;; esac
 
 #export DISPLAY=localhost:11.0
+
+# git
+git config --global credential.helper store
+git config --global user.name "enhoshen"
+git config --global user.email "enhoshen@gmail.com"
 
 #========== alias ==========
 

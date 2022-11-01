@@ -1,0 +1,620 @@
+{
+  "devices": [
+    {
+      "device-id": "GSMC0C0#5\u0026292de552\u00260\u0026UID41218_3840_2160_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{3622A7D7-6CEB-4E75-8CB0-E229E13A65B5}",
+        "type": "custom"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 1,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 1
+    },
+    {
+      "device-id": "ACR06C1#5\u0026292de552\u00260\u0026UID41219_2560_1440_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{3622A7D7-6CEB-4E75-8CB0-E229E13A65B5}",
+        "type": "custom"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 1,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 1
+    },
+    {
+      "device-id": "ACR06C1#5\u0026292de552\u00260\u0026UID41219_720_480_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{044AA225-024F-4AB9-80A3-982F74F69245}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "LOCALDISPLAY_3840_2160_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{B357FD95-205F-4E1C-BB08-C73BCBE44335}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "ACR06C1#5\u0026292de552\u00260\u0026UID41219_720_480_{0BE99FC5-A634-4B0B-BCBB-25E7C0788175}",
+      "active-zoneset": {
+        "uuid": "{C09CFFC0-5579-45A2-98F3-7E92A5AFFA4C}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "ACR06C1#5\u0026292de552\u00260\u0026UID41219_800_600_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{510A0E6C-903E-46FB-9D4D-0F5A6FFCD5EC}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "LOCALDISPLAY_2560_1440_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{09D515ED-731A-4CE2-A9EA-6EFDC661CF82}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "ACR06C1#5\u0026292de552\u00260\u0026UID41219_1920_1440_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{B7357232-1E87-4EAF-8620-3825B9427321}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "ACR06C1#5\u0026292de552\u00260\u0026UID41219_2560_1440_{0BE99FC5-A634-4B0B-BCBB-25E7C0788175}",
+      "active-zoneset": {
+        "uuid": "{3622A7D7-6CEB-4E75-8CB0-E229E13A65B5}",
+        "type": "custom"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 57,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "GSMC0C0#5\u0026292de552\u00260\u0026UID41218_3840_2160_{0BE99FC5-A634-4B0B-BCBB-25E7C0788175}",
+      "active-zoneset": {
+        "uuid": "{3622A7D7-6CEB-4E75-8CB0-E229E13A65B5}",
+        "type": "custom"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 57,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "GSMC0C0#5\u0026292de552\u00260\u0026UID41218_1920_1440_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{9D2E25A5-CB99-4EDF-BED3-E34DA22BBD8F}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "ACR06C1#5\u0026292de552\u00260\u0026UID41219_1920_1080_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{02F2FBF4-9099-4431-8C61-A283B1EEA7A5}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "LOCALDISPLAY_2560_1600_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{2A283AFF-429F-4A05-8BF9-4D6A6092DDC4}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "ACR06C1#5\u0026292de552\u00260\u0026UID41219_1440_2560_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{4977B826-792C-4043-94D6-5E239FF0D198}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "ACR06C1#5\u0026292de552\u00260\u0026UID41219_1280_960_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{6CA3A4AB-24D3-43A2-86BD-1541209A28B0}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "LOCALDISPLAY_1920_1200_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{CE8AC02F-B100-4D9E-8028-34300CBB7FFF}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "GSMC0C0#5\u0026292de552\u00260\u0026UID41218_3802_2116_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{A9F5D32B-0854-4C63-9317-77B124FBBD99}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "GSMC0C0#5\u0026292de552\u00260\u0026UID41218_2560_1600_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{59CB6D4C-B3C9-4DF6-88BF-BF8713EC0213}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "ACR06C1#5\u0026292de552\u00260\u0026UID41219_1024_768_{0BE99FC5-A634-4B0B-BCBB-25E7C0788175}",
+      "active-zoneset": {
+        "uuid": "{58754556-BB8D-4240-A4B4-D7F238753B74}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "ACR06C1#5\u0026292de552\u00260\u0026UID41219_1280_720_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{187BEA69-C573-4C31-984C-C8E2CB6E8363}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "GSMC0C0#5\u0026292de552\u00260\u0026UID41218_2560_1600_{0BE99FC5-A634-4B0B-BCBB-25E7C0788175}",
+      "active-zoneset": {
+        "uuid": "{046778EB-6847-46CC-BFAB-225514DFC22B}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "ACR06C1#5\u0026292de552\u00260\u0026UID41219_1024_768_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{CC368818-628B-4088-9750-826CC2CF2CF1}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "RTK0001#5\u0026292de552\u00260\u0026UID41218_3840_2160_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{D7DCE8CF-025A-42B9-9B17-8E9DAC7B3EA4}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "GSMC0C0#5\u0026292de552\u00260\u0026UID41218_4096_2160_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{2A1CE3E6-0EFD-4A4F-BDEE-7A39A0C95798}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "GSMC0C0#5\u0026292de552\u00260\u0026UID41218_2160_3840_{0BE99FC5-A634-4B0B-BCBB-25E7C0788175}",
+      "active-zoneset": {
+        "uuid": "{4EA3563A-5B7C-4CEB-9A8E-B757EB7F0FC5}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "GSMC0C0#5\u0026292de552\u00260\u0026UID41218_2560_1440_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{C7344A70-FCBD-44DA-A01A-344915815F78}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "ACR06C1#5\u0026292de552\u00260\u0026UID41219_1440_2560_{0BE99FC5-A634-4B0B-BCBB-25E7C0788175}",
+      "active-zoneset": {
+        "uuid": "{3E8564D0-B735-4B23-84FE-CDA761B71EA4}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "SAM7017#5\u0026292de552\u00260\u0026UID41218_4096_2160_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{AE268146-D789-4DF0-872A-3252BE57514C}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "SAM7017#5\u0026292de552\u00260\u0026UID41218_3840_2160_{0BE99FC5-A634-4B0B-BCBB-25E7C0788175}",
+      "active-zoneset": {
+        "uuid": "{3622A7D7-6CEB-4E75-8CB0-E229E13A65B5}",
+        "type": "custom"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 0,
+      "editor-zone-count": 36,
+      "editor-sensitivity-radius": 0
+    },
+    {
+      "device-id": "ACR06C1#1\u00268713bca\u00260\u0026UID0_2560_1440_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{857F9CD8-F2E6-488C-BE93-F035514E35EB}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "SAM7017#5\u0026292de552\u00260\u0026UID41218_3840_2160_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{3622A7D7-6CEB-4E75-8CB0-E229E13A65B5}",
+        "type": "custom"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 0,
+      "editor-zone-count": 36,
+      "editor-sensitivity-radius": 0
+    },
+    {
+      "device-id": "LOCALDISPLAY_1024_768_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{0B218197-6D68-4435-9BBB-F2CD389AF544}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "GSMC0C0#5\u0026292de552\u00260\u0026UID41218_4096_2160_{0BE99FC5-A634-4B0B-BCBB-25E7C0788175}",
+      "active-zoneset": {
+        "uuid": "{2A1CE3E6-0EFD-4A4F-BDEE-7A39A0C95798}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "GSMC0C0#5\u0026292de552\u00260\u0026UID41218_2160_3840_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{B6F96D0A-F48E-4AC4-9A8B-B80694BF0D33}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "FancyZones#MultiMonitorDevice_6400_2160_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{B4EAE45F-C431-456C-ADC3-67EAD71A6871}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "ACR06C1#5\u0026292de552\u00260\u0026UID41219_640_480_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{408E1014-EC7F-4C39-B732-2E039D29C9BD}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "FancyZones#MultiMonitorDevice_6400_2171_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{3622A7D7-6CEB-4E75-8CB0-E229E13A65B5}",
+        "type": "custom"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 1,
+      "editor-zone-count": 36,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "SAM7016#5\u0026292de552\u00260\u0026UID41218_3840_2160_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{162CFA50-B5E9-4CFC-A3B0-60E00B10F1EF}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "ACR06C1#5\u0026292de552\u00260\u0026UID41219_3620_2036_{08E1DA4D-1620-42C2-AA7E-852AD95BC820}",
+      "active-zoneset": {
+        "uuid": "{C68389BD-B4ED-4799-B110-F07152BFF479}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    }
+  ],
+  "custom-zone-sets": [
+    {
+      "uuid": "{3622A7D7-6CEB-4E75-8CB0-E229E13A65B5}",
+      "name": "Custom layout 1",
+      "type": "grid",
+      "info": {
+        "rows": 6,
+        "columns": 11,
+        "rows-percentage": [
+          1666,
+          1667,
+          1667,
+          1666,
+          1667,
+          1667
+        ],
+        "columns-percentage": [
+          1666,
+          834,
+          833,
+          834,
+          833,
+          833,
+          833,
+          834,
+          833,
+          831,
+          836
+        ],
+        "cell-child-map": [
+          [
+            0,
+            1,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            6,
+            7,
+            7
+          ],
+          [
+            8,
+            9,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            14,
+            15,
+            15
+          ],
+          [
+            16,
+            17,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            22,
+            23,
+            23
+          ],
+          [
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34
+          ],
+          [
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45
+          ],
+          [
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56
+          ]
+        ],
+        "show-spacing": true,
+        "spacing": 1,
+        "sensitivity-radius": 1
+      }
+    },
+    {
+      "uuid": "{621C9E40-BEF6-4C28-8094-FF3F8135B72D}",
+      "name": "Custom layout 2",
+      "type": "grid",
+      "info": {
+        "rows": 1,
+        "columns": 3,
+        "rows-percentage": [
+          10000
+        ],
+        "columns-percentage": [
+          3333,
+          3333,
+          3334
+        ],
+        "cell-child-map": [
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "show-spacing": true,
+        "spacing": 1,
+        "sensitivity-radius": 1
+      }
+    }
+  ],
+  "templates": [
+    {
+      "type": "blank",
+      "show-spacing": false,
+      "spacing": 0,
+      "zone-count": 0,
+      "sensitivity-radius": 0
+    },
+    {
+      "type": "focus",
+      "show-spacing": false,
+      "spacing": 0,
+      "zone-count": 3,
+      "sensitivity-radius": 20
+    },
+    {
+      "type": "columns",
+      "show-spacing": true,
+      "spacing": 16,
+      "zone-count": 3,
+      "sensitivity-radius": 20
+    },
+    {
+      "type": "rows",
+      "show-spacing": true,
+      "spacing": 16,
+      "zone-count": 3,
+      "sensitivity-radius": 20
+    },
+    {
+      "type": "grid",
+      "show-spacing": true,
+      "spacing": 16,
+      "zone-count": 3,
+      "sensitivity-radius": 20
+    },
+    {
+      "type": "priority-grid",
+      "show-spacing": true,
+      "spacing": 16,
+      "zone-count": 3,
+      "sensitivity-radius": 20
+    }
+  ],
+  "quick-layout-keys": []
+}
