@@ -18,8 +18,10 @@ set number relativenumber
 
 augroup numbertoggle
   autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave,CursorMoved * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+  #autocmd BufEnter,FocusGained,InsertLeave,CursorMoved * set relativenumber
+  autocmd BufEnter,InsertLeave,CursorMoved * set relativenumber
+  #autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+  autocmd BufLeave,InsertEnter   * set norelativenumber
 augroup END
 
 "cmder, conemu escape replace mode by a esc on startup"

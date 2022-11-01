@@ -117,9 +117,9 @@ endsnippet
 
 #-- one-shot state machine --#
 snippet ositem ""
-$1_r[$2]: begin
+$1_r[${2:${VISUAL}}]: begin
 	if () $1_w[$3] 1'b1;
-	else $1_w[$2] = 1'b1;
+	else $1_w[${2:${VISUAL}}] = 1'b1;
 end
 endsnippet
 
@@ -128,4 +128,10 @@ snippet arrreg ""
 ,${1}_${2} = $1_$3 + $1_$3_NUM //RW //ARR
 endsnippet
 
+snippet sreq ""
+if (o_mult_req && i_mult_ack) state_req_w[${VISUAL}] = 1'b1;
+endsnippet
 
+snippet sign ""
+$signed($1)
+endsnippet

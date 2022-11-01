@@ -5,7 +5,7 @@
 //
 // Contributors
 // ---------------------------
-// En-Ho Shen <enhoshen@ganzin.com.tw>, [:VIM_EVAL:]strftime('%Y')[:END_EVAL:]
+// En-Ho Shen <enho.shen@ganzin.com.tw>, [:VIM_EVAL:]strftime('%Y')[:END_EVAL:]
 
 `ifndef __[:VIM_EVAL:]toupper(''.expand("<afile>:t:r"))[:END_EVAL:]_SV__
 `define __[:VIM_EVAL:]toupper(''.expand("<afile>:t:r"))[:END_EVAL:]_SV__
