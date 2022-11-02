@@ -18,9 +18,9 @@ set number relativenumber
 
 augroup numbertoggle
   autocmd!
-  #autocmd BufEnter,FocusGained,InsertLeave,CursorMoved * set relativenumber
+  "autocmd BufEnter,FocusGained,InsertLeave,CursorMoved * set relativenumber"
   autocmd BufEnter,InsertLeave,CursorMoved * set relativenumber
-  #autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+  "autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber"
   autocmd BufLeave,InsertEnter   * set norelativenumber
 augroup END
 
