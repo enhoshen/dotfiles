@@ -1,5 +1,5 @@
 dir=$DOTFILES
-echo ${dir}
+echo "[INFO] dotfiles directory: ${dir}"
 
 # link dotfiles
 ln -sf ${dir}/.vimrc ~/.vimrc
@@ -11,8 +11,6 @@ ln -sf ${dir}/.tmux.conf ~/.tmux.conf
 
 
 case $TERM in cygwin) TERM=xterm-256color;; esac
-
-#export DISPLAY=localhost:11.0
 
 
 # alias
