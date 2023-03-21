@@ -1,13 +1,13 @@
-dir=$DOTFILES
-echo "[INFO] dotfiles directory: ${dir}"
+DIR=$DOTFILES
+echo "[INFO] dotfiles directory: ${DIR}"
 
 # link dotfiles
-ln -sf ${dir}/.vimrc ~/.vimrc
+ln -sf ${DIR}/.vimrc ~/.vimrc
 mkdir ~/.config/nvim -p
-ln -sf ${dir}/init.vim ~/.config/nvim/init.vim
-ln -sf ${dir}/.bash_aliases ~/.bash_aliases
-ln -sf ${dir}/.vim ~/.vim
-ln -sf ${dir}/.tmux.conf ~/.tmux.conf
+ln -sf ${DIR}/init.vim ~/.config/nvim/init.vim
+ln -sf ${DIR}/.bash_aliases ~/.bash_aliases
+ln -sf ${DIR}/.vim ~/.vim
+ln -sf ${DIR}/.tmux.conf ~/.tmux.conf
 
 
 case $TERM in cygwin) TERM=xterm-256color;; esac
@@ -26,7 +26,7 @@ function tmuxr(){
 		echo session $1 already attached, detatch first 
 	else
 		tmux kill-session -t  $1
-		tmuxp load $1
+		tmuxp load $DIR/tmuxp/$1.yaml
 	fi
 }
 function display(){
@@ -39,8 +39,7 @@ function display(){
     fi
     
 }
-alias dc_sh='term=x10term dc_shell'
-alias reload=' sh $DOTFILES/reload.sh'
+alias reload=' sh $DIR/reload.sh'
 
 
 # Apps #
