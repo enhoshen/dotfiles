@@ -1,13 +1,13 @@
 #!/bin/bash
 dir=${PWD}
 
-echo " export MYWORKSPACE=$dir" >> ~/.bashrc
-echo ". \$MYWORKSPACE/shell.sh" >> ~/.bashrc
-echo ". \$MYWORKSPACE/.bashrc" >> ~/.bashrc
+echo " export DOTFILES=$dir" >> ~/.bashrc
+echo ". \$DOTFILES/.bashrc" >> ~/.bashrc
+echo ". \$DOTFILES/shell.sh" >> ~/.bashrc
 
-echo " export MYWORKSPACE=$dir" >> ~/.zshrc
-echo ". \$MYWORKSPACE/shell.sh" >> ~/.zshrc
-echo ". \$MYWORKSPACE/.zshrc"  >> ~/.zshrc
+echo " export DOTFILES=$dir" >> ~/.zshrc
+echo ". \$DOTFILES/.zshrc"  >> ~/.zshrc
+echo ". \$DOTFILES/shell.sh" >> ~/.zshrc
 
 
 if [ $SHELL=="/bin/bash" ]; then

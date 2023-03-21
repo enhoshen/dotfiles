@@ -1,4 +1,4 @@
-dir=$MYWORKSPACE
+dir=$DOTFILES
 echo ${dir}
 
 # link dotfiles
@@ -14,13 +14,8 @@ case $TERM in cygwin) TERM=xterm-256color;; esac
 
 #export DISPLAY=localhost:11.0
 
-# git
-git config --global credential.helper store
-git config --global user.name "enhoshen"
-git config --global user.email "enhoshen@gmail.com"
 
-#========== alias ==========
-
+# alias
 alias ll='ls -alF'
 alias tmuxn='tmux new -s'
 alias tmuxa='tmux a -d -t'
@@ -33,7 +28,7 @@ function tmuxr(){
 		echo session $1 already attached, detatch first 
 	else
 		tmux kill-session -t  $1
-		tmuxp load $1.json
+		tmuxp load $1
 	fi
 }
 function display(){
@@ -47,10 +42,21 @@ function display(){
     
 }
 alias dc_sh='term=x10term dc_shell'
-alias reload=' sh $MYWORKSPACE/reload.sh'
+alias reload=' sh $DOTFILES/reload.sh'
 
-#========== python3 ==========
 
-alias python='/opt/rh/rh-python36/root/usr/bin/python3.6'
+# Apps #
+# git
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+git config --global credential.helper store
+git config --global user.name "enhoshen"
+git config --global user.email "enhoshen@gmail.com"
 
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -U -g ""'
+
+# vim
+alias vim='~/bin/vim'
+alias nvim='~/nvim/nvim-linux64/bin/nvim'
