@@ -1,0 +1,26 @@
+session_name: DEV
+windows:
+  - window_name: shell
+    start_directory: ~/
+    #layout: c55a,190x55,0,0{95x55,0,0,128,94x55,96,0,129}
+    layout: even-horizontal
+    panes:
+    -
+    -
+  - window_name: xserver
+    window_index: 9
+    start_directory: ~/
+    layout: tiled
+    panes:
+    -
+    -
+    -
+    -
+  - window_name: dev
+    focus: true
+    start_directory: ~/
+  - window_name: dev2
+    start_directory: ~/
+  - window_name: dev3
+    start_directory: ~/
+

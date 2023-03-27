@@ -1,0 +1,61 @@
+{
+  "session_name": "DEV",
+  "windows": [
+    {
+      "options": {
+        "automatic-rename": "off"
+      },
+      "window_name": "shell",
+      "layout": "c55a,190x55,0,0{95x55,0,0,128,94x55,96,0,129}",
+      "panes": [
+        "",
+        ""
+      ]
+    },
+    {
+      "options": {
+        "automatic-rename": "off"
+      },
+      "window_name": "xserver",
+      "layout": "c55a,190x55,0,0{95x55,0,0,128,94x55,96,0,129}",
+      "panes": [
+        "pane",
+        "pane"
+      ],
+      "start_directory": "~/"
+    },
+    {
+      "options": {
+        "automatic-rename": "off"
+      },
+      "window_name": "dev",
+      "layout": "30f9,190x55,0,0,130",
+      "panes": [
+        "pane"
+      ],
+      "start_directory": "~/"
+    },
+    {
+      "options": {
+        "automatic-rename": "off"
+      },
+      "window_name": "dev2",
+      "layout": "30fa,190x55,0,0,131",
+      "panes": [
+        "pane"
+      ],
+      "start_directory": "~/"
+    },
+    {
+      "options": {
+        "automatic-rename": "off"
+      },
+      "window_name": "dev3",
+      "layout": "30fa,190x55,0,0,131",
+      "panes": [
+        "pane"
+      ],
+      "start_directory": "~/"
+    }
+  ]
+}

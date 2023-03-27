@@ -53,7 +53,3 @@ git config --global user.email "enhoshen@gmail.com"
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -U -g ""'
-
-# vim
-alias vim='~/bin/vim'
-alias nvim='~/nvim/nvim-linux64/bin/nvim'
