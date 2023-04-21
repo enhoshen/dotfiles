@@ -26,10 +26,6 @@ $(cd ${HOME}/opt && ${HOME}/opt/nvim.appimage --appimage-extract && \
     mv squashfs-root nvim)
 ln -vfs ${HOME}/opt/nvim/AppRun ${HOME}/.local/bin/nvim
 
-# fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
-
 # python
 python -m pip install neovim
 python -m pip install tmuxp 
@@ -46,3 +42,11 @@ if [[ ! $(grep "export DOTFILES" ${HOME}/.zshrc) ]]; then
     echo "source ${DOTFILES}/.zshrc"  >> ~/.zshrc
     echo "source ${DOTFILES}/shell.sh" >> ~/.zshrc
 fi
+
+# fzf
+# this will put "source .fzf.zsh" at the end of rc files.
+# It has to be after completion system is setup, including
+# those set by oh-my-zsh. So put it after "source dotfiles/.*rc"
+# to make sure .fzf.* is sourced after
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install

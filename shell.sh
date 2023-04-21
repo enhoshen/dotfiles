@@ -1,14 +1,12 @@
-DIR=$DOTFILES
-echo "[INFO] dotfiles directory: ${DIR}"
+echo "[INFO] dotfiles directory: ${DOTFILES}"
 
 # link dotfiles
-ln -sf ${DIR}/.vimrc ~/.vimrc
+ln -sf ${DOTFILES}/.vimrc ~/.vimrc
 mkdir ~/.config/nvim -p
-ln -sf ${DIR}/init.vim ~/.config/nvim/init.vim
-ln -sf ${DIR}/.bash_aliases ~/.bash_aliases
-ln -sf ${DIR}/.vim ~/.vim
-ln -sf ${DIR}/.tmux.conf ~/.tmux.conf
-
+ln -sf ${DOTFILES}/init.vim ~/.config/nvim/init.vim
+ln -sf ${DOTFILES}/.bash_aliases ~/.bash_aliases
+ln -sf ${DOTFILES}/.vim ~/.vim
+ln -sf ${DOTFILES}/.tmux.conf ~/.tmux.conf
 
 case $TERM in cygwin) TERM=xterm-256color;; esac
 
@@ -18,11 +16,10 @@ alias tmuxn='tmux new -s'
 alias tmuxa='tmux a -d -t'
 alias tmuxk='tmux kill-session -t'
 alias tmuxl='tmuxp load'
-alias reload=' sh $DIR/reload.sh'
 
 # to install utility functions
 function install_utility(){
-    source ${DIR}/utility.sh
+    source ${DOTFILES}/utility.sh
 }
 
 # Apps #
@@ -37,3 +34,12 @@ git config --global core.editor "nvim"
 # fzf
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -U -g ""'
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi

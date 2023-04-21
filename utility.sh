@@ -1,12 +1,22 @@
 # reload tmuxp session 
 function tmuxr(){
-    echo $1
+    if [[ ! $1 ]]
+    then
+        echo "Usage: tmuxr <profile name>"
+        echo "profile will be picked from $DOTFILES/tmuxp/*.yaml"
+        echo "Available profiles: "
+        for i in $(ls $DOTFILES/tmuxp/*yaml); do
+            FILE=${i##*/}
+            echo ${FILE%.yaml} 
+        done
+        return 1
+    fi
     if [[ $(tmux display-message -p '#S') == $1 ]] && [[ -n "$TMUX" ]]
     then
 		echo session $1 already attached, detatch first 
 	else
 		tmux kill-session -t  $1
-		tmuxp load $DIR/tmuxp/$1.yaml
+		tmuxp load ${DOTFILES}/tmuxp/$1.yaml
 	fi
 }
 
@@ -46,7 +56,7 @@ function reload (){
     #!/bin/bash
     COLOR="\033[36m"
     COLORRST="\033[0m"
-    echo -e "Usage:" $COLOR "$ sh reload.sh [-e] [file]${COLORRST}\n" \
+    echo -e "Usage:" $COLOR "$ reload [-e] [file]${COLORRST}\n" \
         "${COLOR}-e${COLORRST}: print out the command;\n"\
         "${COLOR}-f${COLORRST}: the file path of the command list. default history file:./.myhistory;\n"\
         "${COLOR}-c${COLORRST}: the command number. If not provided the script prompt you to enter one.\n"
@@ -67,8 +77,8 @@ function reload (){
         esac
     done
 
-    echo $ECHO $file $IN
-    readarray commands < $file
+    echo $ECHO $FILE $IN
+    readarray commands < $FILE
     for i in "${!commands[@]}"
     do
         echo -e $COLOR ${i} $COLORRST ${commands[i]}
