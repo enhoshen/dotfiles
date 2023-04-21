@@ -1,7 +1,6 @@
 # reload tmuxp session 
 function tmuxr(){
-    if [[ ! $1 ]]
-    then
+    if [[ ! $1 ]]; then
         echo "Usage: tmuxr <profile name>"
         echo "profile will be picked from $DOTFILES/tmuxp/*.yaml"
         echo "Available profiles: "
@@ -11,8 +10,7 @@ function tmuxr(){
         done
         return 1
     fi
-    if [[ $(tmux display-message -p '#S') == $1 ]] && [[ -n "$TMUX" ]]
-    then
+    if [[ $(tmux display-message -p '#S') == $1 ]] && [[ -n "$TMUX" ]]; then
 		echo session $1 already attached, detatch first 
 	else
 		tmux kill-session -t  $1
@@ -22,8 +20,7 @@ function tmuxr(){
 
 # change display to localhost:$1
 function display(){
-    if [ $1 ]
-    then
+    if [ $1 ]; then
         export DISPLAY=localhost:$1.0
         echo "DISPLAY changed to $DISPLAY"
     else
@@ -76,27 +73,33 @@ function reload (){
             ?) : ;;
         esac
     done
+    if [[ ${SHELL##*/} == "zsh" ]]; then
+        COMMANDS=("${(@f)$(< $FILE)}")
+    elif [[ ${SHELL##*/} == "bash" ]]; then
+        readarray COMMANDS < $FILE
+    else
+        if [[ ! $COMMANDS ]]; then
+            return 1
+        fi
+    fi
 
-    echo $ECHO $FILE $IN
-    readarray commands < $FILE
-    for i in "${!commands[@]}"
+    for i in $(seq ${#COMMANDS});
     do
-        echo -e $COLOR ${i} $COLORRST ${commands[i]}
+        echo -e $COLOR ${i} $COLORRST ${COMMANDS[i]}
     done
 
-    if ! [[ ${IN} =~ ^[0-9]+$ ]];
-    then
+    if ! [[ ${IN} =~ ^[0-9]+$ ]]; then
         echo -n "choose command "
         read IN
     else
-        : #null command (like pass in python)
+        #null command (like pass in python)
+        : 
     fi
 
-    if [[ $ECHO == 1 ]];
-    then
-        echo -e $COLOR $IN $COLORRST ${commands[IN]}
-        echo -e ${commands[IN]} | xclip
+    if [[ $ECHO == 1 ]]; then
+        echo -e $COLOR $IN $COLORRST ${COMMANDS[IN]}
+        echo -e ${COMMANDS[IN]} | xclip
     else
-        eval ${commands[IN]}
+        ${COMMANDS[IN]}
     fi
 }
