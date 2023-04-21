@@ -1,4 +1,4 @@
-language en_US.utf8
+language en_US.UTF-8
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4

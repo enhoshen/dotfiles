@@ -1,18 +1,12 @@
-## Setup
-* dynamic link `.*` files in this project in the home directory
-## Gitsetup script
-* Initialize a git repo named the argument
+# Setup
 ```shell
-sh gitsetup.sh MYHARDWARE
+git clone https://github.com/enhoshen/dotfiles.git
+source dotfiles/setup/<platform>.setup.sh
+source dotfiles/setup/setup.sh
 ```
-## Reload script
-* Read in a file line by line of previously executed lengthy commands for you to chooose.
-`reload` alias is added in .bash_alias, and one option `-e` is provided if you only wish to
-print out the command. At default the read in file is the .myhistory file in the current 
-folder, you can specify the file by the end of the command.
-```shell
-$ sh reload.sh file # read the file line by line for you to choose
-$ reload file       # reload alias
-$ reload            # read default history file .myhistory
-$ reload -e         # print out the command 
-``` 
+
+## scripts
+### `shell.sh`
+`setup.sh` put command in `.bashrc`/`.zshrc` so that they source `dotfiles/shell.sh`. It dynamic links configuration folder/files in the home directory to the ones in this project.
+
+A `install_utility` function is declared, calling it will source `utility.sh` so functions declared inside can be used in the current shell.
