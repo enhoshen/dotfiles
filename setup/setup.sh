@@ -24,7 +24,7 @@ curl -L -o ${HOME}/opt/nvim.appimage \
 chmod 755 ${HOME}/opt/nvim.appimage
 $(cd ${HOME}/opt && ${HOME}/opt/nvim.appimage --appimage-extract && \
     mv squashfs-root nvim)
-ln -vfs ${HOME}/opt/nvim/AppRun ${HOME}/.local/bin/nvim
+ln -vfs ${HOME}/opt/nvim/AppRun ${HOME}/bin/nvim
 
 # python
 python -m pip install neovim
