@@ -66,5 +66,16 @@ function M.setup()
       require("packer").sync()
     end
   end
+
+  -- Init and start packer
+  packer_init()
+  local packer = require "packer"
+
+  -- Performance
+  pcall(require, "impatient")
+  -- pcall(require, "packer_compiled")
+
+  packer.init(conf)
+  packer.startup(plugins)
 end
 return M 

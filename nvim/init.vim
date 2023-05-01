@@ -14,4 +14,5 @@ tnoremap <C-[> <C-\><C-n>
 
 " plugins
 lua require("config")
+lua require("utils")
 lua require("plugins").setup()
