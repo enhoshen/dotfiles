@@ -4,7 +4,7 @@ set tabstop=4
 set softtabstop=4
 set expandtab
 set ruler
-filetype plugin on
+filetype plugin indent on
 syntax on
 set nocursorline
 
