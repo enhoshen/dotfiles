@@ -2,8 +2,7 @@ echo "[INFO] dotfiles directory: ${DOTFILES}"
 
 # link dotfiles
 ln -sf ${DOTFILES}/.vimrc ~/.vimrc
-mkdir ~/.config/nvim -p
-ln -sf ${DOTFILES}/init.vim ~/.config/nvim/init.vim
+ln -sf ${DOTFILES}/nvim ~/.config/nvim
 ln -sf ${DOTFILES}/.bash_aliases ~/.bash_aliases
 ln -sf ${DOTFILES}/.vim ~/.vim
 ln -sf ${DOTFILES}/.tmux.conf ~/.tmux.conf

@@ -11,3 +11,7 @@ hi Search cterm=reverse gui=reverse
 " terminal mode 
 tnoremap <Esc> <C-\><C-n>
 tnoremap <C-[> <C-\><C-n>
+
+" plugins
+lua require("config")
+lua require("plugins").setup()
