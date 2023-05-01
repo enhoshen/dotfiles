@@ -78,4 +78,4 @@ function M.setup()
   packer.init(conf)
   packer.startup(plugins)
 end
-return M 
+return M

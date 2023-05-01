@@ -1,28 +1,33 @@
--- from https://alpha2phi.medium.com/neovim-for-beginners-lsp-part-1-b3a17ddbe611 
+-- originally from https://alpha2phi.medium.com/neovim-for-beginners-lsp-part-1-b3a17ddbe611 
 local M = {}
 
 local servers = {
-  gopls = {},
+  pyright = {},
+  vimls = {},
+  yamlls = {},
+  bashls = {},
+  sumneko_lua = {
+    settings ={
+      Lua = {
+        diagnostics ={
+          globals = {'vim'}
+        }
+      }
+    }
+  },
+  tsserver = {},
   html = {},
   jsonls = {},
-  pyright = {},
-  rust_analyzer = {},
-  sumneko_lua = {},
-  tsserver = {},
-  vimls = {},
 }
 
 local function on_attach(client, bufnr)
   -- Enable completion triggered by <C-X><C-O>
   -- See `:help omnifunc` and `:help ins-completion` for more information.
   vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
-
   -- Use LSP as the handler for formatexpr.
   -- See `:help formatexpr` for more information.
   vim.api.nvim_buf_set_option(0, "formatexpr", "v:lua.vim.lsp.formatexpr()")
 
-  -- Configure key mappings
-  require("config.lsp.keymaps")
 end
 
 local opts = {
@@ -36,4 +41,7 @@ function M.setup()
   require("config.lsp.installer").setup(servers, opts)
 end
 
-return M 
+-- Configure key mappings
+require("config.lsp.keymaps")
+
+return M
