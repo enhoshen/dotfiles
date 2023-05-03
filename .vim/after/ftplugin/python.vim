@@ -18,5 +18,6 @@ setlocal efm+=
 
 " %-G will ignore everything matched after
 " %.%# is actually regex: .*
-setlocal efm+=
-    \%-G%.%#,
+" TODO it breaks import error parsing
+"setlocal efm+=
+"    \%-G%.%#,
