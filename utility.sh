@@ -30,12 +30,22 @@ function display(){
 
 # create a git repo from existing folder given by $1
 function git_setup_repo(){
-    cd $1
-    git init 
-    git add .
-    git commit -m 'first commit'
-    git remote add origin https://github.com/enhoshen/$1
-    git push -u origin master
+    if [[ ! $1 ]] then;
+        echo "Please provide project name in \$1"
+        return 1
+    fi
+    if [[ $1 =~ "/"  ]] then;
+        echo "Directory is not allowed"
+        return 1
+    fi
+    (cd $1 && \
+        git init; \
+        git add .; \
+        touch README.md; \
+        git commit -m 'first commit'; \
+        git remote add origin https://github.com/enhoshen/$1; \
+        git push -u origin master;
+    )
 }
 
 #  reload commands from .myhistory
