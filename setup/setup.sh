@@ -26,6 +26,8 @@ $(cd ${HOME}/opt && ${HOME}/opt/nvim.appimage --appimage-extract && \
     mv squashfs-root nvim)
 ln -vfs ${HOME}/opt/nvim/AppRun ${HOME}/.local/bin/nvim
 mkdir ~/.config/nvim -p
+${HOME}/.local/bin/nvim +PackerInstall +qall
+${HOME}/.local/bin/nvim +PackerUpdate +qall
 
 # python
 python -m pip install neovim
