@@ -61,6 +61,20 @@ function M.setup()
         "williamboman/nvim-lsp-installer",
       },
     }
+
+    -- ChatGPT
+    --use({
+    --  "jackMort/ChatGPT.nvim",
+    --    config = function()
+    --      require("chatgpt").setup()
+    --    end,
+    --    requires = {
+    --      "MunifTanjim/nui.nvim",
+    --      "nvim-lua/plenary.nvim",
+    --      "nvim-telescope/telescope.nvim"
+    --    }
+    --})
+
     if is_boostrap then
       print "Neovim restart is required after installation!"
       require("packer").sync()

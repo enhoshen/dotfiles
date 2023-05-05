@@ -18,6 +18,7 @@ local servers = {
   tsserver = {},
   html = {},
   jsonls = {},
+  marksman = {},
 }
 
 local function on_attach(client, bufnr)
