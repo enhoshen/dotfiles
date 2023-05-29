@@ -1,6 +1,8 @@
 #!/usr/bin/zsh
+set +e
+
 # get dotfiles project path TODO is there any simpler way
-SETUPFILE=${PWD}/$0
+SETUPFILE=$0
 DOTFILES=$(echo ${SETUPFILE} | sed -e "s;/setup/setup.sh;;")
 
 # setup directory
@@ -10,28 +12,33 @@ mkdir -p ${HOME}/.config
 mkdir -p ${HOME}/.cache
 
 # oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if [[ ! -d ${HOME}/.oh-my-zsh ]]; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
 
 # vim plugin
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-vim +PlugInstall +qall
-vim +PlugUpdate +qall
+if [[ ! -a ${HOME}/.vim/autoload/plug.vim ]]; then
+    curl -fLo ${HOME}/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim &
+    vim +PlugInstall +qall
+    vim +PlugUpdate +qall
+fi
 
 # nvim
-curl -L -o ${HOME}/opt/nvim.appimage \
-    https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod 755 ${HOME}/opt/nvim.appimage
-$(cd ${HOME}/opt && ${HOME}/opt/nvim.appimage --appimage-extract && \
-    mv squashfs-root nvim)
-ln -vfs ${HOME}/opt/nvim/AppRun ${HOME}/.local/bin/nvim
-mkdir ~/.config/nvim -p
-${HOME}/.local/bin/nvim +PackerInstall +qall
-${HOME}/.local/bin/nvim +PackerUpdate +qall
+if [[ ! $(which nvim > /dev/null) ]]; then
+    curl -L -o ${HOME}/opt/nvim.appimage \
+        https://github.com/neovim/neovim/releases/latest/download/nvim.appimage &
+    chmod 755 ${HOME}/opt/nvim.appimage
+    $(cd ${HOME}/opt && ${HOME}/opt/nvim.appimage --appimage-extract && \
+        mv squashfs-root nvim)
+    ln -vfs ${HOME}/opt/nvim/AppRun ${HOME}/.local/bin/nvim
+    ${HOME}/.local/bin/nvim +PackerInstall +qall
+    ${HOME}/.local/bin/nvim +PackerUpdate +qall
+fi
 
 # python
-python -m pip install neovim
-python -m pip install tmuxp 
+python -m pip install neovim --user || echo "failed installing python package neovim" &
+python -m pip install tmuxp --user || echo "failed installing python package tmuxp" &
 
 # Write scripts to rc files
 if [[ ! $(grep "export DOTFILES" ${HOME}/.bashrc) ]]; then
@@ -51,5 +58,7 @@ fi
 # It has to be after completion system is setup, including
 # those set by oh-my-zsh. So put it after "source dotfiles/.*rc"
 # to make sure .fzf.* is sourced after
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+if [[ ! (-a ${HOME}/.fzf.bash && -a ${HOME}/.fzf.zsh)  ]]; then
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
+fi
