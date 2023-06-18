@@ -1,6 +1,18 @@
 -- originally from https://alpha2phi.medium.com/neovim-for-beginners-lsp-part-1-b3a17ddbe611 
 local M = {}
 
+--local servers = {
+--  "pyright",
+--  "vimls",
+--  "yamlls",
+--  "bashls",
+--  "sumneko_lua",
+--  "tsserver",
+--  "html",
+--  "jsonls",
+--  "marksman",
+--}
+
 local servers = {
   pyright = {},
   vimls = {},
@@ -19,6 +31,7 @@ local servers = {
   html = {},
   jsonls = {},
   marksman = {},
+  tailwindcss ={},
 }
 
 local function on_attach(client, bufnr)
@@ -38,8 +51,11 @@ local opts = {
   },
 }
 
+local lspconfig = require "lspconfig"
+
 function M.setup()
   require("config.lsp.installer").setup(servers, opts)
+
 end
 
 -- Configure key mappings

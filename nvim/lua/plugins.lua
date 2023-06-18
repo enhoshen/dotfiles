@@ -56,19 +56,19 @@ function M.setup()
     -- Mason
     use {
       "williamboman/mason.nvim",
+      run = ":MasonUpdate",
     }
     -- LSP
+    use {
+      "williamboman/mason-lspconfig.nvim",
+    }
     use {
       "neovim/nvim-lspconfig",
       opt = true,
       event = "BufReadPre",
-      wants = { "nvim-lsp-installer" },
       config = function()
         require("config.lsp").setup()
       end,
-      requires = {
-        "williamboman/nvim-lsp-installer",
-      },
     }
 
 
