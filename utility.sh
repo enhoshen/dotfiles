@@ -20,7 +20,7 @@ function tmuxr(){
 
 # change display to localhost:$1
 function display(){
-    if [ $1 ]; then
+    if [[ $1 ]]; then
         export DISPLAY=localhost:$1.0
         echo "DISPLAY changed to $DISPLAY"
     else

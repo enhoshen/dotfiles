@@ -49,10 +49,10 @@ function M.setup()
   -- Plugins
   local function plugins(use)
     -- nvim-treesitter
-    --use {
-    --  'nvim-treesitter/nvim-treesitter',
-    --  run = function () require('nvim-treesitter.install').update({ with_sync =true }) end,
-    --}
+    use {
+      'nvim-treesitter/nvim-treesitter',
+      run = function () require('nvim-treesitter.install').update({ with_sync =true }) end,
+    }
     -- Mason
     use {
       "williamboman/mason.nvim",

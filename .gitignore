@@ -1,1 +1,5 @@
 nvim.appimage
+.vim/autoload/plug.vim
+.vim/plugged/
+.vim/.vim
+.vim/.netrwhist

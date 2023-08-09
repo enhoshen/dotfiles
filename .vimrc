@@ -131,3 +131,6 @@ call plug#begin('~/.vim/plugged')
 
 " Initialize plugin system
 call plug#end()
+
+" autoload
+call wsl#setup()
