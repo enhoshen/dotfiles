@@ -24,6 +24,9 @@ augroup numbertoggle
   autocmd BufLeave,InsertEnter   * set norelativenumber
 augroup END
 
+" color column
+set colorcolumn=80
+
 "cmder, conemu escape replace mode by a esc on startup"
 autocmd VimEnter wincmd <esc>
 
@@ -33,6 +36,7 @@ highlight Pmenu ctermbg=gray
 highlight PmenuSel ctermbg=red
 highlight Visual ctermbg=5 term=reverse cterm=bold
 highlight Search  term=bold,reverse cterm=bold,reverse gui=bold,reverse
+highlight ColorColumn ctermbg=DarkGrey
 
 "virtual edit beyond end of line"
 set virtualedit=block
