@@ -31,6 +31,7 @@ set colorcolumn=80
 autocmd VimEnter wincmd <esc>
 
 "color scheme"
+colorscheme slate
 set hlsearch
 highlight Pmenu ctermbg=gray
 highlight PmenuSel ctermbg=red
