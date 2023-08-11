@@ -8,8 +8,10 @@ DOTFILES=$(echo ${SETUPFILE} | sed -e "s;/setup/setup.sh;;")
 # setup directory
 mkdir -p ${HOME}/opt
 mkdir -p ${HOME}/.local/bin
+mkdir -p ${HOME}/.vim
 mkdir -p ${HOME}/.config
 mkdir -p ${HOME}/.cache
+ln -sf ${DOTFILES}/.vim ~/.vim
 
 # oh-my-zsh
 if [[ ! -d ${HOME}/.oh-my-zsh ]]; then
