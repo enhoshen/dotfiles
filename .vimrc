@@ -37,7 +37,7 @@ highlight Pmenu ctermbg=gray
 highlight PmenuSel ctermbg=red
 highlight Visual ctermbg=5 term=reverse cterm=bold
 highlight Search  term=bold,reverse cterm=bold,reverse gui=bold,reverse
-highlight ColorColumn ctermbg=DarkGrey
+highlight ColorColumn ctermbg=238
 
 "virtual edit beyond end of line"
 set virtualedit=block
