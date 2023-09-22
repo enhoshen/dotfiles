@@ -32,6 +32,7 @@ local servers = {
   jsonls = {},
   marksman = {},
   tailwindcss ={},
+  clangd = {},
 }
 
 local function on_attach(client, bufnr)

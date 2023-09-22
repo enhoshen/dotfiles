@@ -38,6 +38,7 @@ highlight PmenuSel ctermbg=red
 highlight Visual ctermbg=5 term=reverse cterm=bold
 highlight Search  term=bold,reverse cterm=bold,reverse gui=bold,reverse
 highlight ColorColumn ctermbg=238
+highlight Cursor ctermbg=red
 
 "virtual edit beyond end of line"
 set virtualedit=block
@@ -57,6 +58,17 @@ augroup templates
     autocmd BufNewFile * silent! 
         \%substitute#\[:VIM_EVAL:\]\(.\{-}\)\[:END_EVAL:\]#\=eval(submatch(1))#ge
 augroup END
+
+"Execute command then move windows,
+"R: move to far right, L: move to far left
+"Notice args can be substitued into double quotes, looks up <args> in section
+"Replacement text
+command -complete=command -nargs=* R exe "<args>" | exe "normal \<C-w>L"
+command -complete=command -nargs=* L exe "<args>" | exe "normal \<C-w>H"
+
+"Split than execute command
+"V: vertical split
+command -complete=command -nargs=* V vsplit | exe "<args>"
 
 
 "auto indent"
