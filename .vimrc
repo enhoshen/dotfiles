@@ -59,12 +59,14 @@ augroup templates
         \%substitute#\[:VIM_EVAL:\]\(.\{-}\)\[:END_EVAL:\]#\=eval(submatch(1))#ge
 augroup END
 
-"Execute command then move windows,
-"R: move to far right, L: move to far left
+"Execute command that opens window and then move windows,
+"R: right; L: left; U: up; D:down
 "Notice args can be substitued into double quotes, looks up <args> in section
 "Replacement text
 command -complete=command -nargs=* R exe "<args>" | exe "normal \<C-w>L"
 command -complete=command -nargs=* L exe "<args>" | exe "normal \<C-w>H"
+command -complete=command -nargs=* U exe "<args>" | exe "normal \<C-w>K"
+command -complete=command -nargs=* D exe "<args>" | exe "normal \<C-w>J"
 
 "Split than execute command
 "V: vertical split
