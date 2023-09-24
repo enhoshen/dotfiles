@@ -60,19 +60,20 @@ augroup END
 
 "Execute command that opens window and then move windows,
 "Ex: copen, help
-"R: right; L: left; U: up; D:down
+"R: right; L: left; U: up; D:down; T:new tab
 "Notice args can be substitued into double quotes, looks up <args> in section
 "Replacement text
 command -complete=command -nargs=* R exe "<args>" | exe "normal \<C-w>L"
 command -complete=command -nargs=* L exe "<args>" | exe "normal \<C-w>H"
 command -complete=command -nargs=* U exe "<args>" | exe "normal \<C-w>K"
 command -complete=command -nargs=* D exe "<args>" | exe "normal \<C-w>J"
+command -complete=command -nargs=* T exe "<args>" | exe "normal \<C-w>T"
 
-"Split then execute command that operates on current window
+"Split then execute command that changes current window
 "Ex: term, Explore 
-"V: vertical split; T: new tab
+"V: vertical split (leftmost pane; TT: new tab
 command -complete=command -nargs=* V vsplit | exe "<args>"
-command -complete=command -nargs=* T tabnew | exe "<args>"
+command -complete=command -nargs=* TT tabnew | exe "<args>"
 
 
 "auto indent"
