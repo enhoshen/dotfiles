@@ -1,3 +1,12 @@
 {
-  "layout-hotkeys": []
+  "layout-hotkeys": [
+    {
+      "key": 1,
+      "layout-id": "{6DEABC79-7CD2-43B0-8E1B-77BD2941AE98}"
+    },
+    {
+      "key": 2,
+      "layout-id": "{105D2099-2F31-4937-AEC8-E1475D37348A}"
+    }
+  ]
 }
