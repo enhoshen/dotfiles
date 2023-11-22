@@ -147,3 +147,8 @@ color_table() {
     
     echo -e "\n"
 }
+remove_merged_branch() {
+    git branch --merged | egrep -v "(^\*|master|main|dev|develop)"  \
+        | xargs git branch -d
+}
+
