@@ -75,6 +75,19 @@ command -complete=command -nargs=* T exe "<args>" | exe "normal \<C-w>T"
 command -complete=command -nargs=* V vsplit | exe "<args>"
 command -complete=command -nargs=* TT tabnew | exe "<args>"
 
+" toggle mouse option
+command -nargs=0 M :call s:ToggleMouse()
+let s:mouse_previous= &mouse
+let s:mouse_on= 1
+function! s:ToggleMouse()
+    if s:mouse_on 
+        setlocal mouse=
+        let s:mouse_on= 0
+    else
+        let &mouse = s:mouse_previous 
+        let s:mouse_on= 1
+    endif
+endfunction
 
 "auto indent"
 set autoindent
