@@ -12,3 +12,6 @@ export PS1='[%F{082}%n %F{051}%(5~|%-4~/.../%1~|%4~) %F{076}$(git_prompt_info)%f
 export RPS1='(%?|%t)'
 setopt NO_CHECK_JOBS
 setopt NO_HUP
+
+# key bindings #
+bindkey -e ^E vi-cmd-mode # Ctrl-E enter normal mode, mnemonic: escape
