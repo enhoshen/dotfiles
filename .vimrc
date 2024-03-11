@@ -8,6 +8,10 @@ filetype plugin indent on
 syntax on
 set nocursorline
 
+" map
+nmap <Tab> :cn<CR>
+nmap <S-Tab> :cN<CR>
+
 " timeout
 set timeoutlen=250
 set ttimeoutlen=5

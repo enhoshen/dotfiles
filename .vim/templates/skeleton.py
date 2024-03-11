@@ -5,7 +5,7 @@
 #
 # Contributors
 # ---------------------------
-# En-Ho Shen <enhoshen@ganzin.com.tw>, 2023
+# En-Ho Shen <enho.shen@ganzin.com.tw>, [:VIM_EVAL:]strftime('%Y')[:END_EVAL:]
 
 import logging
 from typing import *
