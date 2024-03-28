@@ -22,14 +22,14 @@ function! s:ToggleTab(type="c")
         nmap <S-Tab> :lNext<CR>
     else
         nmap <Leader><Tab> :cnext<CR>
-        nmap <S-Tab> :cNnext<CR>
+        nmap <S-Tab> :cNext<CR>
     endif
 endfunction
 call s:ToggleTab()
 
 " tab as :*next
 nmap <Leader>c<Tab> :cnext<CR>
-nmap <Leader>c<S-Tab> :cNnext<CR>
+nmap <Leader>c<S-Tab> :cNext<CR>
 nmap <Leader>b<Tab> :bnext<CR>
 nmap <Leader>b<S-Tab> :bNext<CR>
 nmap <Leader>l<Tab> :lnext<CR>
