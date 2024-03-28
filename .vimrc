@@ -7,10 +7,38 @@ set ruler
 filetype plugin indent on
 syntax on
 set nocursorline
+let mapleader = " "
 
-" map
-nmap <Tab> :cn<CR>
-nmap <S-Tab> :cN<CR>
+" map "
+" toggle <leader><Tab> and <S-Tab> normal map
+" argument: c, b, l:
+command -nargs=?  ToggleNext :call s:ToggleTab(<f-args>)
+function! s:ToggleTab(type="c")
+    if a:type == "b"
+        nmap <Leader><Tab> :bnext<CR>
+        nmap <S-Tab> :bNext<CR>
+    elseif a:type == "l" 
+        nmap <Leader><Tab> :lnext<CR>
+        nmap <S-Tab> :lNext<CR>
+    else
+        nmap <Leader><Tab> :cnext<CR>
+        nmap <S-Tab> :cNnext<CR>
+    endif
+endfunction
+call s:ToggleTab()
+
+" tab as :*next
+nmap <Leader>c<Tab> :cnext<CR>
+nmap <Leader>c<S-Tab> :cNnext<CR>
+nmap <Leader>b<Tab> :bnext<CR>
+nmap <Leader>b<S-Tab> :bNext<CR>
+nmap <Leader>l<Tab> :lnext<CR>
+nmap <Leader>l<S-Tab> :lNext<CR>
+
+"vim pane zoom in"
+noremap Zz <c-w>_ \| <c-w>\| 
+noremap Zo <c-w>=
+
 
 " timeout
 set timeoutlen=250
@@ -46,10 +74,6 @@ highlight Cursor ctermbg=red
 
 "virtual edit beyond end of line"
 set virtualedit=block
-
-"vim pane zoom in"
-noremap Zz <c-w>_ \| <c-w>\| 
-noremap Zo <c-w>=
 
 "backspace" set backspace=indent,eol,start
 
