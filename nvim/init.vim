@@ -14,10 +14,11 @@ tnoremap <Esc> <C-\><C-n>
 tnoremap <C-[> <C-\><C-n>
 
 
+" lazy
+lua require("config.lazy")
+
+
 " plugins
 lua require("config")
 lua require("utils")
 "lua require("plugins").setup()
-
-" lazy
-lua require("config.lazy")
