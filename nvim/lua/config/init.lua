@@ -13,3 +13,6 @@ require("config.dap")
 
 -- treesitter
 -- require("config.treesitters")
+
+-- conform
+require("config.conform")
