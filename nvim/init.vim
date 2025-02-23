@@ -22,3 +22,8 @@ lua require("config.lazy")
 lua require("config")
 lua require("utils")
 "lua require("plugins").setup()
+
+
+" Set my own vim script priority higher, so vimscript from .vim
+" such as after/ftplugin works
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
