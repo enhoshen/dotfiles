@@ -31,11 +31,11 @@ if [[ ! $(which nvim > /dev/null) ]]; then
     # <= v0.9
     #curl -L -o ${HOME}/opt/nvim.appimage \
     #    https://github.com/neovim/neovim/releases/latest/download/nvim.appimage &
-    wget -o ${HOME}/opt/nvim.appimage \
+    wget -O ${HOME}/opt/nvim.appimage \
         https://github.com/neovim/neovim/releases/download/v0.10.4/nvim-linux-x86_64.appimage
     chmod 755 ${HOME}/opt/nvim.appimage
     $(cd ${HOME}/opt && ${HOME}/opt/nvim.appimage --appimage-extract && \
-        mv squashfs-root nvim)
+        mv -f ${HOME}/opt/squashfs-root ${HOME}/opt/nvim)
     # <= v0.9
     #ln -vfs ${HOME}/opt/nvim/AppRun ${HOME}/.local/bin/nvim
     ln -vfs ${HOME}/opt/nvim/usr/bin/nvim ${HOME}/.local/bin/nvim
