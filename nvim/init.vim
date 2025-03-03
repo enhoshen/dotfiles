@@ -27,3 +27,9 @@ lua require("utils")
 " Set my own vim script priority higher, so vimscript from .vim
 " such as after/ftplugin works
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
+
+
+" temporary stuff
+autocmd FileType systemverilog setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+
+lua require("parser.systemrdl")
