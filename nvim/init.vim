@@ -19,9 +19,14 @@ lua require("config.lazy")
 
 
 " plugins
+"lua require("plugins").setup()
+
+" configs
 lua require("config")
 lua require("utils")
-"lua require("plugins").setup()
+
+" commands
+lua require("commands")
 
 
 " Set my own vim script priority higher, so vimscript from .vim
@@ -30,6 +35,4 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 
 
 " temporary stuff
-autocmd FileType systemverilog setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
-
 lua require("parser.systemrdl")
