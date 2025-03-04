@@ -19,11 +19,20 @@ lua require("config.lazy")
 
 
 " plugins
+"lua require("plugins").setup()
+
+" configs
 lua require("config")
 lua require("utils")
-"lua require("plugins").setup()
+
+" commands
+lua require("commands")
 
 
 " Set my own vim script priority higher, so vimscript from .vim
 " such as after/ftplugin works
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
+
+
+" temporary stuff
+lua require("parser.systemrdl")
