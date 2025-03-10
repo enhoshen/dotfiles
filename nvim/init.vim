@@ -35,4 +35,4 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 
 
 " temporary stuff
-lua require("parser.systemrdl")
+" lua require("parser.systemrdl")
