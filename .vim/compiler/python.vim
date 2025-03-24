@@ -7,7 +7,7 @@ if exists(":CompilerSet") != 2		" older Vim always used :setlocal
   command -nargs=* CompilerSet setlocal <args>
 endif
 
-CompilerSet makeprg=python\ %\ $*
+CompilerSet makeprg=python\ $*
 
 " Trace back error
 " 1. match whatever starting with blanks as continual message

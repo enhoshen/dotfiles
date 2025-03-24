@@ -39,6 +39,12 @@ vim.keymap.set(
   dap.toggle_breakpoint,
   { desc = "dap toggle breakpoint" }
 )
+
+dap = require("dap")
+vim.keymap.set("n", "<space>cb", function()
+  dap.toggle_breakpoint(vim.fn.input(""))
+end, { desc = "dap toggle conditional breakpoint" })
+
 vim.keymap.set(
   "n",
   "<space>gb",
