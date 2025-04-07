@@ -15,7 +15,7 @@ local dappy = require("dap-python")
 local dap = require("dap")
 dappy.test_runner = "pytest"
 dappy.setup(PythonPath())
-table.insert(dap.configurations.python, {
+table.insert(dap.configurations.python, 1, {
   --- refer to dap-python.lua::M.test_runners.pytest
   --- this equals to debugpy -m pytest ${file}
   type = "python",
