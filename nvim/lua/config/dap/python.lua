@@ -11,7 +11,20 @@ function PythonPath()
     return "/usr/bin/python"
   end
 end
-require("dap-python").setup(PythonPath())
+local dappy = require("dap-python")
+local dap = require("dap")
+dappy.test_runner = "pytest"
+dappy.setup(PythonPath())
+table.insert(dap.configurations.python, {
+  --- refer to dap-python.lua::M.test_runners.pytest
+  --- this equals to debugpy -m pytest ${file}
+  type = "python",
+  request = "launch",
+  name = "debugpy + pytest",
+  module = "pytest",
+  args = { "${file}" },
+})
+
 --  if config.request == "attach" then
 --dap.adapters.python = function(cb, config)
 --    ---@diagnostic disable-next-line: undefined-field

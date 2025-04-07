@@ -59,6 +59,14 @@ function! FixColumnNumber()
   call setqflist(qflist)
 endfunction
 
+"function s:Debugpy()
+"command -nargs=* Debug :call s:Debugpy()
+"  " this immediately ends, doesn't work, refer to :help !cmd
+"  " >>> Backgrounded ("&") commands must not write to stdout
+"  "     or stderr, the streams are closed immediately.
+"  !debugpy --wait-for-client --listen 5678 -m pytest % &
+"endfunction
+
 augroup FixPytestQuickFix
   au!
   autocmd QuickFixCmdPost <buffer> call FixColumnNumber()
