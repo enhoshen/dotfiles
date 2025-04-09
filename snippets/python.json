@@ -1,0 +1,25 @@
+{
+  "doc string item": {
+    "prefix": "param",
+    "body": [
+      "$0: $1",
+      "$2"
+    ]
+  },
+  "doc string parameters": {
+    "prefix": "params",
+    "body": [
+      "Parameters",
+      "----------",
+      "$0"
+    ]
+  },
+  "doc string attributes": {
+    "prefix": "attrs",
+    "body": [
+      "Attributes",
+      "----------",
+      "$0"
+    ]
+  }
+}

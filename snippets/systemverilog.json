@@ -1,0 +1,92 @@
+{
+  "Always comb block": {
+    "prefix": "acomb",
+    "body": [
+      "always_comb begin",
+      "\t$1",
+      "end"
+    ]
+  },
+  "Always ff block": {
+    "prefix": "aff",
+    "body": [
+      "always_ff @(posedge ${1:i_clk} or negedge ${2:i_rst_n}) begin",
+      "\t${3}_r <= '0;",
+      "\tif (!$2) begin",
+      "\tend",
+      "\telse ${4:if ()}begin",
+      "\t$3_r <= $3_w;",
+      "\tend",
+      "end"
+    ]
+  },
+  "Generate block": {
+    "prefix": "generate",
+    "body": [
+      "genvar $1;",
+      "generate",
+      "\t$2",
+      "endgenerate"
+    ]
+  },
+  "}Struct": {
+    "prefix": "struct",
+    "body": [
+      "struct packed {",
+      "\t$0",
+      "} $1;"
+    ]
+  },
+  "Enum": {
+    "prefix": "enum",
+    "body": [
+      "enum ${1:logic} $2 {",
+      "\t $0",
+      "\t,",
+      "} $3;"
+    ]
+  },
+  "State declaration": {
+    "prefix": "state",
+    "body": [
+      "state_$1_r, state_$1_w$0"
+    ]
+  },
+  "Non blocking assignment": {
+    "prefix": "<=",
+    "body": [
+      "$1_r <= $1_w"
+    ]
+  },
+  "One shot block": {
+    "prefix": "oneshot",
+    "body": [
+      "$1_r[$2]: begin",
+      "\tif () $1_w[$3] = 1'b1;",
+      "\telse $1_w[$2] = 1'b1;",
+      "end"
+    ]
+  },
+  "Width minus 1": {
+    "prefix": "-1",
+    "body": [
+      "[$1-1:0]"
+    ]
+  },
+  "Logic declaration": {
+    "prefix": "logic",
+    "body": [
+      "logic [$2-1:0] $1;"
+    ]
+  },
+  "Signed system function": {
+    "prefix": "signed",
+    "body": [
+      "\\$signed($1)"
+    ]
+  },
+  "dummy last item": {
+    "prefix": "xxxx",
+    "body": []
+  }
+}

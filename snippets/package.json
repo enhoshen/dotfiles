@@ -1,0 +1,23 @@
+{
+  "contributes": {
+    "snippets": [
+      {
+        "language": "python",
+        "path": "./python.json"
+      },
+      {
+        "language": "systemverilog",
+        "path": "./systemverilog.json"
+      },
+      {
+        "language": "lua",
+        "path": "./project-specific/nvim-lua.json"
+      },
+      {
+        "language": "all",
+        "path": "./allFiletypes.json"
+      }
+    ]
+  },
+  "name": "my-snippets"
+}

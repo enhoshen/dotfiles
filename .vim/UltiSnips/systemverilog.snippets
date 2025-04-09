@@ -118,7 +118,7 @@ endsnippet
 #-- one-shot state machine --#
 snippet ositem ""
 $1_r[${2:${VISUAL}}]: begin
-	if () $1_w[$3] 1'b1;
+	if () $1_w[$3] = 1'b1;
 	else $1_w[${2:${VISUAL}}] = 1'b1;
 end
 endsnippet
