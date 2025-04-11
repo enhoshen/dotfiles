@@ -3,7 +3,7 @@ return {
   opts = {
     spec = {
       { "<Leader>gp", group = "Gpt prompt" },
-      { "<Leader>g", group = "Git/Gpt prompt" },
+      { "<Leader>g", group = "Git/Gpt prompt", mode = { "n", "i", "v" } },
     },
   },
 }
