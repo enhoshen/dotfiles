@@ -8,6 +8,7 @@ return {
     --provider = "openai",
     provider = "gemini",
     openai = {
+      --gemini = {
       --endpoint = "https://api.openai.com/v1",
       endpoint = "https://generativelanguage.googleapis.com/v1beta/models/{{model}}:streamGenerateContent?key={{secret}}",
       --model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)

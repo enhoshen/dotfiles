@@ -26,3 +26,6 @@ vim.keymap.set(
   vim.diagnostic.setloclist,
   { desc = "diagnostic open float" }
 )
+
+--- misc
+vim.keymap.set("n", "<space>wp", ":set invwrap<CR>", { desc = "Toggle wrap" })
