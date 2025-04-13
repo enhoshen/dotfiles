@@ -12,6 +12,7 @@ let mapleader = " "
 " map "
 " toggle <leader><Tab> and <S-Tab> normal map
 " argument: c, b, l:
+"   c: quicklist b: buffer l: locationlist
 command -nargs=?  ToggleNext :call s:ToggleTab(<f-args>)
 function! s:ToggleTab(type="c")
     if a:type == "b"
@@ -104,6 +105,8 @@ command -complete=command -nargs=* V vsplit | exe "<args>"
 command -complete=command -nargs=* TT tabnew | exe "<args>"
 
 " toggle mouse option
+" actually, hold shift to temporarily disable mouse, refer
+" to :help mouse
 command -nargs=0 M :call s:ToggleMouse()
 let s:mouse_previous= &mouse
 let s:mouse_on= 1
