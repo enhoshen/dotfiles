@@ -7,7 +7,7 @@ ln -sf ${DOTFILES}/.bash_aliases ~/.bash_aliases
 ln -sf ${DOTFILES}/.vim ~/.vim
 ln -sf ${DOTFILES}/.tmux.conf ~/.tmux.conf
 
-case $TERM in cygwin) TERM=xterm-256color;; esac
+case $TERM in cygwin) TERM=xterm-256color ;; esac
 
 # alias
 alias ll='ls -alF'
@@ -17,8 +17,8 @@ alias tmuxk='tmux kill-session -t'
 alias tmuxl='tmuxp load'
 
 # to install utility functions
-function install_utility(){
-    source ${DOTFILES}/utility.sh
+function install_utility() {
+  source ${DOTFILES}/utility.sh
 }
 
 # Apps #
@@ -34,11 +34,17 @@ git config --global core.editor "nvim"
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -U -g ""'
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+if [ -d "$HOME/bin" ]; then
+  PATH="$HOME/bin:$PATH"
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
+if [ -d "$HOME/.local/bin" ]; then
+  PATH="$HOME/.local/bin:$PATH"
 fi
+
+# binary overide
+for i in $(ls ${DOTFILES}/bin/); do
+  ln -sf ${DOTFILES}/bin/$i ~/.local/bin/$i
+  chmod +x ${DOTFILES}/bin/$i
+done
