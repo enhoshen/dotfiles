@@ -14,6 +14,8 @@ return {
       local dap = require("dap")
       local ui = require("dapui")
 
+      width_percent = 50
+
       opts = {
         icons = { expanded = "", collapsed = "", current_frame = "" },
         mappings = {
@@ -41,7 +43,7 @@ return {
               { id = "scopes", size = 0.5 },
               { id = "repl", size = 0.5 },
             },
-            size = 80,
+            size = math.ceil(vim.o.columns * (width_percent / 100)),
             position = "right", -- Can be "left" or "right"
           },
           --- { elements = { "repl", "console", }, size = 10, position = "bottom", -- Can be "bottom" or "top" },

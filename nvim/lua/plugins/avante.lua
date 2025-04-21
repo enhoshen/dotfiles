@@ -7,6 +7,28 @@ return {
     -- for example
     --provider = "openai",
     provider = "gemini",
+    cursor_applying_provider = "gemini",
+    behaviour = {
+      enable_cursor_planning_mode = true,
+    },
+    -- TODO before fixing apply behavior, I may call avante.diff.setup_buffer_mappings
+    -- myself
+    -- see avante.nvim/lua/avante/diff.lua:L354
+    mappings = {
+      diff = {
+        ours = "<Leader>axo",
+        theirs = "<Leader>axt",
+        all_theirs = "<Leader>axa",
+        both = "<Leader>axb",
+        cursor = "<Leader>axc",
+        next = "<Leader>a]x",
+        prev = "<Leader>a[x",
+      },
+    },
+    windows = {
+      width = 50,
+    },
+    -- TODO i'm using gemini but why does it only work with openai???
     openai = {
       --gemini = {
       --endpoint = "https://api.openai.com/v1",
