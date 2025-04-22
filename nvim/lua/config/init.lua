@@ -1,5 +1,7 @@
--- keymaps
-require("config.keymaps")
+-- !! using lazyvim, DO NOT require("config.keymaps")
+-- here, default lazyvim keymaps might not be properly overidden.
+-- this may be affected by the order I setup config in init.lua:
+-- config.lazy then config.init
 
 -- mason
 require("mason").setup({
@@ -10,6 +12,9 @@ require("mason").setup({
 
 -- dap
 require("config.dap")
+
+-- lsp
+require("config.lsp")
 
 -- treesitter
 -- require("config.treesitters")

@@ -17,13 +17,8 @@ tnoremap <C-[> <C-\><C-n>
 " lazy
 lua require("config.lazy")
 
-
-" plugins
-"lua require("plugins").setup()
-
 " configs
 lua require("config")
-lua require("utils")
 
 " commands
 lua require("commands")

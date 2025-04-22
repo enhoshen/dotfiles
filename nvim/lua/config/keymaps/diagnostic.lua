@@ -23,9 +23,7 @@ vim.keymap.set(
 
 vim.keymap.set(
   "n",
-  --  Why isn't this working
-  -- "<Leader>xq",
-  "<Leader>xc",
+  "<Leader>xq",
   vim.diagnostic.setqflist,
   { desc = "diagnostic set quickfix list" }
 )

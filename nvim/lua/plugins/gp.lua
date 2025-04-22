@@ -1,4 +1,3 @@
--- using avante now
 return {
   "robitx/gp.nvim",
   config = function()

@@ -30,6 +30,12 @@ git config --global user.name "enhoshen"
 git config --global user.email "enhoshen@gmail.com"
 git config --global core.editor "nvim"
 
+# man #
+# this means run the ex command Man!
+# see nvim --help (shell)
+# and :help Man! (in nvim)
+export MANPAGER='nvim +Man!'
+
 # fzf
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -U -g ""'
 
