@@ -29,15 +29,17 @@ return {
       width = 50,
     },
     -- TODO i'm using gemini but why does it only work with openai???
-    openai = {
-      --gemini = {
+    gemini = {
       --endpoint = "https://api.openai.com/v1",
-      endpoint = "https://generativelanguage.googleapis.com/v1beta/models/{{model}}:streamGenerateContent?key={{secret}}",
+      --endpoint = "https://generativelanguage.googleapis.com/v1beta/models/{{model}}:streamGenerateContent?key={{secret}}",
+      endpoint = "https://generativelanguage.googleapis.com/v1beta/models/",
       --model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)
-      model = { model = "gemini-2.0-flash", temperature = 1.1, top_p = 1 },
+      --model = model = "gemini-2.0-flash", temperature = 1.1, top_p = 1 },
+      model = "gemini-2.0-flash",
       timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
       temperature = 0,
-      max_completion_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
+      max_tokens = 8192,
+      --max_completion_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
       --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
     },
   },
