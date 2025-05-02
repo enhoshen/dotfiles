@@ -7,7 +7,7 @@ if exists(":CompilerSet") != 2		" older Vim always used :setlocal
   command -nargs=* CompilerSet setlocal <args>
 endif
 
-CompilerSet makeprg=pytest\ -Wi:DeprecationWarning\ -vv\ --tb=short\ \$*\ >/tmp/make.txt
+CompilerSet makeprg=pytest\ -Wi:DeprecationWarning\ -vv\ --tb=short\ \$*\ >\ /tmp/make.txt
 
 " ERROR file
 CompilerSet efm=
