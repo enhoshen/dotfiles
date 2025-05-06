@@ -14,7 +14,9 @@ end, { desc = "Toggle auto format" })
 -- toggle background
 local transparent_flag = false
 vim.keymap.set("n", "<Leader>tt", function()
+  -- Commands defined in commands module
   if transparent_flag then
+    -- reload colorscheme
     vim.cmd("ReloadColor")
   else
     vim.cmd("SetTransparent")
