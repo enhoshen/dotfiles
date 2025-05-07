@@ -25,6 +25,7 @@ vim.keymap.set("n", "<Leader>ds", dap.step_over, { desc = "dap step over" })
 vim.keymap.set("n", "<Leader>do", dap.step_out, { desc = "dap step out" })
 vim.keymap.set("n", "<Leader>db", dap.step_back, { desc = "dap step back" })
 vim.keymap.set("n", "<Leader>dr", dap.restart, { desc = "dap restart" })
+vim.keymap.set("n", "<Leader>dq", dap.terminate, { desc = "dap terminate" })
 
 vim.keymap.set({ "n", "v" }, "<Leader>dh", function()
   require("dap.ui.widgets").hover()
