@@ -30,25 +30,21 @@ let mapleader = " "
 "    >> Some commands allow for a count after the command.
 command -nargs=?  ToggleNext :call s:ToggleTab(<f-args>)
 function! s:ToggleTab(type="")
+    let s:options = ["c", "b", "l"]
+    let s:reverse_map = {"c": 0, "b": 1, "l": 2}
+    if !exists("s:index")
+      let s:index = 0
+    endif
     if g:toggle_type == ""
+      let s:index = 0
       let g:toggle_type = "c"
     endif
     if a:type == ""
       " cycle toggle
-      let s:cycled = 0
-      if g:toggle_type == "c" && s:cycled == 0
-        let s:cycled = 1
-        let g:toggle_type = "b"
-      endif
-      if g:toggle_type == "b" && s:cycled == 0
-        let s:cycled = 1
-        let g:toggle_type = "l"
-      endif
-      if g:toggle_type == "l" && s:cycled == 0
-        let s:cycled = 1
-        let g:toggle_type = "c"
-      endif
+      let s:index = (s:index+1) % len(s:options)
+      let g:toggle_type = s:options[s:index]
     else
+      let s:index = s:reverse_map[a:type]
       let g:toggle_type = a:type
     endif
     nmap <Leader><Tab> :<C-U> exe g:toggle_type .. "next".v:count1<CR>
