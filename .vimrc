@@ -13,28 +13,43 @@ let mapleader = " "
 " toggle <leader><Tab> and <S-Tab> normal map
 " argument: c, b, l:
 "   c: quicklist b: buffer l: locationlist
+"
+" * :help :v:count
+" * <C-U> here is the character sent by as if ctrl-u was typed,
+"   this keymap functions as line-erase and clear the line.
+"   when typing count in normal mode then type :, there may be
+"   line range such as :'<,'> after using visual selection, we
+"   need to clear those line range here
+" * in ex command, count can be directly typed out such as :5 cnext
+" * but to use variable, exe is need for expansion
+"   :let a = 5
+"   :exe a . "cnext"
+" * `:*next 5` works the same as ":5 *next", WHY??
+"    something to do with cmdline-ranges, see :help cmdline-ranges,
+"    then go line 785
+"    >> Some commands allow for a count after the command.
 command -nargs=?  ToggleNext :call s:ToggleTab(<f-args>)
 function! s:ToggleTab(type="c")
     if a:type == "b"
-        nmap <Leader><Tab> :bnext<CR>
-        nmap <S-Tab> :bNext<CR>
+        nmap <Leader><Tab> :<C-U> exe "bnext".v:count1<CR>
+        nmap <S-Tab> :<C-U> exe "bNext".v:count1<CR>
     elseif a:type == "l" 
-        nmap <Leader><Tab> :lnext<CR>
-        nmap <S-Tab> :lNext<CR>
+        nmap <Leader><Tab> :<C-U> exe "lnext".v:count1<CR>
+        nmap <S-Tab> :<C-U> exe "lNext".v:count1<CR>
     else
-        nmap <Leader><Tab> :cnext<CR>
-        nmap <S-Tab> :cNext<CR>
+        nmap <Leader><Tab> :<C-U> exe "<C-U> exe "cnext".v:count1<CR>
+        nmap <S-Tab> :<C-U> exe "cNext".v:count1<CR>
     endif
 endfunction
 call s:ToggleTab()
 
 " tab as :*next
-nmap <Leader>c<Tab> :cnext<CR>
-nmap <Leader>c<S-Tab> :cNext<CR>
-nmap <Leader>b<Tab> :bnext<CR>
-nmap <Leader>b<S-Tab> :bNext<CR>
-nmap <Leader>l<Tab> :lnext<CR>
-nmap <Leader>l<S-Tab> :lNext<CR>
+nmap <Leader>c<Tab> :<C-U> exe "cnext".v:count1<CR>
+nmap <Leader>c<S-Tab> :<C-U> exe "cNext".v:count1<CR>
+nmap <Leader>b<Tab> :<C-U> exe "bnext".v:count1<CR>
+nmap <Leader>b<S-Tab> :<C-U> exe "bNext".v:count1<CR>
+nmap <Leader>l<Tab> :<C-U> exe "lnext".v:count1<CR>
+nmap <Leader>l<S-Tab> :<C-U> exe "lNext".v:count1<CR>
 
 "vim pane zoom in"
 noremap Zz <c-w>_ \| <c-w>\| 
