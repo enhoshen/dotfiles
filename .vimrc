@@ -29,19 +29,33 @@ let mapleader = " "
 "    then go line 785
 "    >> Some commands allow for a count after the command.
 command -nargs=?  ToggleNext :call s:ToggleTab(<f-args>)
-function! s:ToggleTab(type="c")
-    if a:type == "b"
-        nmap <Leader><Tab> :<C-U> exe "bnext".v:count1<CR>
-        nmap <S-Tab> :<C-U> exe "bNext".v:count1<CR>
-    elseif a:type == "l" 
-        nmap <Leader><Tab> :<C-U> exe "lnext".v:count1<CR>
-        nmap <S-Tab> :<C-U> exe "lNext".v:count1<CR>
-    else
-        nmap <Leader><Tab> :<C-U> exe "<C-U> exe "cnext".v:count1<CR>
-        nmap <S-Tab> :<C-U> exe "cNext".v:count1<CR>
+function! s:ToggleTab(type="")
+    if g:toggle_type == ""
+      let g:toggle_type = "c"
     endif
+    if a:type == ""
+      " cycle toggle
+      let s:cycled = 0
+      if g:toggle_type == "c" && s:cycled == 0
+        let s:cycled = 1
+        let g:toggle_type = "b"
+      endif
+      if g:toggle_type == "b" && s:cycled == 0
+        let s:cycled = 1
+        let g:toggle_type = "l"
+      endif
+      if g:toggle_type == "l" && s:cycled == 0
+        let s:cycled = 1
+        let g:toggle_type = "c"
+      endif
+    else
+      let g:toggle_type = a:type
+    endif
+    nmap <Leader><Tab> :<C-U> exe g:toggle_type .. "next".v:count1<CR>
+    nmap <S-Tab> :<C-U> exe g:toggle_type .."Next".v:count1<CR>
 endfunction
-call s:ToggleTab()
+let g:toggle_type = "c"
+call s:ToggleTab("c")
 
 " tab as :*next
 nmap <Leader>c<Tab> :<C-U> exe "cnext".v:count1<CR>
