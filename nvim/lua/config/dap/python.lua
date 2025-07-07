@@ -27,3 +27,22 @@ table.insert(dap.configurations.python, 1, {
   --- https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings
   justMyCode = false,
 })
+table.insert(dap.configurations.python, 2, {
+  type = "python",
+  request = "attach",
+  name = "pytest then attach",
+  connect = function()
+    --- get windows and buffer info so we can switch back to it
+    win_id = vim.fn.win_getid()
+    buf_id = vim.fn.bufnr()
+    --- run pytest in the background by opening a terminal emulator
+    vim.cmd(":term pytest % > /tmp/make.txt")
+    --- switch back to previous window and buffer
+    vim.fn.win_gotoid(win_id)
+    vim.cmd.buffer(buf_id)
+    local host = vim.fn.input("Host [127.0.0.1]: ")
+    host = host ~= "" and host or "127.0.0.1"
+    local port = tonumber(vim.fn.input("Port [5678]: ")) or 5678
+    return { host = host, port = port }
+  end,
+})
