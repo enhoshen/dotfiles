@@ -157,6 +157,7 @@ let g:tex_flavor = "latex"
 set rtp+=~/.fzf
 let $FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
+set showtabline=2
 "tabline"
 " (Based on 
 " http://stackoverflow.com/questions/5927952/whats-implementation-of-vims-default-tabline-function)
@@ -200,7 +201,6 @@ if exists("+showtabline")
     endfunction
     set stal=2
     set tabline=%!MyTabLine()
-    set showtabline=1
     highlight link TabNum Special
 endif
 

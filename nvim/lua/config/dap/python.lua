@@ -26,6 +26,7 @@ table.insert(dap.configurations.python, 1, {
   --- options can be found at
   --- https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings
   justMyCode = false,
+  subProcess = true,
 })
 table.insert(dap.configurations.python, 2, {
   type = "python",
@@ -45,4 +46,6 @@ table.insert(dap.configurations.python, 2, {
     local port = tonumber(vim.fn.input("Port [5678]: ")) or 5678
     return { host = host, port = port }
   end,
+  justMyCode = false,
+  subProcess = true,
 })
