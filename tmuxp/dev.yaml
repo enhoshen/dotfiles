@@ -3,10 +3,10 @@ windows:
   - window_name: shell
     start_directory: ~/
     #layout: c55a,190x55,0,0{95x55,0,0,128,94x55,96,0,129}
-    layout: even-horizontal
-    panes:
-    -
-    -
+    #layout: even-horizontal
+    #panes:
+    #-
+    #-
   - window_name: xserver
     window_index: 9
     start_directory: ~/
