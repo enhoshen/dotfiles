@@ -23,3 +23,15 @@ vim.keymap.set("n", "<Leader>tt", function()
   end
   transparent_flag = not transparent_flag
 end, { desc = "Toggle transparent background" })
+
+-- toggle tabline
+vim.keymap.set("n", "<Leader>tl", function()
+  -- Commands defined in commands module
+  if vim.o.showtabline == 0 then
+    -- reload colorscheme
+
+    vim.o.showtabline = 2
+  else
+    vim.o.showtabline = 0
+  end
+end, { desc = "Toggle show tabline" })

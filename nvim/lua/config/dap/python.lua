@@ -31,6 +31,24 @@ table.insert(dap.configurations.python, 1, {
 table.insert(dap.configurations.python, 2, {
   type = "python",
   request = "attach",
+  name = "pytest then attach on 127.0.0.1:5678",
+  connect = function()
+    --- get windows and buffer info so we can switch back to it
+    win_id = vim.fn.win_getid()
+    buf_id = vim.fn.bufnr()
+    --- run pytest in the background by opening a terminal emulator
+    vim.cmd(":term pytest % > /tmp/make.txt")
+    --- switch back to previous window and buffer
+    vim.fn.win_gotoid(win_id)
+    vim.cmd.buffer(buf_id)
+    return { host = "127.0.0.1", port = 5678 }
+  end,
+  justMyCode = false,
+  subProcess = true,
+})
+table.insert(dap.configurations.python, 3, {
+  type = "python",
+  request = "attach",
   name = "pytest then attach",
   connect = function()
     --- get windows and buffer info so we can switch back to it
