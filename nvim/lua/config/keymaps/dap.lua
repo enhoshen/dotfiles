@@ -3,7 +3,7 @@
 dap = require("dap")
 vim.keymap.set(
   "n",
-  "<space>b",
+  "<leader>b",
   dap.toggle_breakpoint,
   { desc = "dap toggle breakpoint" }
 )
@@ -14,7 +14,7 @@ end, { desc = "dap toggle conditional breakpoint" })
 
 vim.keymap.set(
   "n",
-  "<space>gb",
+  "<leader>gb",
   dap.run_to_cursor,
   { desc = "dap run to cursor" }
 )
