@@ -25,6 +25,7 @@ vim.keymap.set("n", "<Leader>tt", function()
 end, { desc = "Toggle transparent background" })
 
 -- toggle tabline
+-- Just found out lazyvim has this: <Leader>uA
 vim.keymap.set("n", "<Leader>tl", function()
   -- Commands defined in commands module
   if vim.o.showtabline == 0 then
