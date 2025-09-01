@@ -152,3 +152,13 @@ remove_merged_branch() {
         | xargs git branch -d
 }
 
+compress() {
+  # compress all images with extension $1
+  ext=$1
+  q=$2
+  if [[ ! $q ]]; then
+    q=80
+  fi
+  mkdir -p compressed
+  for i in $(ls *${ext}); do ffmpeg -i $i -q:v $q -y compressed/$(basename $i .${ext}).webp; done;
+}
