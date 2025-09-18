@@ -1,0 +1,27 @@
+{
+    "window.zoomLevel": 1,
+    "editor.wordWrap": "on",
+    "remote.SSH.remotePlatform": {
+        "EDA": "linux",
+        "192.168.1.140": "linux"
+    },
+    "git.ignoreLegacyWarning": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "vscode-neovim.neovimExecutablePaths.linux": "/root/.local/bin/nvim",
+    "vscode-neovim.useWSL": true,
+    "vim.useSystemClipboard": true,
+    "chat.agent.enabled": true,
+    "pasteImage.path": "${currentFileDir}/images/",
+    "vim.handleKeys": {
+        "<C-k>": false,
+        "<C-d>": true,
+        "<C-s>": false,
+        "<C-z>": false
+    },
+    "editor.tabCompletion": "on",
+
+}
