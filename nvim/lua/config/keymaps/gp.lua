@@ -27,11 +27,11 @@ wk.add({
         "<cmd>GpChatRespond<cr>",
         desc = "Gpt Propmt get response",
       },
-      {
-        "<C-s>",
-        "<cmd>GpChatRespond<cr>",
-        desc = "Gpt Propmt get response",
-      },
+      -- {
+      --   "<C-s>",
+      --   "<cmd>GpChatRespond<cr>",
+      --   desc = "Gpt Propmt get response",
+      -- },
     },
     {
       mode = "v",
