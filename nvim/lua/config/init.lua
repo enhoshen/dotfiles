@@ -21,3 +21,6 @@ require("config.lsp")
 
 -- conform
 require("config.conform")
+
+-- oil
+require("config.oil")
