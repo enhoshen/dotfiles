@@ -16,6 +16,11 @@ windows:
     -
     -
     -
+  - window_name: dotfile
+    window_index: 8
+    start_directory: ~/
+    shell_command_before:
+      - cd $DOTFILES
   - window_name: dev
     focus: true
     start_directory: ~/
@@ -23,4 +28,3 @@ windows:
     start_directory: ~/
   - window_name: dev3
     start_directory: ~/
-
