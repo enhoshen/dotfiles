@@ -2,7 +2,7 @@ snack = require("snacks")
 vim.api.nvim_create_autocmd({ "User" }, {
   pattern = { "OilActionsPost" },
   callback = function(ev)
-    for i, a in ipairs(ev.data.actions) do
+    for _, a in ipairs(ev.data.actions) do
       if a.type ~= "create" then
         return
       end
@@ -10,9 +10,18 @@ vim.api.nvim_create_autocmd({ "User" }, {
       local uri = string.sub(a.url, string.len(prefix) + 1)
       local file_extension = vim.fn.fnamemodify(uri, ":e")
       local template_file =
-        string.format("~/.vim/templates/skeleton.%s", file_extension)
+          string.format("~/.vim/templates/skeleton.%s", file_extension)
       -- expand home directory and such
       template_file = vim.fn.expand(template_file)
+      if vim.fn.filereadable(template_file) == 0 then
+        snack.notify(
+          string.format("Template file not found: %s", template_file)
+        )
+        return
+      end
+      -- without using vim.fn:
+      -- local tfile, err = io.open(template_file, "r")
+      -- local content = tfile:read("*a")
       local lines = vim.fn.readfile(template_file)
       local content = table.concat(lines, "\n")
       content = vim.fn.substitute(
@@ -24,14 +33,13 @@ vim.api.nvim_create_autocmd({ "User" }, {
         "\\[:VIM_EVAL:\\]\\(.\\{-}\\)\\[:END_EVAL:\\]",
         -- see :help sub-replace-expression to understand \=
         "\\=eval(submatch(1))",
-        -- function(match)
-        --   eval = vim.fn.eval(match(1))
-        --   snack.notify(vim.inspect(eval))
-        --   return
-        -- end,
         "ge"
       )
       vim.fn.writefile(vim.split(content, "\n"), uri)
+      -- without using vim.fn:
+      -- urifile, err = io.open(uri, "w")
+      -- urifile:write(content)
+      -- urifile:close()
     end
   end,
 })

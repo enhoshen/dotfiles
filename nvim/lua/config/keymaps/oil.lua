@@ -8,4 +8,4 @@ vim.keymap.set(
 )
 vim.keymap.set("n", "<leader>fE", function()
   require("oil").open(vim.fn.getcwd())
-end, { desc = "Toggle Oil on parent directory" })
+end, { desc = "Toggle Oil on working directory" })
