@@ -454,6 +454,100 @@
                 },
                 "name": "Tile Right",
                 "icon": "text_select_jump_to_end",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 60
+              },
+              {
+                "type": "macro",
+                "name": "BottomRight",
+                "icon": "position_bottom_right",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "macro": [
+                    {
+                      "type": "keyDown",
+                      "key": "MetaLeft",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "ArrowRight",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ArrowRight",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "ArrowDown",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ArrowDown",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "MetaLeft",
+                      "delay": 10
+                    }
+                  ],
+                  "delayed": true
+                },
+                "angle": 105
+              },
+              {
+                "type": "macro",
+                "name": "BottomLeft",
+                "icon": "position_bottom_left",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "macro": [
+                    {
+                      "type": "keyDown",
+                      "key": "MetaLeft",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "ArrowLeft",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ArrowLeft",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "ArrowDown",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ArrowDown",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "MetaLeft",
+                      "delay": 10
+                    }
+                  ],
+                  "delayed": true
+                }
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "MetaLeft+ArrowLeft",
+                  "delayed": true
+                },
+                "name": "Tile Left",
+                "icon": "text_select_jump_to_beginning",
                 "iconTheme": "material-symbols-rounded"
               },
               {
@@ -464,16 +558,6 @@
                 },
                 "name": "Close Window",
                 "icon": "cancel_presentation",
-                "iconTheme": "material-symbols-rounded"
-              },
-              {
-                "type": "hotkey",
-                "data": {
-                  "hotkey": "MetaLeft+ArrowLeft",
-                  "delayed": true
-                },
-                "name": "Tile Left",
-                "icon": "text_select_jump_to_beginning",
                 "iconTheme": "material-symbols-rounded"
               }
             ],
