@@ -374,6 +374,16 @@
             "children": [
               {
                 "type": "hotkey",
+                "name": "Close Tab",
+                "icon": "close_small",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "ControlLeft+KeyW",
+                  "delayed": true
+                }
+              },
+              {
+                "type": "hotkey",
                 "name": "Next Tab",
                 "icon": "align_horizontal_right",
                 "iconTheme": "material-symbols-rounded",
@@ -419,7 +429,7 @@
               {
                 "type": "hotkey",
                 "name": "Previous Tab",
-                "icon": "align_horizontal_right",
+                "icon": "align_horizontal_left",
                 "iconTheme": "material-symbols-rounded",
                 "data": {
                   "hotkey": "ControlLeft+ShiftLeft+Tab",
@@ -589,7 +599,7 @@
               },
               {
                 "type": "command",
-                "name": "Run Command",
+                "name": "Task Manager",
                 "icon": "monitor_heart",
                 "iconTheme": "material-symbols-rounded",
                 "data": {
