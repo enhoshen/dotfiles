@@ -160,5 +160,10 @@ compress() {
     q=80
   fi
   mkdir -p compressed
-  for i in $(ls *${ext}); do ffmpeg -i $i -q:v $q -y compressed/$(basename $i .${ext}).webp; done;
+  # internal field separator to newline, dealing with filename containing
+  # spaces
+  IFS=$'\n'
+  for i in $(ls *${ext}); do
+    out=$(basename "$i" .${ext})
+    ffmpeg -i "$i" -q:v $q -y compressed/"$out".webp; done;
 }

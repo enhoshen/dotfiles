@@ -1,0 +1,782 @@
+{
+  "menus": [
+    {
+      "shortcut": "",
+      "shortcutID": "example-menu",
+      "centered": false,
+      "root": {
+        "type": "submenu",
+        "name": "Example Menu",
+        "icon": "award_star",
+        "iconTheme": "material-symbols-rounded",
+        "children": [
+          {
+            "type": "submenu",
+            "name": "Apps",
+            "icon": "apps",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "start \"\" \"https://kando.menu\""
+                },
+                "name": "Web Browser",
+                "icon": "globe",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "start \"\" mailto:"
+                },
+                "name": "E-Mail",
+                "icon": "mail",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "mspaint"
+                },
+                "name": "Paint",
+                "icon": "brush",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "start \"\" explorer"
+                },
+                "name": "File Browser",
+                "icon": "folder_shared",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "start \"\" powershell"
+                },
+                "name": "Terminal",
+                "icon": "terminal",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ]
+          },
+          {
+            "type": "submenu",
+            "name": "Web Links",
+            "icon": "public",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://www.google.com"
+                },
+                "name": "Google",
+                "icon": "google",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://github.com/kando-menu/kando"
+                },
+                "name": "Kando on GitHub",
+                "icon": "github",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://ko-fi.com/schneegans"
+                },
+                "name": "Kando on Ko-fi",
+                "icon": "kofi",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://www.youtube.com/@simonschneegans"
+                },
+                "name": "Kando on YouTube",
+                "icon": "youtube",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://discord.gg/hZwbVSDkhy"
+                },
+                "name": "Kando on Discord",
+                "icon": "discord",
+                "iconTheme": "simple-icons"
+              }
+            ]
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "ControlLeft+MetaLeft+ArrowRight",
+              "delayed": false
+            },
+            "name": "Next Workspace",
+            "icon": "arrow_forward",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "submenu",
+            "name": "Clipboard",
+            "icon": "assignment",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "ControlLeft+KeyV",
+                  "delayed": true
+                },
+                "name": "Paste",
+                "icon": "content_paste_go",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 90
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "ControlLeft+KeyC",
+                  "delayed": true
+                },
+                "name": "Copy",
+                "icon": "content_copy",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "ControlLeft+KeyX",
+                  "delayed": true
+                },
+                "name": "Cut",
+                "icon": "cut",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ]
+          },
+          {
+            "type": "submenu",
+            "name": "Audio",
+            "icon": "play_circle",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "MediaTrackNext",
+                  "delayed": false
+                },
+                "name": "Next Track",
+                "icon": "skip_next",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 90
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "MediaPlayPause",
+                  "delayed": false
+                },
+                "name": "Play / Pause",
+                "icon": "play_pause",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "AudioVolumeMute",
+                  "delayed": false
+                },
+                "name": "Mute",
+                "icon": "music_off",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "MediaTrackPrevious",
+                  "delayed": false
+                },
+                "name": "Previous Track",
+                "icon": "skip_previous",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 270
+              }
+            ]
+          },
+          {
+            "type": "submenu",
+            "name": "Windows",
+            "icon": "select_window",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "MetaLeft+ArrowUp",
+                  "delayed": true
+                },
+                "name": "Toggle Maximize",
+                "icon": "open_in_full",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 0
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "MetaLeft+ArrowRight",
+                  "delayed": true
+                },
+                "name": "Tile Right",
+                "icon": "text_select_jump_to_end",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 90
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "AltLeft+F4",
+                  "delayed": true
+                },
+                "name": "Close Window",
+                "icon": "cancel_presentation",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "MetaLeft+ArrowLeft",
+                  "delayed": true
+                },
+                "name": "Tile Left",
+                "icon": "text_select_jump_to_beginning",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 270
+              }
+            ]
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "ControlLeft+MetaLeft+ArrowLeft",
+              "delayed": false
+            },
+            "name": "Previous Workspace",
+            "icon": "arrow_back",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "submenu",
+            "name": "Bookmarks",
+            "icon": "folder_special",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "start \"\" %USERPROFILE%\\Downloads"
+                },
+                "name": "Downloads",
+                "icon": "download",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "powershell -Command \"Start-Process explorer.exe ([System.Environment]::GetFolderPath('MyVideos'))\"",
+                  "detached": false
+                },
+                "name": "Videos",
+                "icon": "video_camera_front",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "powershell -Command \"Start-Process explorer.exe ([System.Environment]::GetFolderPath('MyPictures'))\"",
+                  "detached": false
+                },
+                "name": "Pictures",
+                "icon": "imagesmode",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "powershell -Command \"Start-Process explorer.exe ([System.Environment]::GetFolderPath('MyDocuments'))\"",
+                  "detached": false
+                },
+                "name": "Documents",
+                "icon": "text_ad",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "powershell -Command \"Start-Process explorer.exe ([System.Environment]::GetFolderPath('Desktop'))\"",
+                  "detached": false
+                },
+                "name": "Desktop",
+                "icon": "desktop_windows",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "start \"\" %USERPROFILE%"
+                },
+                "name": "Home",
+                "icon": "home",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "powershell -Command \"Start-Process explorer.exe ([System.Environment]::GetFolderPath('MyMusic'))\"",
+                  "detached": false
+                },
+                "name": "Music",
+                "icon": "music_note",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "shortcut": "Control+F1",
+      "shortcutID": "example-menu",
+      "centered": false,
+      "root": {
+        "type": "submenu",
+        "name": "Menu",
+        "icon": "award_star",
+        "iconTheme": "material-symbols-rounded",
+        "children": [
+          {
+            "type": "submenu",
+            "name": "Navigation",
+            "icon": "desktop_windows",
+            "iconTheme": "material-symbols-rounded",
+            "data": {},
+            "children": [
+              {
+                "type": "hotkey",
+                "name": "Close Tab",
+                "icon": "close_small",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "ControlLeft+KeyW",
+                  "delayed": true
+                }
+              },
+              {
+                "type": "hotkey",
+                "name": "Next Tab",
+                "icon": "align_horizontal_right",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "ControlLeft+Tab",
+                  "delayed": true
+                },
+                "angle": 30
+              },
+              {
+                "type": "hotkey",
+                "name": "Next WorkSpace",
+                "icon": "left_panel_open",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "ControlLeft+MetaLeft+ArrowRight",
+                  "delayed": true
+                },
+                "angle": 150
+              },
+              {
+                "type": "hotkey",
+                "name": "Previous Workspace",
+                "icon": "left_panel_close",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "ControlLeft+MetaLeft+ArrowLeft",
+                  "delayed": true
+                },
+                "angle": 210
+              },
+              {
+                "type": "hotkey",
+                "name": "WinTab",
+                "icon": "tab",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "MetaLeft+Tab",
+                  "delayed": false
+                },
+                "angle": 270
+              },
+              {
+                "type": "hotkey",
+                "name": "Previous Tab",
+                "icon": "align_horizontal_left",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "ControlLeft+ShiftLeft+Tab",
+                  "delayed": true
+                },
+                "angle": 330
+              }
+            ],
+            "angle": 270
+          },
+          {
+            "type": "submenu",
+            "name": "Windows",
+            "icon": "select_window",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "MetaLeft+ArrowUp",
+                  "delayed": true
+                },
+                "name": "Toggle Maximize",
+                "icon": "open_in_full",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "MetaLeft+ArrowRight",
+                  "delayed": true
+                },
+                "name": "Tile Right",
+                "icon": "text_select_jump_to_end",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 60
+              },
+              {
+                "type": "macro",
+                "name": "BottomRight",
+                "icon": "position_bottom_right",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "macro": [
+                    {
+                      "type": "keyDown",
+                      "key": "MetaLeft",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "ArrowRight",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ArrowRight",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "ArrowDown",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ArrowDown",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "MetaLeft",
+                      "delay": 10
+                    }
+                  ],
+                  "delayed": true
+                },
+                "angle": 105
+              },
+              {
+                "type": "macro",
+                "name": "BottomLeft",
+                "icon": "position_bottom_left",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "macro": [
+                    {
+                      "type": "keyDown",
+                      "key": "MetaLeft",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "ArrowLeft",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ArrowLeft",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "ArrowDown",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ArrowDown",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "MetaLeft",
+                      "delay": 10
+                    }
+                  ],
+                  "delayed": true
+                }
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "MetaLeft+ArrowLeft",
+                  "delayed": true
+                },
+                "name": "Tile Left",
+                "icon": "text_select_jump_to_beginning",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "AltLeft+F4",
+                  "delayed": true
+                },
+                "name": "Close Window",
+                "icon": "cancel_presentation",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ],
+            "angle": 345
+          },
+          {
+            "type": "submenu",
+            "name": "Apps",
+            "icon": "apps",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "submenu",
+                "name": "Link",
+                "icon": "🔗",
+                "iconTheme": "emoji",
+                "data": {},
+                "children": [
+                  {
+                    "type": "uri",
+                    "name": "Open URI",
+                    "icon": "youtube",
+                    "iconTheme": "simple-icons",
+                    "data": {
+                      "uri": "https://www.youtube.com/"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "command",
+                "name": "Task Manager",
+                "icon": "monitor_heart",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "command": "start \"\" taskmgr",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                }
+              },
+              {
+                "type": "hotkey",
+                "name": "Incog",
+                "icon": "shield_person",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "ControlLeft+ShiftLeft+KeyN",
+                  "delayed": true
+                }
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "start \"\" \"https://google.com\""
+                },
+                "name": "Web Browser",
+                "icon": "uri-item.svg",
+                "iconTheme": "kando"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "start \"\" explorer"
+                },
+                "name": "File Browser",
+                "icon": "folder_shared",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ],
+            "angle": 375
+          },
+          {
+            "type": "submenu",
+            "name": "Clipboard",
+            "icon": "assignment",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "Delete",
+                  "delayed": true
+                },
+                "name": "Delete",
+                "icon": "delete",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 30
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "ControlLeft+KeyX",
+                  "delayed": true
+                },
+                "name": "Cut",
+                "icon": "cut",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "ControlLeft+KeyV",
+                  "delayed": true
+                },
+                "name": "Paste",
+                "icon": "content_paste_go",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "ControlLeft+KeyC",
+                  "delayed": true
+                },
+                "name": "Copy",
+                "icon": "content_copy",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "Backspace",
+                  "delayed": true
+                },
+                "name": "Backspace",
+                "icon": "backspace",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ],
+            "angle": 450
+          },
+          {
+            "type": "submenu",
+            "name": "Media",
+            "icon": "play_circle",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "ArrowRight",
+                  "delayed": false
+                },
+                "name": "Right",
+                "icon": "arrow_right_alt",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "hotkey",
+                "name": "FullScreen",
+                "icon": "fullscreen",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "F11",
+                  "delayed": true
+                }
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "MediaPlayPause",
+                  "delayed": false
+                },
+                "name": "Play / Pause",
+                "icon": "play_pause",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "hotkey",
+                "name": "Refresh",
+                "icon": "refresh",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "F5",
+                  "delayed": true
+                }
+              },
+              {
+                "type": "hotkey",
+                "name": "Left",
+                "icon": "arrow_left_alt",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "ArrowLeft",
+                  "delayed": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "conditions": {}
+    }
+  ],
+  "collections": [
+    {
+      "name": "Favorites",
+      "icon": "favorite",
+      "iconTheme": "material-symbols-rounded",
+      "tags": [
+        "favs"
+      ]
+    },
+    {
+      "name": "New Collection",
+      "icon": "sell",
+      "iconTheme": "material-symbols-rounded",
+      "tags": []
+    }
+  ]
+}
