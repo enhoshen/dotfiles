@@ -16,20 +16,12 @@ vim.keymap.set("n", "<leader>hu", function()
   harpoon.ui:toggle_quick_menu(harpoon:list())
 end, { desc = "Harpoon toggle list UI" })
 
---
-vim.keymap.set("n", "<leader>h1", function()
-  harpoon:list():select(1)
-end, { desc = "Harpoon select 1st item" })
-vim.keymap.set("n", "<leader>h2", function()
-  harpoon:list():select(2)
-end, { desc = "Harpoon select 2nd item" })
-vim.keymap.set("n", "<leader>h3", function()
-  harpoon:list():select(3)
-end, { desc = "Harpoon select 3rd item" })
-vim.keymap.set("n", "<leader>h4", function()
-  harpoon:list():select(4)
-end, { desc = "Harpoon select 4th item" })
---
+-- assign 1-9 to harpoon select
+for i = 1, 9 do
+  vim.keymap.set("n", "<leader>h" .. i, function()
+    harpoon:list():select(i)
+  end, { desc = "Harpoon select " .. i .. "st item" })
+end
 -- Toggle previous & next buffers stored within Harpoon list
 vim.keymap.set("n", "<leader>hn", function()
   harpoon:list():prev()
