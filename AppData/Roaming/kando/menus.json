@@ -395,6 +395,17 @@
               },
               {
                 "type": "hotkey",
+                "name": "Forward",
+                "icon": "chevron_right",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "AltLeft+ArrowRight",
+                  "delayed": true
+                },
+                "angle": 60
+              },
+              {
+                "type": "hotkey",
                 "name": "Next WorkSpace",
                 "icon": "left_panel_open",
                 "iconTheme": "material-symbols-rounded",
@@ -425,6 +436,16 @@
                   "delayed": false
                 },
                 "angle": 270
+              },
+              {
+                "type": "hotkey",
+                "name": "Back",
+                "icon": "keyboard_arrow_left",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "AltLeft+ArrowLeft",
+                  "delayed": true
+                }
               },
               {
                 "type": "hotkey",
@@ -610,6 +631,24 @@
                 }
               },
               {
+                "type": "submenu",
+                "name": "Menus",
+                "icon": "menu",
+                "iconTheme": "material-symbols-rounded",
+                "data": {},
+                "children": [
+                  {
+                    "type": "redirect",
+                    "name": "Timestamp",
+                    "icon": "apps",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "menu": "Timestamp"
+                    }
+                  }
+                ]
+              },
+              {
                 "type": "hotkey",
                 "name": "Incog",
                 "icon": "shield_person",
@@ -649,13 +688,23 @@
               {
                 "type": "hotkey",
                 "data": {
+                  "hotkey": "Backspace",
+                  "delayed": true
+                },
+                "name": "Backspace",
+                "icon": "backspace",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "hotkey",
+                "data": {
                   "hotkey": "Delete",
                   "delayed": true
                 },
                 "name": "Delete",
                 "icon": "delete",
                 "iconTheme": "material-symbols-rounded",
-                "angle": 30
+                "angle": 15
               },
               {
                 "type": "hotkey",
@@ -689,13 +738,13 @@
               },
               {
                 "type": "hotkey",
+                "name": "Screenshot",
+                "icon": "screenshot_region",
+                "iconTheme": "material-symbols-rounded",
                 "data": {
-                  "hotkey": "Backspace",
+                  "hotkey": "MetaLeft+ShiftLeft+KeyS",
                   "delayed": true
-                },
-                "name": "Backspace",
-                "icon": "backspace",
-                "iconTheme": "material-symbols-rounded"
+                }
               }
             ],
             "angle": 450
@@ -760,23 +809,26 @@
           }
         ]
       },
-      "conditions": {}
-    }
-  ],
-  "collections": [
-    {
-      "name": "Favorites",
-      "icon": "favorite",
-      "iconTheme": "material-symbols-rounded",
-      "tags": [
-        "favs"
-      ]
+      "conditions": {},
+      "tags": []
     },
     {
-      "name": "New Collection",
-      "icon": "sell",
-      "iconTheme": "material-symbols-rounded",
-      "tags": []
+      "shortcut": "",
+      "shortcutID": "",
+      "centered": false,
+      "anchored": false,
+      "hoverMode": false,
+      "tags": [
+        "favs"
+      ],
+      "root": {
+        "type": "submenu",
+        "name": "Timestamp",
+        "icon": "apps",
+        "iconTheme": "material-symbols-rounded",
+        "children": []
+      }
     }
-  ]
+  ],
+  "collections": []
 }
