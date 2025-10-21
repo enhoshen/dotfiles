@@ -36,3 +36,17 @@ vim.keymap.set("n", "<Leader>tl", function()
     vim.o.showtabline = 0
   end
 end, { desc = "Toggle show tabline" })
+
+-- toggle enter mapping in terminal mode
+local enter_leave_term_flag = true
+vim.keymap.set("n", "<Leader>te", function()
+  -- Commands defined in commands module
+  if enter_leave_term_flag then
+    vim.keymap.del("t", "<CR>")
+  else
+    vim.keymap.set("t", "<CR>", "<CR><C-\\><C-N>", {
+      desc = "Leave terminal mode after repeated enter",
+    })
+  end
+  enter_leave_term_flag = not enter_leave_term_flag
+end, { desc = "Toggle enter mapping in terminal mode" })
