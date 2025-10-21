@@ -30,17 +30,26 @@ vim.keymap.set("n", "<Leader>dq", dap.terminate, { desc = "dap terminate" })
 vim.keymap.set({ "n", "v" }, "<Leader>dh", function()
   require("dap.ui.widgets").hover()
 end, { desc = "dap widget preview" })
+
 vim.keymap.set({ "n", "v" }, "<Leader>dp", function()
   require("dap.ui.widgets").preview()
 end, { desc = "dap widget preview" })
+
 vim.keymap.set("n", "<Leader>df", function()
   local widgets = require("dap.ui.widgets")
   widgets.centered_float(widgets.frames)
 end, { desc = "dap widget frames" })
+
+vim.keymap.set("n", "<Leader>dw", function()
+  local ui = require("dapui")
+  ui.float_element("breakpoints", { position = "center" })
+end, { desc = "dap breakpoints floating" })
+
 vim.keymap.set("n", "<Leader>dt", function()
   local widgets = require("dap.ui.widgets")
   widgets.centered_float(widgets.threads)
 end, { desc = "dap widget threads " })
+
 vim.keymap.set("n", "<Leader>db", function()
   dap.list_breakpoints()
 end, { desc = "dap list breakpoints in quicklist" })
