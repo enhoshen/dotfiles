@@ -11,3 +11,6 @@ vim.keymap.set("n", "<leader>fh", ":History<CR>", {
 vim.keymap.set("n", "<leader>f:", ":History:<CR>", {
   desc = "Find history commands with fzf-vim",
 })
+vim.keymap.set("t", "<CR>", "<CR><C-\\><C-N>", {
+  desc = "Leave terminal mode after enter",
+})
