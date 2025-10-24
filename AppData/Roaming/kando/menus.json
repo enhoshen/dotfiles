@@ -639,8 +639,17 @@
                 "children": [
                   {
                     "type": "redirect",
+                    "name": "FancyZone",
+                    "icon": "window",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "menu": "FancyZone"
+                    }
+                  },
+                  {
+                    "type": "redirect",
                     "name": "Timestamp",
-                    "icon": "apps",
+                    "icon": "timer",
                     "iconTheme": "material-symbols-rounded",
                     "data": {
                       "menu": "Timestamp"
@@ -824,9 +833,55 @@
       "root": {
         "type": "submenu",
         "name": "Timestamp",
-        "icon": "apps",
+        "icon": "timer",
         "iconTheme": "material-symbols-rounded",
         "children": []
+      }
+    },
+    {
+      "shortcut": "",
+      "shortcutID": "",
+      "centered": false,
+      "anchored": false,
+      "hoverMode": false,
+      "tags": [],
+      "root": {
+        "type": "submenu",
+        "name": "FancyZone",
+        "icon": "window",
+        "iconTheme": "material-symbols-rounded",
+        "children": [
+          {
+            "type": "hotkey",
+            "name": "1",
+            "icon": "1️⃣",
+            "iconTheme": "emoji",
+            "data": {
+              "hotkey": "ControlLeft+MetaLeft+AltLeft+Digit1",
+              "delayed": true
+            }
+          },
+          {
+            "type": "hotkey",
+            "name": "2",
+            "icon": "2️⃣",
+            "iconTheme": "emoji",
+            "data": {
+              "hotkey": "ControlLeft+MetaLeft+AltLeft+Digit1",
+              "delayed": true
+            }
+          },
+          {
+            "type": "hotkey",
+            "name": "3",
+            "icon": "3️⃣",
+            "iconTheme": "emoji",
+            "data": {
+              "hotkey": "ControlLeft+MetaLeft+AltLeft+Digit3",
+              "delayed": true
+            }
+          }
+        ]
       }
     }
   ],

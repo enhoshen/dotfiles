@@ -143,7 +143,7 @@
             95
           ]
         ],
-        "show-spacing": true,
+        "show-spacing": false,
         "spacing": 1,
         "sensitivity-radius": 0
       }
@@ -203,6 +203,30 @@
         "show-spacing": false,
         "spacing": -10,
         "sensitivity-radius": 0
+      }
+    },
+    {
+      "uuid": "{58214D7E-D4EE-4559-9B04-1E7DB1E4CEAB}",
+      "name": "Video",
+      "type": "canvas",
+      "info": {
+        "ref-width": 3840,
+        "ref-height": 2130,
+        "zones": [
+          {
+            "X": 100,
+            "Y": 100,
+            "width": 3402,
+            "height": 1882
+          },
+          {
+            "X": 2250,
+            "Y": 1241,
+            "width": 1536,
+            "height": 852
+          }
+        ],
+        "sensitivity-radius": 20
       }
     }
   ]
