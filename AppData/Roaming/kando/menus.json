@@ -417,6 +417,16 @@
               },
               {
                 "type": "hotkey",
+                "name": "Incog",
+                "icon": "shield_person",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "ControlLeft+ShiftLeft+KeyN",
+                  "delayed": true
+                }
+              },
+              {
+                "type": "hotkey",
                 "name": "Previous Workspace",
                 "icon": "left_panel_close",
                 "iconTheme": "material-symbols-rounded",
@@ -468,118 +478,160 @@
             "iconTheme": "material-symbols-rounded",
             "children": [
               {
-                "type": "hotkey",
-                "data": {
-                  "hotkey": "MetaLeft+ArrowUp",
-                  "delayed": true
-                },
-                "name": "Toggle Maximize",
-                "icon": "open_in_full",
-                "iconTheme": "material-symbols-rounded"
-              },
-              {
-                "type": "hotkey",
-                "data": {
-                  "hotkey": "MetaLeft+ArrowRight",
-                  "delayed": true
-                },
-                "name": "Tile Right",
-                "icon": "text_select_jump_to_end",
-                "iconTheme": "material-symbols-rounded",
-                "angle": 60
-              },
-              {
-                "type": "macro",
-                "name": "BottomRight",
-                "icon": "position_bottom_right",
-                "iconTheme": "material-symbols-rounded",
-                "data": {
-                  "macro": [
-                    {
-                      "type": "keyDown",
-                      "key": "MetaLeft",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "ArrowRight",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "ArrowRight",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "ArrowDown",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "ArrowDown",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "MetaLeft",
-                      "delay": 10
+                "type": "submenu",
+                "name": "Magnifier",
+                "icon": "🔍",
+                "iconTheme": "emoji",
+                "data": {},
+                "children": [
+                  {
+                    "type": "hotkey",
+                    "name": "Zoom in",
+                    "icon": "➕",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "MetaLeft+Equal",
+                      "delayed": true
                     }
-                  ],
-                  "delayed": true
-                },
-                "angle": 105
-              },
-              {
-                "type": "macro",
-                "name": "BottomLeft",
-                "icon": "position_bottom_left",
-                "iconTheme": "material-symbols-rounded",
-                "data": {
-                  "macro": [
-                    {
-                      "type": "keyDown",
-                      "key": "MetaLeft",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "ArrowLeft",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "ArrowLeft",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "ArrowDown",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "ArrowDown",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "MetaLeft",
-                      "delay": 10
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Zoom out",
+                    "icon": "➖",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "MetaLeft+Minus",
+                      "delayed": true
                     }
-                  ],
-                  "delayed": true
-                }
+                  }
+                ]
               },
               {
-                "type": "hotkey",
-                "data": {
-                  "hotkey": "MetaLeft+ArrowLeft",
-                  "delayed": true
-                },
-                "name": "Tile Left",
-                "icon": "text_select_jump_to_beginning",
-                "iconTheme": "material-symbols-rounded"
+                "type": "submenu",
+                "name": "Position",
+                "icon": "select_window",
+                "iconTheme": "material-symbols-rounded",
+                "data": {},
+                "children": [
+                  {
+                    "type": "hotkey",
+                    "data": {
+                      "hotkey": "MetaLeft+ArrowUp",
+                      "delayed": true
+                    },
+                    "name": "Toggle Maximize",
+                    "icon": "open_in_full",
+                    "iconTheme": "material-symbols-rounded",
+                    "angle": 0
+                  },
+                  {
+                    "type": "hotkey",
+                    "data": {
+                      "hotkey": "MetaLeft+ArrowRight",
+                      "delayed": true
+                    },
+                    "name": "Tile Right",
+                    "icon": "text_select_jump_to_end",
+                    "iconTheme": "material-symbols-rounded",
+                    "angle": 90
+                  },
+                  {
+                    "type": "macro",
+                    "name": "BottomRight",
+                    "icon": "position_bottom_right",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "macro": [
+                        {
+                          "type": "keyDown",
+                          "key": "MetaLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "ArrowRight",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "ArrowRight",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "ArrowDown",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "ArrowDown",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "MetaLeft",
+                          "delay": 10
+                        }
+                      ],
+                      "delayed": true
+                    },
+                    "angle": 150
+                  },
+                  {
+                    "type": "macro",
+                    "name": "BottomLeft",
+                    "icon": "position_bottom_left",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "macro": [
+                        {
+                          "type": "keyDown",
+                          "key": "MetaLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "ArrowLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "ArrowLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "ArrowDown",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "ArrowDown",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "MetaLeft",
+                          "delay": 10
+                        }
+                      ],
+                      "delayed": true
+                    },
+                    "angle": 210
+                  },
+                  {
+                    "type": "hotkey",
+                    "data": {
+                      "hotkey": "MetaLeft+ArrowLeft",
+                      "delayed": true
+                    },
+                    "name": "Tile Left",
+                    "icon": "text_select_jump_to_beginning",
+                    "iconTheme": "material-symbols-rounded",
+                    "angle": 270
+                  }
+                ],
+                "angle": 225
               },
               {
                 "type": "hotkey",
@@ -658,16 +710,6 @@
                 ]
               },
               {
-                "type": "hotkey",
-                "name": "Incog",
-                "icon": "shield_person",
-                "iconTheme": "material-symbols-rounded",
-                "data": {
-                  "hotkey": "ControlLeft+ShiftLeft+KeyN",
-                  "delayed": true
-                }
-              },
-              {
                 "type": "command",
                 "data": {
                   "command": "start \"\" \"https://google.com\""
@@ -696,6 +738,17 @@
             "children": [
               {
                 "type": "hotkey",
+                "name": "Screenshot",
+                "icon": "screenshot_region",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "MetaLeft+ShiftLeft+KeyS",
+                  "delayed": true
+                },
+                "angle": 225
+              },
+              {
+                "type": "hotkey",
                 "data": {
                   "hotkey": "Backspace",
                   "delayed": true
@@ -713,7 +766,7 @@
                 "name": "Delete",
                 "icon": "delete",
                 "iconTheme": "material-symbols-rounded",
-                "angle": 15
+                "angle": 360
               },
               {
                 "type": "hotkey",
@@ -747,12 +800,12 @@
               },
               {
                 "type": "hotkey",
-                "name": "Screenshot",
-                "icon": "screenshot_region",
+                "name": "Text Extract",
+                "icon": "insert_text",
                 "iconTheme": "material-symbols-rounded",
                 "data": {
-                  "hotkey": "MetaLeft+ShiftLeft+KeyS",
-                  "delayed": true
+                  "hotkey": "MetaLeft+ShiftLeft+KeyT",
+                  "delayed": false
                 }
               }
             ],
@@ -827,15 +880,23 @@
       "centered": false,
       "anchored": false,
       "hoverMode": false,
-      "tags": [
-        "favs"
-      ],
+      "tags": [],
       "root": {
         "type": "submenu",
         "name": "Timestamp",
         "icon": "timer",
         "iconTheme": "material-symbols-rounded",
-        "children": []
+        "children": [
+          {
+            "type": "text",
+            "name": "Paste Text",
+            "icon": "text-item.svg",
+            "iconTheme": "kando",
+            "data": {
+              "text": "* []()"
+            }
+          }
+        ]
       }
     },
     {
