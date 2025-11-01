@@ -374,11 +374,64 @@
             "children": [
               {
                 "type": "hotkey",
-                "name": "Close Tab",
-                "icon": "close_small",
+                "name": "WinTab",
+                "icon": "tab",
                 "iconTheme": "material-symbols-rounded",
                 "data": {
-                  "hotkey": "ControlLeft+KeyW",
+                  "hotkey": "MetaLeft+Tab",
+                  "delayed": false
+                },
+                "angle": 270
+              },
+              {
+                "type": "hotkey",
+                "name": "AltTab",
+                "icon": "thumbnail_bar",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "AltLeft+Tab",
+                  "delayed": true
+                }
+              },
+              {
+                "type": "hotkey",
+                "name": "Next WorkSpace",
+                "icon": "left_panel_open",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "ControlLeft+MetaLeft+ArrowRight",
+                  "delayed": true
+                },
+                "angle": 510
+              },
+              {
+                "type": "hotkey",
+                "name": "Previous Workspace",
+                "icon": "left_panel_close",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "ControlLeft+MetaLeft+ArrowLeft",
+                  "delayed": true
+                },
+                "angle": 570
+              }
+            ],
+            "angle": 270
+          },
+          {
+            "type": "submenu",
+            "name": "Browser",
+            "icon": "globe",
+            "iconTheme": "material-symbols-rounded",
+            "data": {},
+            "children": [
+              {
+                "type": "hotkey",
+                "name": "Forward",
+                "icon": "chevron_right",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "AltLeft+ArrowRight",
                   "delayed": true
                 }
               },
@@ -390,30 +443,17 @@
                 "data": {
                   "hotkey": "ControlLeft+Tab",
                   "delayed": true
-                },
-                "angle": 30
+                }
               },
               {
                 "type": "hotkey",
-                "name": "Forward",
-                "icon": "chevron_right",
+                "name": "Repoen",
+                "icon": "reopen_window",
                 "iconTheme": "material-symbols-rounded",
                 "data": {
-                  "hotkey": "AltLeft+ArrowRight",
+                  "hotkey": "ControlLeft+ShiftLeft+KeyT",
                   "delayed": true
-                },
-                "angle": 60
-              },
-              {
-                "type": "hotkey",
-                "name": "Next WorkSpace",
-                "icon": "left_panel_open",
-                "iconTheme": "material-symbols-rounded",
-                "data": {
-                  "hotkey": "ControlLeft+MetaLeft+ArrowRight",
-                  "delayed": true
-                },
-                "angle": 150
+                }
               },
               {
                 "type": "hotkey",
@@ -427,33 +467,21 @@
               },
               {
                 "type": "hotkey",
-                "name": "Previous Workspace",
-                "icon": "left_panel_close",
+                "name": "Close Tab",
+                "icon": "close_small",
                 "iconTheme": "material-symbols-rounded",
                 "data": {
-                  "hotkey": "ControlLeft+MetaLeft+ArrowLeft",
+                  "hotkey": "ControlLeft+KeyW",
                   "delayed": true
-                },
-                "angle": 210
+                }
               },
               {
                 "type": "hotkey",
-                "name": "WinTab",
-                "icon": "tab",
+                "name": "Refresh",
+                "icon": "refresh",
                 "iconTheme": "material-symbols-rounded",
                 "data": {
-                  "hotkey": "MetaLeft+Tab",
-                  "delayed": false
-                },
-                "angle": 270
-              },
-              {
-                "type": "hotkey",
-                "name": "Back",
-                "icon": "keyboard_arrow_left",
-                "iconTheme": "material-symbols-rounded",
-                "data": {
-                  "hotkey": "AltLeft+ArrowLeft",
+                  "hotkey": "F5",
                   "delayed": true
                 }
               },
@@ -465,11 +493,20 @@
                 "data": {
                   "hotkey": "ControlLeft+ShiftLeft+Tab",
                   "delayed": true
-                },
-                "angle": 330
+                }
+              },
+              {
+                "type": "hotkey",
+                "name": "Back",
+                "icon": "keyboard_arrow_left",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "AltLeft+ArrowLeft",
+                  "delayed": true
+                }
               }
             ],
-            "angle": 270
+            "angle": 307.5
           },
           {
             "type": "submenu",
@@ -849,16 +886,6 @@
               },
               {
                 "type": "hotkey",
-                "name": "Refresh",
-                "icon": "refresh",
-                "iconTheme": "material-symbols-rounded",
-                "data": {
-                  "hotkey": "F5",
-                  "delayed": true
-                }
-              },
-              {
-                "type": "hotkey",
                 "name": "Left",
                 "icon": "arrow_left_alt",
                 "iconTheme": "material-symbols-rounded",
@@ -867,7 +894,8 @@
                   "delayed": true
                 }
               }
-            ]
+            ],
+            "angle": 540
           }
         ]
       },
