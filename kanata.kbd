@@ -1,0 +1,117 @@
+(defcfg
+  ;; we are only mapping the keys we want to use for mouse keys
+  process-unmapped-keys yes
+
+  ;; you may wish to only capture a trackpoint and keyboard
+  ;; but not e.g. a trackpad or external mouse
+  ;;linux-dev-names-include (
+  ;;                         "Lenovo TrackPoint Keyboard II"
+  ;;)
+  ;; optional, but useful with the trackpoint
+  ;;linux-use-trackpoint-property yes
+
+  mouse-movement-key mvmt
+)
+
+(defsrc)
+
+(defvirtualkeys
+  mouse (layer-while-held mouse-layer)
+)
+
+(defalias
+  mhld (hold-for-duration 750 mouse)
+
+  moff (on-press release-vkey mouse)
+
+  _ (multi
+     @moff
+     _
+  )
+
+  ;; mouse click extended time out for double tap
+  mdbt (hold-for-duration 500 mouse)
+  mbl (multi
+       mlft
+       @mdbt
+  )
+  mbm (multi
+       mmid
+       @mdbt
+  )
+  mbr (multi
+       mrgt
+       @mdbt
+  )
+  mup (movemouse-accel-up 1 1000 1 5)
+  mleft (movemouse-accel-left 1 1000 1 5)
+  mdown (movemouse-accel-down 1 1000 1 5)
+  mright (movemouse-accel-right 1 1000 1 5)
+
+  mwu (mwheel-up 50 120)
+  mwd (mwheel-down 50 120)
+  mwl (mwheel-left 50 120)
+  mwr (mwheel-right 50 120)
+)
+
+(defalias
+  to-mouse (layer-while-held mouse-layer)
+  to-arrow (layer-while-held arrow-layer)
+  to-wheel (layer-while-held wheel-layer)
+  to-media (layer-while-held media-layer)
+)
+
+(defchords layer-chord 300  
+  (mod) @to-arrow
+  (mod 1) @to-mouse
+  (mod 2) @to-wheel
+  (mod 3) @to-media
+)
+
+(deflayermap (base)
+  caps (chord layer-chord mod)
+  ;; remember to use tap-hold so they do their original job
+  ;; when not chording
+  q (tap-hold 100 200 q (chord layer-chord 1))
+  w (tap-hold 100 200 w (chord layer-chord 2))
+  e (tap-hold 100 200 e (chord layer-chord 3))
+  mvmt @mhld
+)
+
+(deflayermap (mouse-layer)
+  j @mleft
+  i @mup
+  l @mright
+  k @mdown
+
+  spc @mbl
+  u mmid
+  ; mrgt
+
+  mvmt @mhld
+)
+
+(deflayermap (wheel-layer)
+  j @mwl
+  i @mwu
+  l @mwr
+  k @mwd
+)
+
+(deflayermap (arrow-layer)
+  j left 
+  i up
+  l rght
+  k down
+  ;; just a fallback if caps is accidently tapped when
+  ;; kanata is active
+  spc caps
+)
+
+(deflayermap (media-layer)
+  i VolumeUp
+  k VolumeDown
+  j MediaTrackPrevious 
+  l MediaTrackNext
+  spc MediaPlayPause
+)

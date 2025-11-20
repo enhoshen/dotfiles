@@ -1,15 +1,17 @@
 md-png-compress() {
-  # under images folder, compress png to webp, replace all *png links
+  # under folder with images subfolder, compress png to webp, replace all *png links
   # to *.webp
   #
-  # - *.md
+  # - *.md <-
   # - images <-
   #     |- *.png
   #     |- compressed
+  cd images/
   compress png
   mv compressed/*.webp ./
   rm *.png
-  for i in ../*.md; do sed -i -e "s/png/webp/" $i; done
+  cd -
+  for i in *.md; do sed -i -e "s/png/webp/" $i; done
 }
 
 get-images-from-md() {
