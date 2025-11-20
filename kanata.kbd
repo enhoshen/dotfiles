@@ -43,11 +43,10 @@
        mrgt
        @mdbt
   )
-  mup (movemouse-accel-up 1 1000 1 5)
-  mleft (movemouse-accel-left 1 1000 1 5)
-  mdown (movemouse-accel-down 1 1000 1 5)
-  mright (movemouse-accel-right 1 1000 1 5)
-
+  mup (movemouse-accel-up 2 1000 1 10)
+  mleft (movemouse-accel-left 2 1000 1 10)
+  mdown (movemouse-accel-down 2 1000 1 10)
+  mright (movemouse-accel-right 2 1000 1 10)
   mwu (mwheel-up 50 120)
   mwd (mwheel-down 50 120)
   mwl (mwheel-left 50 120)
