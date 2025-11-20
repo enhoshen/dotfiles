@@ -55,27 +55,47 @@
 )
 
 (defalias
+  to-mod (layer-while-held mod-layer)
   to-mouse (layer-while-held mouse-layer)
-  to-arrow (layer-while-held arrow-layer)
   to-wheel (layer-while-held wheel-layer)
   to-media (layer-while-held media-layer)
 )
 
 (defchords layer-chord 300  
-  (mod) @to-arrow
-  (mod 1) @to-mouse
-  (mod 2) @to-wheel
-  (mod 3) @to-media
+  (1) @to-mouse
+  (2) @to-wheel
+  (3) @to-media
 )
 
 (deflayermap (base)
-  caps (chord layer-chord mod)
-  ;; remember to use tap-hold so they do their original job
-  ;; when not chording
-  q (tap-hold 100 200 q (chord layer-chord 1))
-  w (tap-hold 100 200 w (chord layer-chord 2))
-  e (tap-hold 100 200 e (chord layer-chord 3))
-  mvmt @mhld
+  caps @to-mod
+)
+
+;; remember to use tap-hold so they do their original job
+;; when not chording.
+;; q (tap-hold 100 200 q (chord layer-chord 1))
+;;  Now it is in mod-layer tap-hold is not needed
+;; in fact it doesn't even activate deeper layers
+;; when @to-mod is held
+(deflayermap (mod-layer)
+  q (chord layer-chord 1)
+  w (chord layer-chord 2)
+  e (chord layer-chord 3)
+
+  j left 
+  i up
+  l rght
+  k down
+  ;; just a fallback if caps is accidently tapped when
+  ;; kanata is inactive
+  spc caps
+)
+
+(deflayermap (arrow-layer)
+  j left 
+  i up
+  l rght
+  k down
 )
 
 (deflayermap (mouse-layer)
@@ -98,15 +118,6 @@
   k @mwd
 )
 
-(deflayermap (arrow-layer)
-  j left 
-  i up
-  l rght
-  k down
-  ;; just a fallback if caps is accidently tapped when
-  ;; kanata is active
-  spc caps
-)
 
 (deflayermap (media-layer)
   i VolumeUp
