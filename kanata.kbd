@@ -140,6 +140,11 @@
   (t! map-two @mwu i e)
   (t! map-two @mwr l f)
   (t! map-two @mwd k d)
+
+  (t! map-two home u w)
+  (t! map-two pgup y t)
+  (t! map-two end o r)
+  (t! map-two pgdn h g)
 )
 
 
