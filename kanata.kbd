@@ -150,10 +150,10 @@
 
 (deflayermap (media-layer)
   tab(chord layer-chord mod)
-  (t! map-two VolumeUp j s)
-  (t! map-two VolumeDown i e)
+  (t! map-two MediaTrackPrevious j s)
+  (t! map-two VolumeUp i e)
   (t! map-two MediaTrackNext l f)
-  (t! map-two MediaTrackPrevious k d)
+  (t! map-two VolumeDown k d)
   spc MediaPlayPause
 )
 
