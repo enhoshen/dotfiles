@@ -1,15 +1,6 @@
+;; from kanata/cfg_samples/automousekeys-only.kbd
 (defcfg
-  ;; we are only mapping the keys we want to use for mouse keys
   process-unmapped-keys yes
-
-  ;; you may wish to only capture a trackpoint and keyboard
-  ;; but not e.g. a trackpad or external mouse
-  ;;linux-dev-names-include (
-  ;;                         "Lenovo TrackPoint Keyboard II"
-  ;;)
-  ;; optional, but useful with the trackpoint
-  ;;linux-use-trackpoint-property yes
-
   mouse-movement-key mvmt
 )
 
@@ -43,6 +34,10 @@
        mrgt
        @mdbt
   )
+)
+;; end of kanata/cfg_samples/automousekeys-only.kbd
+
+(defalias
   mup (movemouse-accel-up 2 1000 1 10)
   mleft (movemouse-accel-left 2 1000 1 10)
   mdown (movemouse-accel-down 2 1000 1 10)
@@ -55,15 +50,52 @@
 
 (defalias
   to-mod (layer-while-held mod-layer)
-  to-mouse (layer-while-held mouse-layer)
-  to-wheel (layer-while-held wheel-layer)
-  to-media (layer-while-held media-layer)
+  hold-mouse (layer-while-held mouse-layer)
+  hold-wheel (layer-while-held wheel-layer)
+  hold-media (layer-while-held media-layer)
 )
 
+(deftemplate map-left (map)
+  j $map
+  s $map
+)
+(deftemplate map-up (map)
+  i $map
+  e $map
+)
+(deftemplate map-right (map)
+  l $map
+  f $map
+)
+(deftemplate map-down (map)
+  k $map
+  d $map
+)
+(deftemplate map-two (map key1 key2)
+  $key1 $map
+  $key2 $map
+)
+(deftemplate layer-alias-1 (key layer)
+  ($key) (layer-while-held $layer)
+  (mod $key) (layer-switch $layer)
+)
+(deftemplate layer-alias-2 (key1 key2 layer)
+  ($key1 $key2) (layer-while-held $layer)
+  (mod $key1 $key2) (layer-switch $layer)
+)
+(deftemplate layer-alias-3 (key1 key2 key3 layer)
+  ($key1 $key2 $key3) (layer-while-held $layer)
+  (mod $key1 $key2 $key3) (layer-switch $layer)
+)
 (defchords layer-chord 300  
-  (1) @to-mouse
-  (2) @to-wheel
-  (3) @to-media
+  (mod) (layer-switch base)
+  (t! layer-alias-1 1 mouse-layer)
+  (t! layer-alias-1 2 wheel-layer)
+  (t! layer-alias-1 3 media-layer)
+  (t! layer-alias-2 1 2 num-layer)
+  (t! layer-alias-2 1 3 fn-layer)
+  (t! layer-alias-2 2 3 arrow-layer)
+  (t! layer-alias-3 1 2 3 nav-layer)
 )
 
 (deflayermap (base)
@@ -73,10 +105,11 @@
 ;; remember to use tap-hold so they do their original job
 ;; when not chording.
 ;; q (tap-hold 100 200 q (chord layer-chord 1))
-;;  Now it is in mod-layer tap-hold is not needed
-;; in fact it doesn't even activate deeper layers
+;; Now it is in mod-layer tap-hold is not needed
+;; in fact this mapping doesn't even activate deeper layers
 ;; when @to-mod is held
 (deflayermap (mod-layer)
+  spc (chord layer-chord mod)
   q (chord layer-chord 1)
   w (chord layer-chord 2)
   e (chord layer-chord 3)
@@ -85,43 +118,92 @@
   i up
   l rght
   k down
-  ;; just a fallback if caps is accidently tapped when
+  u bspc
+  o del
+  ;; fallback if caps is accidently tapped when
   ;; kanata is inactive
-  spc caps
+  tab caps
 )
 
 (deflayermap (arrow-layer)
-  j left 
-  i up
-  l rght
-  k down
+  tab(chord layer-chord mod)
+  (t! map-left left)
+  (t! map-up up)
+  (t! map-right rght)
+  (t! map-down down)
 )
 
 (deflayermap (mouse-layer)
-  j @mleft
-  i @mup
-  l @mright
-  k @mdown
+  tab(chord layer-chord mod)
+  (t! map-left @mleft)
+  (t! map-up @mup)
+  (t! map-right @mright)
+  (t! map-down @mdown)
 
   spc @mbl
-  u mmid
-  ; mrgt
+  (t! map-two mmid u r)
+  (t! map-two mrgt ; a)
 
   mvmt @mhld
 )
 
 (deflayermap (wheel-layer)
-  j @mwl
-  i @mwu
-  l @mwr
-  k @mwd
+  tab(chord layer-chord mod)
+  (t! map-left @mwl)
+  (t! map-up @mwu)
+  (t! map-right @mwr)
+  (t! map-down @mwd)
+
+  (t! map-two home u w)
+  (t! map-two pgup y t)
+  (t! map-two end o r)
+  (t! map-two pgdn h g)
 )
 
 
 (deflayermap (media-layer)
-  i VolumeUp
-  k VolumeDown
-  j MediaTrackPrevious 
-  l MediaTrackNext
+  tab(chord layer-chord mod)
+  (t! map-left MediaTrackPrevious)
+  (t! map-up VolumeUp)
+  (t! map-right MediaTrackNext)
+  (t! map-down VolumeDown)
   spc MediaPlayPause
+)
+
+(deflayermap (num-layer)
+  tab(chord layer-chord mod)
+  (t! map-two 1 m x)
+  (t! map-two 2 , c)
+  (t! map-two 3 . v)
+  (t! map-two 4 j s)
+  (t! map-two 5 k d)
+  (t! map-two 6 l f)
+  (t! map-two 7 u w)
+  (t! map-two 8 i e)
+  (t! map-two 9 o r)
+  spc 0
+)
+
+(deflayermap (fn-layer)
+  tab(chord layer-chord mod)
+  (t! map-two f1 m z)
+  (t! map-two f2 , x)
+  (t! map-two f3 . c)
+  (t! map-two f4 / v)
+  (t! map-two f5 j a)
+  (t! map-two f6 k s)
+  (t! map-two f7 l d)
+  (t! map-two f8 ; f)
+  (t! map-two f9 u q)
+  (t! map-two f10 i w)
+  (t! map-two f11 o e)
+  (t! map-two f12 p r)
+)
+
+(deflayermap (nav-layer)
+  tab(chord layer-chord mod)
+  (t! map-left home)
+  (t! map-up pgup)
+  (t! map-right end)
+  (t! map-down pgdn)
 )

@@ -20,11 +20,12 @@ get-images-from-md() {
   for i in $(grep -o --regexp="images/.*\.webp" ${MD}); do echo $i; done
 }
 mv-images-from-md() {
+  # $1: path of a markdown file *.md
   # create markdown file folder $1/images
   # then move images found in $1 originally stored
   # under images to $1/images
-  MD=$(basename $1)
-  mkdir ${MD}/images/ -p
-  for i in $(get-images-from-md $1); do mv $i ${MD}/images/; done
-  mv ${MD}.md ${MD}/
+  NAME=$(basename $1 .md)
+  mkdir ${NAME}/images/ -p
+  for i in $(get-images-from-md $1); do mv $i ${NAME}/images/; done
+  mv $(basename $1) ${NAME}/
 }
