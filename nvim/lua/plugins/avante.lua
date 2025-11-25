@@ -35,7 +35,7 @@ return {
       endpoint = "https://generativelanguage.googleapis.com/v1beta/models/",
       --model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)
       --model = model = "gemini-2.0-flash", temperature = 1.1, top_p = 1 },
-      model = "gemini-2.0-flash",
+      model = "gemini-2.5-pro",
       timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
       temperature = 0,
       max_tokens = 8192,

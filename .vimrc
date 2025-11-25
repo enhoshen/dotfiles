@@ -147,7 +147,7 @@ endfunction
 
 "auto indent"
 set autoindent
-set pastetoggle=<F3>
+" set pastetoggle=<F3>
 
 "filetype"
 let g:tex_flavor = "latex"
@@ -224,4 +224,4 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 " autoload
-call wsl#setup()
+" call wsl#setup()

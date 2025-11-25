@@ -2,7 +2,7 @@
 set +e
 
 # get dotfiles project path TODO is there any simpler way
-SETUPFILE=$0
+SETUPFILE=$PWD/$0
 DOTFILES=$(echo ${SETUPFILE} | sed -e "s;/setup/setup.sh;;")
 
 # setup directory
@@ -31,8 +31,10 @@ if [[ ! $(which nvim > /dev/null) ]]; then
     # <= v0.9
     #curl -L -o ${HOME}/opt/nvim.appimage \
     #    https://github.com/neovim/neovim/releases/latest/download/nvim.appimage &
+    # wget -O ${HOME}/opt/nvim.appimage \
+    #     https://github.com/neovim/neovim/releases/download/v0.10.4/nvim-linux-x86_64.appimage
     wget -O ${HOME}/opt/nvim.appimage \
-        https://github.com/neovim/neovim/releases/download/v0.10.4/nvim-linux-x86_64.appimage
+        https://github.com/neovim/neovim/releases/download/v0.11.2/nvim-linux-x86_64.appimage
     chmod 755 ${HOME}/opt/nvim.appimage
     $(cd ${HOME}/opt && ${HOME}/opt/nvim.appimage --appimage-extract && \
         mv -f ${HOME}/opt/squashfs-root ${HOME}/opt/nvim)

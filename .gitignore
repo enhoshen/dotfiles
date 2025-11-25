@@ -3,5 +3,3 @@ nvim.appimage
 .vim/plugged/
 .vim/.vim
 .vim/.netrwhist
-
-nvim/lazy-lock.json
