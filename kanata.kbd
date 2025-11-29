@@ -139,8 +139,10 @@
 ;; in fact this mapping doesn't even activate deeper layers
 ;; when @hold-mod is held
 (deflayermap (mod-layer)
-  ;; fallback if caps is accidently tapped when
-  tab (tap-dance 200 ((chord layer-chord mod) caps))
+  ;; * esc
+  ;; * live reload
+  ;; * fallback if caps is accidently tapped when
+  tab (tap-dance 200 ((chord layer-chord mod) esc lrld caps ))
   q (chord layer-chord 1)
   w (chord layer-chord 2)
   e (chord layer-chord 3)
@@ -152,8 +154,6 @@
   k down
   u bspc
   o del
-  ;; live reload
-  ` lrld
 )
 
 (deflayermap (arrow-layer)
@@ -238,9 +238,8 @@
   u 7
   i 8
   o 9
-  y -
-  p =
-  ; 0
+  h -
+  ; =
   spc 0
 )
 
