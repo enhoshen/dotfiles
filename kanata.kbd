@@ -58,10 +58,13 @@
 )
 
 (defalias
-  to-mod (layer-while-held mod-layer)
+  hold-mod (layer-while-held mod-layer)
   hold-mouse (layer-while-held mouse-layer)
   hold-wheel (layer-while-held wheel-layer)
   hold-media (layer-while-held media-layer)
+  hold-numpad-right (layer-while-held numpad-right-layer)
+  hold-numline (layer-while-held num-line-layer)
+  hold-symbol (layer-while-held symbol-layer)
   to-base (layer-switch base)
 )
 
@@ -97,23 +100,35 @@
   ($key1 $key2 $key3) (layer-while-held $layer)
   (mod $key1 $key2 $key3) (layer-switch $layer)
 )
+;;(defchords base-layer-chord 100
+;;  (1) @hold-mod
+;;  (2) @hold-numline
+;;  (1 2) @hold-symbol
+;;)
 (defchords layer-chord 100
-  (mod) (layer-while-held num-line-layer)
-  (t! layer-alias-1 shft symbol-layer)
   (t! layer-alias-1 1 mouse-layer)
   (t! layer-alias-1 2 wheel-layer)
   (t! layer-alias-1 3 media-layer)
-  (t! layer-alias-2 1 2 num-layer)
-  (t! layer-alias-2 1 3 fn-layer)
-  (t! layer-alias-2 2 3 arrow-layer)
-  (t! layer-alias-3 1 2 3 nav-layer)
+  (t! layer-alias-1 4 symbol-layer)
+  (t! layer-alias-1 5 numpad-right-layer)
+  (t! layer-alias-2 1 2 fn-layer)
+  ;;(t! layer-alias-1 5 num-line-layer)
+  ;;(t! layer-alias-2 4 5 symbol-layer)
+  ;;(4) (layer-while-held numpad-right-layer)
+  ;;(t! layer-alias-1 4 symbol-layer)
+  ;;(t! layer-alias-2 1 2 numpad-layer)
+  ;;(t! layer-alias-2 2 3 arrow-layer)
+  ;;(t! layer-alias-3 1 2 3 nav-layer)
 )
 (defalias
   layer-chord-mod (chord layer-chord mod)
 )
 
 (deflayermap (base)
-  caps @to-mod
+  caps @hold-mod
+  rsft @hold-numline
+  ;;caps (chord base-layer-chord 1)
+  ;;rsft (chord base-layer-chord 2)
 )
 
 ;; remember to use tap-hold so they do their original job
@@ -121,13 +136,15 @@
 ;; q (tap-hold 100 200 q (chord layer-chord 1))
 ;; Now it is in mod-layer tap-hold is not needed
 ;; in fact this mapping doesn't even activate deeper layers
-;; when @to-mod is held
+;; when @hold-mod is held
 (deflayermap (mod-layer)
-  spc (chord layer-chord mod)
+  ;; fallback if caps is accidently tapped when
+  tab (tap-dance 200 ((chord layer-chord mod) caps))
   q (chord layer-chord 1)
   w (chord layer-chord 2)
   e (chord layer-chord 3)
-  lsft (chord layer-chord shft)
+  spc (chord layer-chord 4)
+  rsft (chord layer-chord 5)
 
   j left 
   i up
@@ -135,9 +152,6 @@
   k down
   u bspc
   o del
-  ;; fallback if caps is accidently tapped when
-  ;; kanata is inactive
-  tab caps
   ;; live reload
   ` lrld
 )
@@ -191,7 +205,7 @@
   spc MediaPlayPause
 )
 
-(deflayermap (num-layer)
+(deflayermap (numpad-layer)
   caps @to-base
   (t! map-two 1 m x)
   (t! map-two 2 , c)
@@ -204,6 +218,40 @@
   (t! map-two 9 o r)
   (t! map-two - y q)
   (t! map-two + p t)
+  spc 0
+)
+
+(deflayermap (numpad-right-layer)
+  caps @to-base
+  m 1
+  , 2
+  . 3
+  j 4
+  k 5
+  l 6
+  u 7
+  i 8
+  o 9
+  y -
+  p =
+  ; 0
+  spc 0
+)
+
+(deflayermap (numpad-left-layer)
+  caps @to-base
+  x 1
+  c 2
+  v 3
+  s 4
+  d 5
+  f 6
+  w 7
+  e 8
+  r 9
+  q -
+  t =
+  a 0
   spc 0
 )
 
@@ -233,6 +281,7 @@
 
 (deflayermap (symbol-layer)
   caps @to-base
+  tab S-`
   q S-1
   w S-2 
   e S-3
@@ -249,6 +298,7 @@
 
 (deflayermap (num-line-layer)
   caps @to-base
+  tab `
   q 1
   w 2 
   e 3
@@ -261,4 +311,5 @@
   p 0
   [ -
   ] =
+  spc 0
 )
