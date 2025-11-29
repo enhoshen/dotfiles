@@ -63,6 +63,7 @@
   hold-wheel (layer-while-held wheel-layer)
   hold-media (layer-while-held media-layer)
   hold-numpad-right (layer-while-held numpad-right-layer)
+  to-numpad-right (layer-switch numpad-right-layer)
   hold-numline (layer-while-held num-line-layer)
   hold-symbol (layer-while-held symbol-layer)
   to-base (layer-switch base)
@@ -101,21 +102,19 @@
   (mod $key1 $key2 $key3) (layer-switch $layer)
 )
 ;;(defchords base-layer-chord 100
-;;  (1) @hold-mod
-;;  (2) @hold-numline
-;;  (1 2) @hold-symbol
+;;  (1) @hold-numline
+;;  (1 2) @hold-numpad-right
 ;;)
 (defchords layer-chord 100
   (t! layer-alias-1 1 mouse-layer)
   (t! layer-alias-1 2 wheel-layer)
   (t! layer-alias-1 3 media-layer)
   (t! layer-alias-1 4 symbol-layer)
-  (t! layer-alias-1 5 numpad-right-layer)
+  (t! layer-alias-2 1 4 numpad-right-layer)
   (t! layer-alias-2 1 2 fn-layer)
   ;;(t! layer-alias-1 5 num-line-layer)
   ;;(t! layer-alias-2 4 5 symbol-layer)
   ;;(4) (layer-while-held numpad-right-layer)
-  ;;(t! layer-alias-1 4 symbol-layer)
   ;;(t! layer-alias-2 1 2 numpad-layer)
   ;;(t! layer-alias-2 2 3 arrow-layer)
   ;;(t! layer-alias-3 1 2 3 nav-layer)
@@ -125,10 +124,12 @@
 )
 
 (deflayermap (base)
-  caps @hold-mod
-  rsft @hold-numline
+  caps (tap-dance 200 (@hold-mod @hold-numline @to-numpad-right))
+  ;;caps @hold-mod
+  ;;rsft (tap-dance 200 (@hold-numline @to-numpad-right))
   ;;caps (chord base-layer-chord 1)
   ;;rsft (chord base-layer-chord 2)
+
 )
 
 ;; remember to use tap-hold so they do their original job
@@ -144,7 +145,6 @@
   w (chord layer-chord 2)
   e (chord layer-chord 3)
   spc (chord layer-chord 4)
-  rsft (chord layer-chord 5)
 
   j left 
   i up
@@ -223,6 +223,12 @@
 
 (deflayermap (numpad-right-layer)
   caps @to-base
+
+  ;; reset mapping of left half
+  q q
+  w w
+  e e
+
   m 1
   , 2
   . 3
@@ -305,7 +311,15 @@
   r 4
   t 5
   y 6
+
+  m 1
+  , 2
+  . 3
+  j 4
+  k 5
+  l 6
   u 7
+
   i 8
   o 9
   p 0
