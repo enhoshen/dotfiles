@@ -126,8 +126,9 @@
 (deflayermap (base)
   caps (tap-dance 200 (@hold-mod @hold-numline @to-numpad-right))
   ;;caps @hold-mod
-  ;;rsft (tap-dance 200 (@hold-numline @to-numpad-right))
   ;;caps (chord base-layer-chord 1)
+  rsft @hold-numpad-right
+  ;;rsft (tap-dance 200 (@hold-numline @to-numpad-right))
   ;;rsft (chord base-layer-chord 2)
 
 )
