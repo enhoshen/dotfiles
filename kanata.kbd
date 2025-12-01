@@ -41,20 +41,32 @@
 
 ;; key reference: https://github.com/jtroo/kanata/blob/main/parser/src/keys/mod.rs
 ;; keys of interest:
-;; * brup // brightness up
-;; * brdown // brightness down
-;; * blup // keyboard backlight up
-;; * bldn // keyboard backlight down
 ;; * fn // function key modifier
+(defvar
+  interval 2
+  interval-fast 2
+  accel-time 1200
+  accel-time-fast 250 
+  mm-min 1
+  mm-min-fast 2
+  mm-max 15
+  mm-max-fast 15
+  mw-interval 50
+  mw-distance 120
+)
 (defalias
-  mup (movemouse-accel-up 2 1000 1 10)
-  mleft (movemouse-accel-left 2 1000 1 10)
-  mdown (movemouse-accel-down 2 1000 1 10)
-  mright (movemouse-accel-right 2 1000 1 10)
-  mwu (mwheel-up 50 120)
-  mwd (mwheel-down 50 120)
-  mwl (mwheel-left 50 120)
-  mwr (mwheel-right 50 120)
+  mup (movemouse-accel-up $interval $accel-time $mm-min $mm-max)
+  mleft (movemouse-accel-left $interval $accel-time $mm-min $mm-max)
+  mdown (movemouse-accel-down $interval $accel-time $mm-min $mm-max)
+  mright (movemouse-accel-right $interval $accel-time $mm-min $mm-max)
+  mup-fast (movemouse-accel-up $interval-fast $accel-time-fast $mm-min-fast $mm-max-fast)
+  mleft-fast (movemouse-accel-left $interval-fast $accel-time-fast $mm-min-fast $mm-max-fast)
+  mdown-fast (movemouse-accel-down $interval-fast $accel-time-fast $mm-min-fast $mm-max-fast)
+  mright-fast (movemouse-accel-right $interval-fast $accel-time-fast $mm-min-fast $mm-max-fast)
+  mwu (mwheel-up $mw-interval $mw-distance)
+  mwd (mwheel-down $mw-interval $mw-distance)
+  mwl (mwheel-left $mw-interval $mw-distance)
+  mwr (mwheel-right $mw-interval $mw-distance)
 )
 
 (defalias
@@ -110,8 +122,9 @@
   (t! layer-alias-1 2 wheel-layer)
   (t! layer-alias-1 3 media-layer)
   (t! layer-alias-1 4 symbol-layer)
-  (t! layer-alias-2 1 4 numpad-right-layer)
-  (t! layer-alias-2 1 2 fn-layer)
+  (t! layer-alias-2 1 4 fn-layer)
+  (t! layer-alias-2 1 2 numpad-right-layer)
+  ;;(t! layer-alias-2 2 4 light-layer) ;; doesn't work on windows
   ;;(t! layer-alias-1 5 num-line-layer)
   ;;(t! layer-alias-2 4 5 symbol-layer)
   ;;(4) (layer-while-held numpad-right-layer)
@@ -127,7 +140,7 @@
   caps (tap-dance 200 (@hold-mod @hold-numline @to-numpad-right))
   ;;caps @hold-mod
   ;;caps (chord base-layer-chord 1)
-  rsft @hold-numpad-right
+  rsft (tap-dance 200 (rsft @hold-numpad-right))
   ;;rsft (tap-dance 200 (@hold-numline @to-numpad-right))
   ;;rsft (chord base-layer-chord 2)
 
@@ -169,6 +182,10 @@
   
   caps @to-base
 
+  ;;(t! map-left (tap-dance 200 (@mleft @mleft-fast)))
+  ;;(t! map-up (tap-dance 200 (@mup @mup-fast)))
+  ;;(t! map-right (tap-dance 200 (@mright @mright-fast)))
+  ;;(t! map-down (tap-dance 200 (@mdown @mdown-fast)))
   (t! map-left @mleft)
   (t! map-up @mup)
   (t! map-right @mright)
@@ -326,4 +343,14 @@
   [ -
   ] =
   spc 0
+)
+(deflayermap (light-layer)
+  ;;brup brightness up
+  ;;brdown brightness down
+  ;;blup keyboard backlight up
+  ;;bldn keyboard backlight down
+  (t! map-left bldn)
+  (t! map-up brup)
+  (t! map-right bldn)
+  (t! map-down brdown)
 )
