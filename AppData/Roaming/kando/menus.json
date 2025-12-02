@@ -420,96 +420,6 @@
           },
           {
             "type": "submenu",
-            "name": "Browser",
-            "icon": "globe",
-            "iconTheme": "material-symbols-rounded",
-            "data": {},
-            "children": [
-              {
-                "type": "hotkey",
-                "name": "Forward",
-                "icon": "chevron_right",
-                "iconTheme": "material-symbols-rounded",
-                "data": {
-                  "hotkey": "AltLeft+ArrowRight",
-                  "delayed": true
-                }
-              },
-              {
-                "type": "hotkey",
-                "name": "Next Tab",
-                "icon": "align_horizontal_right",
-                "iconTheme": "material-symbols-rounded",
-                "data": {
-                  "hotkey": "ControlLeft+Tab",
-                  "delayed": true
-                }
-              },
-              {
-                "type": "hotkey",
-                "name": "Repoen",
-                "icon": "reopen_window",
-                "iconTheme": "material-symbols-rounded",
-                "data": {
-                  "hotkey": "ControlLeft+ShiftLeft+KeyT",
-                  "delayed": true
-                }
-              },
-              {
-                "type": "hotkey",
-                "name": "Incog",
-                "icon": "shield_person",
-                "iconTheme": "material-symbols-rounded",
-                "data": {
-                  "hotkey": "ControlLeft+ShiftLeft+KeyN",
-                  "delayed": true
-                }
-              },
-              {
-                "type": "hotkey",
-                "name": "Close Tab",
-                "icon": "close_small",
-                "iconTheme": "material-symbols-rounded",
-                "data": {
-                  "hotkey": "ControlLeft+KeyW",
-                  "delayed": true
-                }
-              },
-              {
-                "type": "hotkey",
-                "name": "Refresh",
-                "icon": "refresh",
-                "iconTheme": "material-symbols-rounded",
-                "data": {
-                  "hotkey": "F5",
-                  "delayed": true
-                }
-              },
-              {
-                "type": "hotkey",
-                "name": "Previous Tab",
-                "icon": "align_horizontal_left",
-                "iconTheme": "material-symbols-rounded",
-                "data": {
-                  "hotkey": "ControlLeft+ShiftLeft+Tab",
-                  "delayed": true
-                }
-              },
-              {
-                "type": "hotkey",
-                "name": "Back",
-                "icon": "keyboard_arrow_left",
-                "iconTheme": "material-symbols-rounded",
-                "data": {
-                  "hotkey": "AltLeft+ArrowLeft",
-                  "delayed": true
-                }
-              }
-            ],
-            "angle": 307.5
-          },
-          {
-            "type": "submenu",
             "name": "Windows",
             "icon": "select_window",
             "iconTheme": "material-symbols-rounded",
@@ -681,7 +591,97 @@
                 "iconTheme": "material-symbols-rounded"
               }
             ],
-            "angle": 345
+            "angle": 315
+          },
+          {
+            "type": "submenu",
+            "name": "Browser",
+            "icon": "globe",
+            "iconTheme": "material-symbols-rounded",
+            "data": {},
+            "children": [
+              {
+                "type": "hotkey",
+                "name": "Forward",
+                "icon": "chevron_right",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "AltLeft+ArrowRight",
+                  "delayed": true
+                }
+              },
+              {
+                "type": "hotkey",
+                "name": "Next Tab",
+                "icon": "align_horizontal_right",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "ControlLeft+Tab",
+                  "delayed": true
+                }
+              },
+              {
+                "type": "hotkey",
+                "name": "Repoen",
+                "icon": "reopen_window",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "ControlLeft+ShiftLeft+KeyT",
+                  "delayed": true
+                }
+              },
+              {
+                "type": "hotkey",
+                "name": "Incog",
+                "icon": "shield_person",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "ControlLeft+ShiftLeft+KeyN",
+                  "delayed": true
+                }
+              },
+              {
+                "type": "hotkey",
+                "name": "Close Tab",
+                "icon": "close_small",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "ControlLeft+KeyW",
+                  "delayed": true
+                }
+              },
+              {
+                "type": "hotkey",
+                "name": "Refresh",
+                "icon": "refresh",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "F5",
+                  "delayed": true
+                }
+              },
+              {
+                "type": "hotkey",
+                "name": "Previous Tab",
+                "icon": "align_horizontal_left",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "ControlLeft+ShiftLeft+Tab",
+                  "delayed": true
+                }
+              },
+              {
+                "type": "hotkey",
+                "name": "Back",
+                "icon": "keyboard_arrow_left",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "hotkey": "AltLeft+ArrowLeft",
+                  "delayed": true
+                }
+              }
+            ],
+            "angle": 360
           },
           {
             "type": "submenu",
@@ -720,33 +720,6 @@
                 }
               },
               {
-                "type": "submenu",
-                "name": "Menus",
-                "icon": "menu",
-                "iconTheme": "material-symbols-rounded",
-                "data": {},
-                "children": [
-                  {
-                    "type": "redirect",
-                    "name": "FancyZone",
-                    "icon": "window",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "menu": "FancyZone"
-                    }
-                  },
-                  {
-                    "type": "redirect",
-                    "name": "Timestamp",
-                    "icon": "timer",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "menu": "Timestamp"
-                    }
-                  }
-                ]
-              },
-              {
                 "type": "command",
                 "data": {
                   "command": "start \"\" \"https://google.com\""
@@ -765,7 +738,7 @@
                 "iconTheme": "material-symbols-rounded"
               }
             ],
-            "angle": 375
+            "angle": 405
           },
           {
             "type": "submenu",
@@ -850,6 +823,347 @@
           },
           {
             "type": "submenu",
+            "name": "Menus",
+            "icon": "menu",
+            "iconTheme": "material-symbols-rounded",
+            "data": {},
+            "children": [
+              {
+                "type": "submenu",
+                "name": "FancyZone",
+                "icon": "window",
+                "iconTheme": "material-symbols-rounded",
+                "data": {},
+                "children": [
+                  {
+                    "type": "hotkey",
+                    "name": "2",
+                    "icon": "2️⃣",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "MetaLeft+ControlLeft+AltLeft+Numpad2",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "3",
+                    "icon": "3️⃣",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "ControlLeft+AltLeft+MetaLeft+Digit3",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "1",
+                    "icon": "1️⃣",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "MetaRight+ControlLeft+AltLeft+Digit1",
+                      "delayed": true
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "submenu",
+                "name": "Text Op",
+                "icon": "text-item.svg",
+                "iconTheme": "kando",
+                "data": {},
+                "children": [
+                  {
+                    "type": "macro",
+                    "name": "CopyUrl",
+                    "icon": "🌐",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "macro": [
+                        {
+                          "type": "keyDown",
+                          "key": "F6",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "F6",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "ControlLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "KeyC",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "KeyC",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "ControlLeft",
+                          "delay": 10
+                        }
+                      ],
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "macro",
+                    "name": "PasteAddDash",
+                    "icon": "➖",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "macro": [
+                        {
+                          "type": "keyDown",
+                          "key": "ControlLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "KeyV",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "ControlLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "KeyV",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "Minus",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "Minus",
+                          "delay": 10
+                        }
+                      ],
+                      "delayed": true
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "submenu",
+                "name": "TimeStamp",
+                "icon": "timer",
+                "iconTheme": "material-symbols-rounded",
+                "data": {},
+                "children": [
+                  {
+                    "type": "macro",
+                    "name": "TIme stamp item",
+                    "icon": "add_box",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "macro": [
+                        {
+                          "type": "keyDown",
+                          "key": "ShiftLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "Digit8",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "Digit8",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "ShiftLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "Space",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "Space",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "BracketLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "BracketLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "BracketRight",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "BracketRight",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "ShiftLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "Digit9",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "Digit9",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "ShiftLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "ShiftLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "Digit0",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "Digit0",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "ShiftLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "Enter",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "Enter",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "Tab",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "Tab",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "ControlLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "KeyK",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "KeyK",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "KeyV",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "KeyV",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "ControlLeft",
+                          "delay": 10
+                        }
+                      ],
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "macro",
+                    "name": "paste image",
+                    "icon": "image",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "macro": [
+                        {
+                          "type": "keyDown",
+                          "key": "ControlLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "KeyK",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "KeyK",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "KeyV",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "KeyV",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "ControlLeft",
+                          "delay": 10
+                        }
+                      ],
+                      "delayed": true
+                    }
+                  }
+                ]
+              }
+            ],
+            "angle": 495
+          },
+          {
+            "type": "submenu",
             "name": "Media",
             "icon": "play_circle",
             "iconTheme": "material-symbols-rounded",
@@ -901,78 +1215,16 @@
       },
       "conditions": {},
       "tags": []
-    },
-    {
-      "shortcut": "",
-      "shortcutID": "",
-      "centered": false,
-      "anchored": false,
-      "hoverMode": false,
-      "tags": [],
-      "root": {
-        "type": "submenu",
-        "name": "Timestamp",
-        "icon": "timer",
-        "iconTheme": "material-symbols-rounded",
-        "children": [
-          {
-            "type": "text",
-            "name": "Paste Text",
-            "icon": "text-item.svg",
-            "iconTheme": "kando",
-            "data": {
-              "text": "* []()"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "shortcut": "",
-      "shortcutID": "",
-      "centered": false,
-      "anchored": false,
-      "hoverMode": false,
-      "tags": [],
-      "root": {
-        "type": "submenu",
-        "name": "FancyZone",
-        "icon": "window",
-        "iconTheme": "material-symbols-rounded",
-        "children": [
-          {
-            "type": "hotkey",
-            "name": "1",
-            "icon": "1️⃣",
-            "iconTheme": "emoji",
-            "data": {
-              "hotkey": "ControlLeft+MetaLeft+AltLeft+Digit1",
-              "delayed": true
-            }
-          },
-          {
-            "type": "hotkey",
-            "name": "2",
-            "icon": "2️⃣",
-            "iconTheme": "emoji",
-            "data": {
-              "hotkey": "ControlLeft+MetaLeft+AltLeft+Digit1",
-              "delayed": true
-            }
-          },
-          {
-            "type": "hotkey",
-            "name": "3",
-            "icon": "3️⃣",
-            "iconTheme": "emoji",
-            "data": {
-              "hotkey": "ControlLeft+MetaLeft+AltLeft+Digit3",
-              "delayed": true
-            }
-          }
-        ]
-      }
     }
   ],
-  "collections": []
+  "collections": [
+    {
+      "name": "Favorites",
+      "icon": "favorite",
+      "iconTheme": "material-symbols-rounded",
+      "tags": [
+        "favs"
+      ]
+    }
+  ]
 }

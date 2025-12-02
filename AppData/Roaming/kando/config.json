@@ -25,7 +25,7 @@
   "enableTurboMode": true,
   "warpMouse": true,
   "hoverModeNeedsConfirmation": false,
-  "gestureMinStrokeLength": 150,
+  "gestureMinStrokeLength": 100,
   "gestureMinStrokeAngle": 20,
   "gestureJitterThreshold": 10,
   "gesturePauseTimeout": 50,
