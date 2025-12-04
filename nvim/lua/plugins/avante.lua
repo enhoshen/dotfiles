@@ -2,46 +2,66 @@ return {
   "yetone/avante.nvim",
   event = "VeryLazy",
   version = false, -- Never set this value to "*"! Never!
+  mode = "agentic",
   opts = {
     -- add any opts here
     -- for example
     --provider = "openai",
+    providers = {
+      gemini = {
+        --endpoint = "https://api.openai.com/v1",
+        --endpoint = "https://generativelanguage.googleapis.com/v1beta/models/{{model}}:streamGenerateContent?key={{secret}}",
+        endpoint = "https://generativelanguage.googleapis.com/v1beta/models/",
+        --model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)
+        --model = model = "gemini-2.0-flash", temperature = 1.1, top_p = 1 },
+        model = "gemini-2.0-flash",
+        timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
+        temperature = 0,
+        max_tokens = 8192,
+        --max_completion_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
+        --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
+      },
+    },
     provider = "gemini",
+    -- cursor_applying_provider = "gemini",
     cursor_applying_provider = "gemini",
     behaviour = {
+      use_ReAct_prompt = true,
+      auto_focus_sidebar = false,
+      auto_approve_tool_permissions = false,
       enable_cursor_planning_mode = true,
     },
     -- TODO before fixing apply behavior, I may call avante.diff.setup_buffer_mappings
     -- myself
     -- see avante.nvim/lua/avante/diff.lua:L354
     mappings = {
-      diff = {
-        ours = "<Leader>axo",
-        theirs = "<Leader>axt",
-        all_theirs = "<Leader>axa",
-        both = "<Leader>axb",
-        cursor = "<Leader>axc",
-        next = "<Leader>a]x",
-        prev = "<Leader>a[x",
-      },
+      -- diff = {
+      --   ours = "<Leader>axo",
+      --   theirs = "<Leader>axt",
+      --   all_theirs = "<Leader>axa",
+      --   both = "<Leader>axb",
+      --   cursor = "<Leader>axc",
+      --   next = "<Leader>a]x",
+      --   prev = "<Leader>a[x",
+      -- },
     },
     windows = {
       width = 50,
     },
     -- TODO i'm using gemini but why does it only work with openai???
-    gemini = {
-      --endpoint = "https://api.openai.com/v1",
-      --endpoint = "https://generativelanguage.googleapis.com/v1beta/models/{{model}}:streamGenerateContent?key={{secret}}",
-      endpoint = "https://generativelanguage.googleapis.com/v1beta/models/",
-      --model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)
-      --model = model = "gemini-2.0-flash", temperature = 1.1, top_p = 1 },
-      model = "gemini-2.5-pro",
-      timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
-      temperature = 0,
-      max_tokens = 8192,
-      --max_completion_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
-      --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
-    },
+    -- gemini = {
+    --   --endpoint = "https://api.openai.com/v1",
+    --   --endpoint = "https://generativelanguage.googleapis.com/v1beta/models/{{model}}:streamGenerateContent?key={{secret}}",
+    --   endpoint = "https://generativelanguage.googleapis.com/v1beta/models/",
+    --   --model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)
+    --   --model = model = "gemini-2.0-flash", temperature = 1.1, top_p = 1 },
+    --   model = "gemini-2.5-pro",
+    --   timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
+    --   temperature = 0,
+    --   max_tokens = 8192,
+    --   --max_completion_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
+    --   --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
+    -- },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   build = "make",
@@ -52,7 +72,7 @@ return {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
     --- The below dependencies are optional,
-    "echasnovski/mini.pick", -- for file_selector provider mini.pick
+    "nvim-mini/mini.pick", -- for file_selector provider mini.pick
     "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
     "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
     "ibhagwan/fzf-lua", -- for file_selector provider fzf
@@ -82,6 +102,16 @@ return {
         file_types = { "markdown", "Avante" },
       },
       ft = { "markdown", "Avante" },
+    },
+  },
+  acp_providers = {
+    ["gemini-cli"] = {
+      command = "gemini",
+      args = { "--experimental-acp" },
+      env = {
+        NODE_NO_WARNINGS = "1",
+        GEMINI_API_KEY = os.getenv("GEMINI_API_KEY"),
+      },
     },
   },
 }
