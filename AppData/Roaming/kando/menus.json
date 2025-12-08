@@ -917,11 +917,82 @@
                   },
                   {
                     "type": "macro",
-                    "name": "PasteAddDash",
+                    "name": "PrefixPasteAddDash",
                     "icon": "➖",
                     "iconTheme": "emoji",
                     "data": {
                       "macro": [
+                        {
+                          "type": "keyDown",
+                          "key": "ArrowLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "ArrowLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "ControlLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "KeyV",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "ControlLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "KeyV",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "Minus",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "Minus",
+                          "delay": 10
+                        }
+                      ],
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "macro",
+                    "name": "RenamePrefixPasteDash",
+                    "icon": "text_decrease",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "macro": [
+                        {
+                          "type": "keyDown",
+                          "key": "F2",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "F2",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "ArrowLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "ArrowLeft",
+                          "delay": 10
+                        },
                         {
                           "type": "keyDown",
                           "key": "ControlLeft",
