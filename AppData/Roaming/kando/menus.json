@@ -796,6 +796,16 @@
                       "hotkey": "Semicolon",
                       "delayed": true
                     }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Colon",
+                    "icon": ":",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "ShiftLeft+Semicolon",
+                      "delayed": true
+                    }
                   }
                 ]
               }
