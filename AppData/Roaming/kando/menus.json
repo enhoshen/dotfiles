@@ -367,6 +367,442 @@
         "children": [
           {
             "type": "submenu",
+            "name": "Keyboard",
+            "icon": "⌨️",
+            "iconTheme": "emoji",
+            "data": {},
+            "children": [
+              {
+                "type": "submenu",
+                "name": "Fn",
+                "icon": "functions",
+                "iconTheme": "material-symbols-rounded",
+                "data": {},
+                "children": [
+                  {
+                    "type": "hotkey",
+                    "name": "F12",
+                    "icon": "F12",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "F12",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "F11",
+                    "icon": "F11",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "F11",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "F10",
+                    "icon": "F10",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "F10",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "F9",
+                    "icon": "F9",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "F9",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "F8",
+                    "icon": "F8",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "F8",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "F7",
+                    "icon": "F7",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "F7",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "F6",
+                    "icon": "F6",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "F6",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "F5",
+                    "icon": "F5",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "F5",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "F4",
+                    "icon": "F4",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "F4",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "F3",
+                    "icon": "F3",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "F3",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "F2",
+                    "icon": "F2",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "F2",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "F1",
+                    "icon": "F1",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "F1",
+                      "delayed": true
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "submenu",
+                "name": "Character",
+                "icon": "abc",
+                "iconTheme": "material-symbols-rounded",
+                "data": {},
+                "children": [
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅰",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyA",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅱",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyB",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅲",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyC",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅳",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyD",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅴",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyE",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅵",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyF",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅶",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyG",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅷",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyH",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅸",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyI",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅹",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyJ",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅺",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyK",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅻",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyL",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅼",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyM",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅽",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyN",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅾",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyO",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅿",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyP",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🆀",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyQ",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🆁",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyR",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🆂",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyS",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🆃",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyT",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🆄",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyU",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🆅",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyV",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🆆",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyW",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🆇",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyX",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🆈",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyY",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🆉",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyZ",
+                      "delayed": true
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "submenu",
+                "name": "Symbol",
+                "icon": "🔣",
+                "iconTheme": "emoji",
+                "data": {},
+                "children": [
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "✖️",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "Escape",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Semicolon",
+                    "icon": ";",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "Semicolon",
+                      "delayed": true
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "submenu",
             "name": "Navigation",
             "icon": "desktop_windows",
             "iconTheme": "material-symbols-rounded",
@@ -1024,275 +1460,6 @@
                           "delay": 10
                         }
                       ],
-                      "delayed": true
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "submenu",
-                "name": "Character",
-                "icon": "abc",
-                "iconTheme": "material-symbols-rounded",
-                "data": {},
-                "children": [
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🅰",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyA",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🅱",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyB",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🅲",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyC",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🅳",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyD",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🅴",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyE",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🅵",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyF",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🅶",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyG",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🅷",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyH",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🅸",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyI",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🅹",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyJ",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🅺",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyK",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🅻",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyL",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🅼",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyM",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🅽",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyN",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🅾",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyO",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🅿",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyP",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🆀",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyQ",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🆁",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyR",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🆂",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyS",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🆃",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyT",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🆄",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyU",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🆅",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyV",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🆆",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyW",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🆇",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyX",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🆈",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyY",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "🆉",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "hotkey": "KeyZ",
                       "delayed": true
                     }
                   }
