@@ -830,6 +830,476 @@
             "children": [
               {
                 "type": "submenu",
+                "name": "TimeStamp",
+                "icon": "timer",
+                "iconTheme": "material-symbols-rounded",
+                "data": {},
+                "children": [
+                  {
+                    "type": "macro",
+                    "name": "TIme stamp item",
+                    "icon": "add_box",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "macro": [
+                        {
+                          "type": "keyDown",
+                          "key": "ShiftLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "Digit8",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "Digit8",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "ShiftLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "Space",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "Space",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "BracketLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "BracketLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "BracketRight",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "BracketRight",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "ShiftLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "Digit9",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "Digit9",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "ShiftLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "ShiftLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "Digit0",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "Digit0",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "ShiftLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "Enter",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "Enter",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "Tab",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "Tab",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "ControlLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "KeyK",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "KeyK",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "KeyV",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "KeyV",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "ControlLeft",
+                          "delay": 10
+                        }
+                      ],
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "macro",
+                    "name": "paste image",
+                    "icon": "image",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "macro": [
+                        {
+                          "type": "keyDown",
+                          "key": "ControlLeft",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "KeyK",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "KeyK",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyDown",
+                          "key": "KeyV",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "KeyV",
+                          "delay": 10
+                        },
+                        {
+                          "type": "keyUp",
+                          "key": "ControlLeft",
+                          "delay": 10
+                        }
+                      ],
+                      "delayed": true
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "submenu",
+                "name": "Character",
+                "icon": "abc",
+                "iconTheme": "material-symbols-rounded",
+                "data": {},
+                "children": [
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅰",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyA",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅱",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyB",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅲",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyC",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅳",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyD",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅴",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyE",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅵",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyF",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅶",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyG",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅷",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyH",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅸",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyI",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅹",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyJ",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅺",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyK",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅻",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyL",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅼",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyM",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅽",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyN",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅾",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyO",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🅿",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyP",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🆀",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyQ",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🆁",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyR",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🆂",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyS",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🆃",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyT",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🆄",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyU",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🆅",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyV",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🆆",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyW",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🆇",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyX",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🆈",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyY",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "🆉",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "KeyZ",
+                      "delayed": true
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "submenu",
                 "name": "FancyZone",
                 "icon": "window",
                 "iconTheme": "material-symbols-rounded",
@@ -1027,204 +1497,23 @@
                       "delayed": true
                     }
                   }
-                ]
+                ],
+                "angle": 135
               },
               {
                 "type": "submenu",
-                "name": "TimeStamp",
-                "icon": "timer",
-                "iconTheme": "material-symbols-rounded",
+                "name": "Explorer",
+                "icon": "file-item.svg",
+                "iconTheme": "kando",
                 "data": {},
                 "children": [
                   {
-                    "type": "macro",
-                    "name": "TIme stamp item",
-                    "icon": "add_box",
+                    "type": "hotkey",
+                    "name": "Thumbnail",
+                    "icon": "gallery_thumbnail",
                     "iconTheme": "material-symbols-rounded",
                     "data": {
-                      "macro": [
-                        {
-                          "type": "keyDown",
-                          "key": "ShiftLeft",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyDown",
-                          "key": "Digit8",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyUp",
-                          "key": "Digit8",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyUp",
-                          "key": "ShiftLeft",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyDown",
-                          "key": "Space",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyUp",
-                          "key": "Space",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyDown",
-                          "key": "BracketLeft",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyUp",
-                          "key": "BracketLeft",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyDown",
-                          "key": "BracketRight",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyUp",
-                          "key": "BracketRight",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyDown",
-                          "key": "ShiftLeft",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyDown",
-                          "key": "Digit9",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyUp",
-                          "key": "Digit9",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyUp",
-                          "key": "ShiftLeft",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyDown",
-                          "key": "ShiftLeft",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyDown",
-                          "key": "Digit0",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyUp",
-                          "key": "Digit0",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyUp",
-                          "key": "ShiftLeft",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyDown",
-                          "key": "Enter",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyUp",
-                          "key": "Enter",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyDown",
-                          "key": "Tab",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyUp",
-                          "key": "Tab",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyDown",
-                          "key": "ControlLeft",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyDown",
-                          "key": "KeyK",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyUp",
-                          "key": "KeyK",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyDown",
-                          "key": "KeyV",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyUp",
-                          "key": "KeyV",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyUp",
-                          "key": "ControlLeft",
-                          "delay": 10
-                        }
-                      ],
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "macro",
-                    "name": "paste image",
-                    "icon": "image",
-                    "iconTheme": "material-symbols-rounded",
-                    "data": {
-                      "macro": [
-                        {
-                          "type": "keyDown",
-                          "key": "ControlLeft",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyDown",
-                          "key": "KeyK",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyUp",
-                          "key": "KeyK",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyDown",
-                          "key": "KeyV",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyUp",
-                          "key": "KeyV",
-                          "delay": 10
-                        },
-                        {
-                          "type": "keyUp",
-                          "key": "ControlLeft",
-                          "delay": 10
-                        }
-                      ],
+                      "hotkey": "ControlLeft+ShiftLeft+Digit2",
                       "delayed": true
                     }
                   }

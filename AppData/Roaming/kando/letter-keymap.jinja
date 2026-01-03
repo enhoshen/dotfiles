@@ -1,0 +1,12 @@
+{% for icon, key in pairs %}
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "{{icon}}",
+                    "iconTheme": "material-symbols-rounded",
+                    "data": {
+                      "hotkey": "{{key}}",
+                      "delayed": true
+                    }
+                  },
+{% endfor %}
