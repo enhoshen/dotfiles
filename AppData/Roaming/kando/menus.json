@@ -597,6 +597,16 @@
                       "hotkey": "Digit1",
                       "delayed": true
                     }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "0",
+                    "icon": "0",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "Digit0",
+                      "delayed": true
+                    }
                   }
                 ]
               },
