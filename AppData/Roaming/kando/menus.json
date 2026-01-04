@@ -503,6 +503,144 @@
               },
               {
                 "type": "submenu",
+                "name": "Number",
+                "icon": "🔢",
+                "iconTheme": "emoji",
+                "data": {},
+                "children": [
+                  {
+                    "type": "hotkey",
+                    "name": "9",
+                    "icon": "9",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "Digit9",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "8",
+                    "icon": "8",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "Digit8",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "7",
+                    "icon": "7",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "Digit7",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "6",
+                    "icon": "6",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "Digit6",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "5",
+                    "icon": "5",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "Digit5",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "4",
+                    "icon": "4",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "Digit4",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "3",
+                    "icon": "3",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "Digit3",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "2",
+                    "icon": "2",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "Digit2",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "1",
+                    "icon": "1",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "Digit1",
+                      "delayed": true
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "submenu",
+                "name": "Symbol",
+                "icon": "🔣",
+                "iconTheme": "emoji",
+                "data": {},
+                "children": [
+                  {
+                    "type": "hotkey",
+                    "name": "Simulate Hotkey",
+                    "icon": "✖️",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "Escape",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Semicolon",
+                    "icon": ";",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "Semicolon",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
+                    "name": "Colon",
+                    "icon": ":",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "ShiftLeft+Semicolon",
+                      "delayed": true
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "submenu",
                 "name": "Character",
                 "icon": "abc",
                 "iconTheme": "material-symbols-rounded",
@@ -768,46 +906,8 @@
                       "delayed": true
                     }
                   }
-                ]
-              },
-              {
-                "type": "submenu",
-                "name": "Symbol",
-                "icon": "🔣",
-                "iconTheme": "emoji",
-                "data": {},
-                "children": [
-                  {
-                    "type": "hotkey",
-                    "name": "Simulate Hotkey",
-                    "icon": "✖️",
-                    "iconTheme": "emoji",
-                    "data": {
-                      "hotkey": "Escape",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Semicolon",
-                    "icon": ";",
-                    "iconTheme": "emoji",
-                    "data": {
-                      "hotkey": "Semicolon",
-                      "delayed": true
-                    }
-                  },
-                  {
-                    "type": "hotkey",
-                    "name": "Colon",
-                    "icon": ":",
-                    "iconTheme": "emoji",
-                    "data": {
-                      "hotkey": "ShiftLeft+Semicolon",
-                      "delayed": true
-                    }
-                  }
-                ]
+                ],
+                "angle": 225
               }
             ]
           },
