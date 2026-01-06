@@ -7,20 +7,23 @@ windows:
     #panes:
     #-
     #-
-  - window_name: xserver
-    window_index: 9
+  - window_name: note
+    window_index: 7
     start_directory: ~/
-    layout: tiled
-    panes:
-    -
-    -
-    -
-    -
   - window_name: dotfile
     window_index: 8
     start_directory: ~/
     shell_command_before:
       - cd $DOTFILES
+  - window_name: xserver
+    window_index: 9
+    start_directory: ~/
+    layout: tiled
+    panes:
+      -
+      -
+      -
+      -
   - window_name: dev
     focus: true
     start_directory: ~/
