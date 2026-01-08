@@ -13,7 +13,7 @@
         "type": "custom",
         "show-spacing": false,
         "spacing": 0,
-        "zone-count": 2,
+        "zone-count": 5,
         "sensitivity-radius": 20
       }
     },
@@ -94,12 +94,12 @@
         "virtual-desktop": "{E4584E1C-67A0-4780-AC38-DA0CB9A15713}"
       },
       "applied-layout": {
-        "uuid": "{6DEABC79-7CD2-43B0-8E1B-77BD2941AE98}",
+        "uuid": "{58214D7E-D4EE-4559-9B04-1E7DB1E4CEAB}",
         "type": "custom",
         "show-spacing": true,
-        "spacing": 1,
-        "zone-count": 96,
-        "sensitivity-radius": 0
+        "spacing": 16,
+        "zone-count": 3,
+        "sensitivity-radius": 20
       }
     },
     {
