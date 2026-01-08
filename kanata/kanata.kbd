@@ -163,6 +163,9 @@
   spc (chord layer-chord 4)
 
   ` esc
+  ;; the vim/nvim map <C-\><C-N> for exiting
+  ;; Visual-block insert mode and terminal mode
+  y (macro C-(\ 50 n))
   j left 
   i up
   l rght
