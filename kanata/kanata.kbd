@@ -137,6 +137,7 @@
 )
 
 (deflayermap (base)
+  ` esc   
   caps (tap-dance 200 (@hold-mod @hold-numline @to-numpad-right))
   ;;caps @hold-mod
   ;;caps (chord base-layer-chord 1)
@@ -163,6 +164,7 @@
   spc (chord layer-chord 4)
 
   ` esc
+  esc `
   ;; the vim/nvim map <C-\><C-N> for exiting
   ;; Visual-block insert mode and terminal mode
   y (macro C-(\ 50 n))
