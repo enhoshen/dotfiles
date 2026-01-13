@@ -1,3 +1,7 @@
+# I record screenshots of anime I watch with timestamp.
+# This script contains functions to post process the recorded
+# markdown file and images.
+
 md-png-compress() {
   # under folder with images subfolder, compress png to webp, replace all *png links
   # to *.webp

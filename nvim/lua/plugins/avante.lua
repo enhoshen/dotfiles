@@ -7,6 +7,9 @@ return {
     -- add any opts here
     -- for example
     --provider = "openai",
+    disable_tools = {
+      "google_search",
+    },
     providers = {
       gemini = {
         --endpoint = "https://api.openai.com/v1",
@@ -14,7 +17,7 @@ return {
         endpoint = "https://generativelanguage.googleapis.com/v1beta/models/",
         --model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)
         --model = model = "gemini-2.0-flash", temperature = 1.1, top_p = 1 },
-        model = "gemini-2.0-flash",
+        model = "gemini-2.5-flash",
         timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
         temperature = 0,
         max_tokens = 8192,
