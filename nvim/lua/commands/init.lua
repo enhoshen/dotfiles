@@ -19,3 +19,5 @@ vim.api.nvim_create_user_command("ReloadColor", function(opts)
   -- and pass it to command :colorscheme using :exe
   vim.cmd('exe "colo" g:colors_name')
 end, { nargs = "*", desc = "Reload colorscheme" })
+
+require("commands.codediff")
