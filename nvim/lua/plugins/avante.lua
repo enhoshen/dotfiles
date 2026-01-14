@@ -2,14 +2,12 @@ return {
   "yetone/avante.nvim",
   event = "VeryLazy",
   version = false, -- Never set this value to "*"! Never!
-  mode = "agentic",
+  -- mode = "agentic",
+  mode = "legacy",
   opts = {
     -- add any opts here
     -- for example
     --provider = "openai",
-    disable_tools = {
-      "google_search",
-    },
     providers = {
       gemini = {
         --endpoint = "https://api.openai.com/v1",
@@ -17,12 +15,27 @@ return {
         endpoint = "https://generativelanguage.googleapis.com/v1beta/models/",
         --model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)
         --model = model = "gemini-2.0-flash", temperature = 1.1, top_p = 1 },
-        model = "gemini-2.5-flash",
+        model = "gemini-3-flash-preview",
         timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
         temperature = 0,
         max_tokens = 8192,
         --max_completion_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
         --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
+        -- disable_tools = {
+        --   "google_search",
+        -- },
+      },
+      gemini_flash_2p5 = {
+        __inherited_from = "gemini",
+        model = "gemini-2.5-flash",
+      },
+      gemini_flash_3 = {
+        __inherited_from = "gemini",
+        model = "gemini-3-flash",
+      },
+      gemma_3_27b = {
+        __inherited_from = "gemini",
+        model = "gemma-3-27b",
       },
     },
     provider = "gemini",
