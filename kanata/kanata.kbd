@@ -137,7 +137,10 @@
 )
 
 (deflayermap (base)
-  ` esc   
+  ;; s-` is still ~ 
+  ;; for 60 keyboard, s-esc is mapped to ~
+  ` (fork esc S-` (lsft rsft) )
+  esc (fork esc S-` (lsft rsft))
   caps (tap-dance 200 (@hold-mod @hold-numline @to-numpad-right))
   ;;caps @hold-mod
   ;;caps (chord base-layer-chord 1)
