@@ -38,7 +38,7 @@ vim.keymap.set("n", "<Leader>tl", function()
 end, { desc = "Toggle show tabline" })
 
 -- toggle enter mapping in terminal mode
-local enter_leave_term_flag = true
+local enter_leave_term_flag = false
 vim.keymap.set("n", "<Leader>te", function()
   -- Commands defined in commands module
   if enter_leave_term_flag then
