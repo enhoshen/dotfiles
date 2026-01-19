@@ -183,6 +183,7 @@
     (deflayermap (sub-layer)
       caps @to-base
       q (layer-switch macro-layer)
+      w (layer-switch mouse-set-layer)
     )
 
 ;; common layers
@@ -206,6 +207,8 @@
   spc @mbl
   (t! map-two mmid u r)
   (t! map-two mrgt ; a)
+
+  (t! map-two (layer-while-held mouse-set-layer) g h)
 
   mvmt @mhld
 )
@@ -371,4 +374,26 @@
 (deflayermap (macro-layer)
   caps @to-base
   q @tfs-server
+)
+(deflayermap (mouse-set-layer)
+  caps @to-base
+  (t! map-two (setmouse 0 0    )   7 1)
+  (t! map-two (setmouse 0 21845)   u q)
+  (t! map-two (setmouse 0 43690)   j a)
+  (t! map-two (setmouse 0 65535)   m z)
+
+  (t! map-two (setmouse 21845 0    ) 8 2)
+  (t! map-two (setmouse 21845 21845) i w)
+  (t! map-two (setmouse 21845 43690) k s)
+  (t! map-two (setmouse 21845 65535) , x)
+
+  (t! map-two (setmouse 43690 0    ) 9 3)
+  (t! map-two (setmouse 43690 21845) o e)
+  (t! map-two (setmouse 43690 43690) l d)
+  (t! map-two (setmouse 43690 65535) . c)
+
+  (t! map-two (setmouse 65535 0    ) 0 4)
+  (t! map-two (setmouse 65535 21845) p r)
+  (t! map-two (setmouse 65535 43690) ; f)
+  (t! map-two (setmouse 65535 65535) / v)
 )
