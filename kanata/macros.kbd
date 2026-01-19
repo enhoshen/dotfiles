@@ -1,0 +1,12 @@
+;; macros with way too specific purposes
+
+;; tf2
+;; sequence: tfs
+;;   type "exec my_server<CR>" in tf2 console
+(deftemplate tfs-server ()
+  (macro e x e c spc m y S-- s e r v e r ret)
+)
+(defalias
+  tfs-server (t! tfs-server)
+)
+(t! seq tfs (t f s) (t! tfs-server))

@@ -1,12 +1,20 @@
 ;; Doc: https://github.com/jtroo/kanata/blob/main/docs/config.adoc
 
 ;; from kanata/cfg_samples/automousekeys-only.kbd
+(include macros.kbd)
 (defcfg
   process-unmapped-keys yes
   mouse-movement-key mvmt
 )
 
 (defsrc)
+
+;; seq template to define a sequence item triggered by input-keys
+;; and a virtualkeys mapped to the output-action
+(deftemplate seq (vk-name input-keys output-action)
+    (defvirtualkeys $vk-name $output-action)
+    (defseq $vk-name $input-keys)
+)
 
 (defvirtualkeys
   mouse (layer-while-held mouse-layer)
@@ -165,6 +173,10 @@
   w (chord layer-chord 2)
   e (chord layer-chord 3)
   spc (chord layer-chord 4)
+
+  ;; activate sequence mode
+  t (sequence 500)
+  g (layer-switch macro-layer)
 
   esc `
   ` `
@@ -362,4 +374,9 @@
   (t! map-up brup)
   (t! map-right bldn)
   (t! map-down brdown)
+)
+
+(deflayermap (macro-layer)
+  caps @to-base
+  q @tfs-server
 )
