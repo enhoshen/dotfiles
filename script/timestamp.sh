@@ -33,3 +33,11 @@ mv-images-from-md() {
   for i in $(get-images-from-md $1); do mv $i ${NAME}/images/; done
   mv $(basename $1) ${NAME}/
 }
+
+BASE=/mnt/i/timestamp
+md-compress-all() {
+  for i in $(ls ./); do
+    [[ -d $i ]] && cd $i && md-png-compress
+    cd ${BASE}
+  done
+}

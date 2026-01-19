@@ -5,6 +5,8 @@ return {
   -- mode = "agentic",
   mode = "legacy",
   opts = {
+    -- provider = "gemini",
+    provider = "gemini-cli",
     -- add any opts here
     -- for example
     --provider = "openai",
@@ -38,7 +40,6 @@ return {
         model = "gemma-3-27b",
       },
     },
-    provider = "gemini",
     -- cursor_applying_provider = "gemini",
     cursor_applying_provider = "gemini",
     behaviour = {
