@@ -1,4 +1,3 @@
-vim.keymap.set("n", "<Leader>D", "", { desc = "Diff" })
 vim.keymap.set("n", "<Leader>Dd", ":CodeDiff<CR>", { desc = "Start code diff" })
 vim.keymap.set(
   "n",

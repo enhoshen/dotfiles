@@ -1,6 +1,3 @@
-vim.keymap.set("n", "<leader>m", "", {
-  desc = "Make",
-})
 vim.keymap.set("n", "<Leader>mc", function()
   vim.cmd("make %")
 end, { desc = "Make the current file" })
