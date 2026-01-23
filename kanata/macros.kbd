@@ -1,12 +1,22 @@
 ;; macros with way too specific purposes
 
 ;; tf2
-;; sequence: tfs
-;;   type "exec my_server<CR>" in tf2 console
+;;   run "exec my_server" in console
 (deftemplate tfs-server ()
-  (macro e x e c spc m y S-- s e r v e r ret)
+  (macro ` e x e c spc m y S-- s e r v e r ret `)
+)
+;;   run "noclip" in console
+(deftemplate tfs-noclip ()
+  (macro ` n o c l i p ret `)
+)
+;;   run "kill" in console
+(deftemplate tfs-kill ()
+  (macro ` k i l l ret `)
 )
 (defalias
   tfs-server (t! tfs-server)
+  tfs-noclip (t! tfs-noclip)
+  tfs-kill (t! tfs-kill)
 )
+;; sequence: tfs
 (t! seq tfs (t f s) (t! tfs-server))

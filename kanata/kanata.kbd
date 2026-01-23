@@ -374,6 +374,8 @@
 (deflayermap (macro-layer)
   caps @to-base
   q @tfs-server
+  w @tfs-noclip
+  e @tfs-kill
 )
 (deflayermap (mouse-set-layer)
   caps @to-base
