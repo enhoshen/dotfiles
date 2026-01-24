@@ -17,7 +17,7 @@ require("config.dap")
 require("config.lsp")
 
 -- treesitter
--- require("config.treesitters")
+require("config.treesitters")
 
 -- conform
 require("config.conform")

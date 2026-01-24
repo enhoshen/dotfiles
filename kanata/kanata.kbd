@@ -20,16 +20,6 @@
   mouse (layer-while-held mouse-layer)
 )
 
-(deftemplate text-paste (text)
- (macro
-  (clipboard-save 0)
-  20
-  (clipboard-set $text)
-  300
-  C-v
-  (clipboard-restore 0)
- ))
-
 (defalias
   mhld (hold-for-duration 750 mouse)
 
@@ -60,6 +50,8 @@
 ;; key reference: https://github.com/jtroo/kanata/blob/main/parser/src/keys/mod.rs
 ;; keys of interest:
 ;; * fn // function key modifier
+
+;; variables
 (defvar
   interval 2
   interval-fast 2
@@ -72,6 +64,13 @@
   mw-interval 50
   mw-distance 120
 )
+
+(defvar
+  ;; time out for one-shot action
+  oneshot-to 500
+)
+
+;; alias
 (defalias
   mup (movemouse-accel-up $interval $accel-time $mm-min $mm-max)
   mleft (movemouse-accel-left $interval $accel-time $mm-min $mm-max)
@@ -97,6 +96,15 @@
   hold-numline (layer-while-held num-line-layer)
   hold-symbol (layer-while-held symbol-layer)
   to-base (layer-switch base)
+)
+
+
+;; templates
+(deftemplate oneshot (action)
+  (one-shot $oneshot-to $action)
+)
+(deftemplate oneshot-layer (layer)
+  (one-shot $oneshot-to (layer-while-held $layer))
 )
 
 (deftemplate map-left (map)
@@ -131,10 +139,6 @@
   ($key1 $key2 $key3) (layer-while-held $layer)
   (mod $key1 $key2 $key3) (layer-switch $layer)
 )
-;;(defchords base-layer-chord 100
-;;  (1) @hold-numline
-;;  (1 2) @hold-numpad-right
-;;)
 (defchords layer-chord 100
   (t! layer-alias-1 1 mouse-layer)
   (t! layer-alias-1 2 wheel-layer)
@@ -142,59 +146,48 @@
   (t! layer-alias-1 4 symbol-layer)
   (t! layer-alias-2 1 4 fn-layer)
   (t! layer-alias-2 1 2 numpad-right-layer)
-  ;;(t! layer-alias-2 2 4 light-layer) ;; doesn't work on windows
-  ;;(t! layer-alias-1 5 num-line-layer)
-  ;;(t! layer-alias-2 4 5 symbol-layer)
-  ;;(4) (layer-while-held numpad-right-layer)
-  ;;(t! layer-alias-2 1 2 numpad-layer)
-  ;;(t! layer-alias-2 2 3 arrow-layer)
-  ;;(t! layer-alias-3 1 2 3 nav-layer)
 )
 (defalias
   layer-chord-mod (chord layer-chord mod)
 )
 
+;; base structure
 (deflayermap (base)
   ;; s-` is still ~ 
   ;; for 60 keyboard, s-esc is mapped to ~
   (t! map-two (fork esc S-` (lsft rsft) ) esc `)
-  caps (tap-dance 200 (@hold-mod @hold-numline @to-numpad-right))
+  caps @hold-mod
   rsft (tap-dance 200 (rsft @hold-numpad-right))
 )
-  (deflayermap (mod-layer)
-    ;; * esc
-    ;; * live reload
-    ;; * fallback if caps is accidently tapped when
-    tab (tap-dance 200 ((chord layer-chord mod) esc lrld caps ))
-    q (chord layer-chord 1)
-    w (chord layer-chord 2)
-    e (chord layer-chord 3)
-    spc (chord layer-chord 4)
+(deflayermap (mod-layer)
+  tab (chord layer-chord mod)
+  q (chord layer-chord 1)
+  w (chord layer-chord 2)
+  e (chord layer-chord 3)
+  spc (chord layer-chord 4)
 
-    ;; activate sequence mode
-    t (sequence 500)
-    ;; switch to sub-layer that contains
-    ;; routes to other rarely used layers
-    r (layer-switch sub-layer)
+  ;; switch to sub-layer that contains
+  ;; routes to other rarely used layers
+  r (t! oneshot-layer sub-layer)
 
-    (t! map-two ` esc `)
-    ;; the vim/nvim map <C-\><C-N> for exiting
-    ;; Visual-block insert mode and terminal mode
-    y (macro C-(\ 50 n))
-    j left 
-    i up
-    l rght
-    k down
-    u bspc
-    o del
-  )
-    ;; sub layer
-    ;; rarely or niche layer switching goes here
-    (deflayermap (sub-layer)
-      caps @to-base
-      q (layer-switch macro-layer)
-      w (layer-switch mouse-set-layer)
-    )
+  (t! map-two ` esc `)
+  ;; the vim/nvim map <C-\><C-N> for exiting
+  ;; Visual-block insert mode and terminal mode
+  y (macro C-(\ 50 n))
+  j left 
+  i up
+  l rght
+  k down
+  u bspc
+  o del
+)
+;; sub layer
+;; rarely or niche layer switching goes here
+(deflayermap (sub-layer)
+  caps @to-base
+  tab (t! oneshot-layer misc-layer)
+  q (t! oneshot-layer macro-layer)
+)
 
 ;; common layers
 (deflayermap (arrow-layer)
@@ -381,6 +374,12 @@
 )
 
 ;; uncommon layers
+(deflayermap (misc-layer)
+  caps @to-base
+  ;; live reload kanata config
+  r lrld
+  c caps
+)
 (deflayermap (macro-layer)
   caps @to-base
   q @tf2-my-server

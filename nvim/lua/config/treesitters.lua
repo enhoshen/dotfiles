@@ -1,6 +1,13 @@
-require("nvim-treesitter.configs").setup({
+require("nvim-treesitter").setup({
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
-  ensure_installed = { "typescript", "c", "lua", "vim", "vimdoc", "query" },
+  ensure_installed = {
+    "typescript",
+    "c",
+    "lua",
+    "vim",
+    "vimdoc",
+    "query",
+  },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -23,6 +30,7 @@ require("nvim-treesitter.configs").setup({
     -- the name of the parser)
     -- list of language that will be disabled
     disable = {
+      "kanata",
       -- "markdown",
       -- "markdown_inline",
     },
@@ -46,3 +54,23 @@ require("nvim-treesitter.configs").setup({
     enable = true,
   },
 })
+
+-- vim.api.nvim_create_autocmd("User", {
+--   pattern = "TSUpdate",
+--   callback = function()
+--     require("nvim-treesitter.parsers").kanata = {
+--       install_info = {
+--         url = "https://github.com/postsolar/tree-sitter-kanata",
+--         -- revision = "af53b4c", -- commit hash for revision to check out; HEAD if missing
+--         -- optional entries:
+--         branch = "master", -- only needed if different from default branch
+--         --location = "parser", -- only needed if the parser is in subdirectory of a "monorepo"
+--         --generate = true, -- only needed if repo does not contain pre-generated `src/parser.c`
+--         -- generate_from_json = false, -- only needed if repo does not contain `src/grammar.json` either
+--         --queries = "queries", -- also install queries from given directory
+--       },
+--     }
+--   end,
+-- })
+vim.filetype.add({ extension = { kbd = "kanata" } })
+vim.treesitter.language.register("kanata", { "kanata" })
