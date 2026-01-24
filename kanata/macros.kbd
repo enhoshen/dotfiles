@@ -1,22 +1,24 @@
 ;; macros with way too specific purposes
 
 ;; tf2
-;;   run "exec my_server" in console
-(deftemplate tfs-server ()
-  (macro ` e x e c spc m y S-- s e r v e r ret `)
+(deftemplate paste (text)
+  (clipboard-save 0)
+  20
+  (clipboard-set $text)
+  100
+  C-v
+  (clipboard-restore 0)
 )
-;;   run "noclip" in console
-(deftemplate tfs-noclip ()
-  (macro ` n o c l i p ret `)
-)
-;;   run "kill" in console
-(deftemplate tfs-kill ()
-  (macro ` k i l l ret `)
+
+(deftemplate tf2-console (command)
+  (macro ` 100 (t! paste $command) ret `)
 )
 (defalias
-  tfs-server (t! tfs-server)
-  tfs-noclip (t! tfs-noclip)
-  tfs-kill (t! tfs-kill)
+  tf2-my-server (t! tf2-console "exec my_server" )
+  tf2-noclip (t! tf2-console "noclip")
+  tf2-kill   (t! tf2-console "kill")
+  tf2-map-ctap (t! tf2-console "map tr_ctap_practice")
+  tf2-map-jump (t! tf2-console "map jump_academy2_rc7")
 )
-;; sequence: tfs
-(t! seq tfs (t f s) (t! tfs-server))
+;; sequence: tf2
+;;(t! seq tf2 (t f s) (t! tf2-my-server))
