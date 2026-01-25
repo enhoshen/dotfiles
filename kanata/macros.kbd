@@ -17,8 +17,7 @@
   tf2-my-server (t! tf2-console "exec my_server" )
   tf2-noclip (t! tf2-console "noclip")
   tf2-kill   (t! tf2-console "kill")
+  tf2-retry (t! tf2-console "retry")
   tf2-map-ctap (t! tf2-console "map tr_ctap_practice")
   tf2-map-jump (t! tf2-console "map jump_academy2_rc7")
 )
-;; sequence: tf2
-;;(t! seq tf2 (t f s) (t! tf2-my-server))

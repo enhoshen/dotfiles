@@ -382,11 +382,17 @@
 )
 (deflayermap (macro-layer)
   caps @to-base
+  ;; local server
   q @tf2-my-server
   w @tf2-noclip
-  e @tf2-kill
-  r @tf2-map-jump
-  t @tf2-map-ctap
+
+  ;; online
+  a @tf2-kill
+  s @tf2-retry
+
+  ;; maps
+  z @tf2-map-ctap
+  x @tf2-map-jump
 )
 (deflayermap (mouse-set-layer)
   caps @to-base
