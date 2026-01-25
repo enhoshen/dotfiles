@@ -166,9 +166,9 @@
   e (chord layer-chord 3)
   spc (chord layer-chord 4)
 
-  ;; switch to sub-layer that contains
+  ;; switch to oneshot-layer that contains
   ;; routes to other rarely used layers
-  r (t! oneshot-layer sub-layer)
+  r (t! oneshot-layer oneshot-layer)
 
   (t! map-two ` esc `)
   ;; the vim/nvim map <C-\><C-N> for exiting
@@ -183,7 +183,7 @@
 )
 ;; sub layer
 ;; rarely or niche layer switching goes here
-(deflayermap (sub-layer)
+(deflayermap (oneshot-layer)
   caps @to-base
   tab (t! oneshot-layer misc-layer)
   q (t! oneshot-layer macro-layer)
