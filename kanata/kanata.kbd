@@ -382,6 +382,14 @@
 )
 (deflayermap (macro-layer)
   caps @to-base
+  ;; fn keys
+  1 f1
+  2 f2
+  3 f3
+  4 f4
+  5 f5
+  6 f6
+
   ;; local server
   q @tf2-my-server
   w @tf2-noclip
@@ -393,6 +401,9 @@
   ;; maps
   z @tf2-map-ctap
   x @tf2-map-jump
+
+  ;; single key press
+  c @tf2-change-team
 )
 (deflayermap (mouse-set-layer)
   caps @to-base

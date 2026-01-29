@@ -156,8 +156,12 @@ compress() {
   # compress all images with extension $1
   ext=$1
   q=$2
+  o=$3
   if [[ ! $q ]]; then
     q=80
+  fi
+  if [[ ! $o ]]; then
+    o=webp
   fi
   mkdir -p compressed
   # internal field separator to newline, dealing with filename containing
@@ -165,5 +169,19 @@ compress() {
   IFS=$'\n'
   for i in $(ls *${ext}); do
     out=$(basename "$i" .${ext})
-    ffmpeg -i "$i" -q:v $q -y compressed/"$out".webp; done;
+    ffmpeg -i "$i" -q:v $q -y compressed/"$out".$o; done;
+}
+compress_img() {
+  q=$2
+  if [[ ! $2 ]]; then
+    q=80
+  fi
+  compress $1 $q webp
+}
+compress_video() {
+  q=$2
+  if [[ ! $2 ]]; then
+    q=80
+  fi
+  compress $1 $q webm
 }

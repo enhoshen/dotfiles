@@ -5,19 +5,25 @@
   (clipboard-save 0)
   20
   (clipboard-set $text)
-  100
+  200
   C-v
   (clipboard-restore 0)
 )
 
-(deftemplate tf2-console (command)
-  (macro ` 100 (t! paste $command) ret `)
+(deftemplate tf2-console-paste (command)
+  (macro ` 100 (t! paste $command) 100 ret `)
+)
+(deftemplate tf2-console-keys (keys)
+  (macro ` 100 $keys 100 ret `)
 )
 (defalias
-  tf2-my-server (t! tf2-console "exec my_server" )
-  tf2-noclip (t! tf2-console "noclip")
-  tf2-kill   (t! tf2-console "kill")
-  tf2-retry (t! tf2-console "retry")
-  tf2-map-ctap (t! tf2-console "map tr_ctap_practice")
-  tf2-map-jump (t! tf2-console "map jump_academy2_rc7")
+  tf2-my-server (t! tf2-console-paste "exec my_server" )
+  tf2-noclip (t! tf2-console-paste "noclip")
+  ;;tf2-kill   (t! tf2-console-paste "kill")
+  tf2-kill   (t! tf2-console-keys (k i l l))
+  ;;tf2-retry (t! tf2-console-paste "retry")
+  tf2-retry (t! tf2-console-keys (r e t r y))
+  tf2-map-ctap (t! tf2-console-paste "map tr_ctap_practice")
+  tf2-map-jump (t! tf2-console-paste "map jump_academy2_rc7")
+  tf2-change-team .
 )
