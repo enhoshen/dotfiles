@@ -41,3 +41,35 @@ md-compress-all() {
     cd ${BASE}
   done
 }
+tab() {
+  # return $1 number of white spcaes
+  printf "%${1}s"
+}
+retab-item() {
+  # $1 the search pattern
+  # $2 the number of identation
+  # $3 is the file path
+  tab=$(tab $2)
+  sed -i -E -e "/${1}/s/^(\s*)//" ${MD}
+  sed -i -E -e "/${1}/s/^/${tab}/" ${MD}
+}
+md-retab() {
+  # get image links from markdown file $1
+  MD=$(basename $1)
+  # retab image items
+  image_pattern="\!\[.*\]\(images"
+  timestamp_pattern="\* \[.*\]\("
+  retab-item ${image_pattern} 8 ${MD}
+  # retab timestamp items
+  retab-item ${timestamp_pattern} 4 ${MD}
+  sed -i -E -e '/^\s*$/d' ${MD}
+}
+md-retab-all() {
+  for i in $(ls ./); do
+    [[ -d $i ]] && cd $i 
+    for ii in $(ls *.md); do
+      md-retab $ii
+    done
+    cd ${BASE}
+  done
+}
