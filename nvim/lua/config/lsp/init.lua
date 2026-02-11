@@ -1,4 +1,4 @@
--- originally from https://alpha2phi.medium.com/neovim-for-beginners-lsp-part-1-b3a17ddbe611 
+-- originally from https://alpha2phi.medium.com/neovim-for-beginners-lsp-part-1-b3a17ddbe611
 local M = {}
 
 --local servers = {
@@ -19,19 +19,19 @@ local servers = {
   yamlls = {},
   bashls = {},
   sumneko_lua = {
-    settings ={
+    settings = {
       Lua = {
-        diagnostics ={
-          globals = {'vim'}
-        }
-      }
-    }
+        diagnostics = {
+          globals = { "vim" },
+        },
+      },
+    },
   },
   tsserver = {},
   html = {},
   jsonls = {},
   marksman = {},
-  tailwindcss ={},
+  tailwindcss = {},
   clangd = {},
 }
 
@@ -42,7 +42,6 @@ local function on_attach(client, bufnr)
   -- Use LSP as the handler for formatexpr.
   -- See `:help formatexpr` for more information.
   vim.api.nvim_buf_set_option(0, "formatexpr", "v:lua.vim.lsp.formatexpr()")
-
 end
 
 local opts = {
@@ -52,11 +51,10 @@ local opts = {
   },
 }
 
-local lspconfig = require "lspconfig"
+--local lspconfig = require "lspconfig"
 
 function M.setup()
   require("config.lsp.installer").setup(servers, opts)
-
 end
 
 -- Configure key mappings
