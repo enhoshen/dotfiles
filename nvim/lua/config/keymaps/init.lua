@@ -9,5 +9,6 @@ require("config.keymaps.diffview")
 require("config.keymaps.oil")
 require("config.keymaps.codediff")
 require("config.keymaps.harpoon")
+require("config.keymaps.quickfix")
 
 -- to add key maps group, go to plugins/whichkey.lua
