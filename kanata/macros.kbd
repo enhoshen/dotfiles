@@ -2,12 +2,12 @@
 
 ;; tf2
 (deftemplate paste (text)
-  (clipboard-save 0)
-  20
+  ;;(clipboard-save 0)
+  ;;20
   (clipboard-set $text)
   200
   C-v
-  (clipboard-restore 0)
+  ;;(clipboard-restore 0)
 )
 
 (deftemplate tf2-console-paste (command)
