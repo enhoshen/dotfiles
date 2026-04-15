@@ -15,6 +15,8 @@ return {
         group = "quit/session/quickfix",
         mode = { "n", "i", "v" },
       },
+      { "<Leader>c", group = "Code/Copy", mode = { "n", "i", "v" } },
+      { "<Leader>/", group = "Grep", mode = { "n", "i", "v" } },
     },
   },
 }

@@ -1,4 +1,5 @@
 -- require("config.keymaps.gp")
+require("config.keymaps.lazy")
 require("config.keymaps.dap")
 require("config.keymaps.toggle")
 require("config.keymaps.diagnostic")
@@ -10,5 +11,7 @@ require("config.keymaps.oil")
 require("config.keymaps.codediff")
 require("config.keymaps.harpoon")
 require("config.keymaps.quickfix")
+require("config.keymaps.grep")
+require("config.keymaps.copy")
 
 -- to add key maps group, go to plugins/whichkey.lua
