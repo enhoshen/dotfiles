@@ -20,6 +20,7 @@ return {
       },
     },
     sources = {
+      default = { "lsp", "omni", "snippets", "buffer", "path" },
       providers = {
         snippets = {
           opts = {

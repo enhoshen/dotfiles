@@ -185,3 +185,6 @@ compress_video() {
   fi
   compress $1 $q webm
 }
+delete_empty_dir() {
+  find . -type d -empty -delete
+}
