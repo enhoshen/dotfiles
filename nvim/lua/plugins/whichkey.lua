@@ -17,6 +17,7 @@ return {
       },
       { "<Leader>c", group = "Code/Copy", mode = { "n", "i", "v" } },
       { "<Leader>/", group = "Grep", mode = { "n", "i", "v" } },
+      { "<Leader>?", group = "Note", mode = { "n", "i", "v" } },
     },
   },
 }

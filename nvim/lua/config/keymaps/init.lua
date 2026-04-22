@@ -13,5 +13,6 @@ require("config.keymaps.harpoon")
 require("config.keymaps.quickfix")
 require("config.keymaps.grep")
 require("config.keymaps.copy")
+require("config.keymaps.note")
 
 -- to add key maps group, go to plugins/whichkey.lua
