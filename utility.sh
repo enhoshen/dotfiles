@@ -185,6 +185,19 @@ compress_video() {
   fi
   compress $1 $q webm
 }
+compress_video_gpu() {
+  q=$2
+  if [[ ! $2 ]]; then
+    q=8
+  fi
+  mkdir -p compressed
+  # internal field separator to newline, dealing with filename containing
+  # spaces
+  IFS=$'\n'
+  for i in $(ls *${ext}); do
+    out=$(basename "$i" .${ext})
+    ffmpeg -i "$i" -c:v hevc_nvenc -preset fast -b:v ${q}M -y compressed/"$out".mp4; done;
+}
 delete_empty_dir() {
   find . -type d -empty -delete
 }
