@@ -8,5 +8,6 @@ return {
     --  replace_netrw = false,
     --},
     layout = { enabled = false },
+    dashboard = { enabled = false },
   },
 }
