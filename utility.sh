@@ -188,7 +188,7 @@ compress_video() {
 compress_video_gpu() {
   q=$2
   if [[ ! $2 ]]; then
-    q=8
+    q=5
   fi
   mkdir -p compressed
   # internal field separator to newline, dealing with filename containing
@@ -196,7 +196,8 @@ compress_video_gpu() {
   IFS=$'\n'
   for i in $(ls *${ext}); do
     out=$(basename "$i" .${ext})
-    ffmpeg -i "$i" -c:v hevc_nvenc -preset fast -b:v ${q}M -y compressed/"$out".mp4; done;
+    # map_metadata 0 keeps original metadata
+    ffmpeg -i "$i" -map_metadata 0 -c:v hevc_nvenc -preset fast -b:v ${q}M -y compressed/"$out".mp4; done;
 }
 delete_empty_dir() {
   find . -type d -empty -delete
