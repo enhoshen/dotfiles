@@ -9,6 +9,7 @@ require("conform").setup({
   formatters_by_ft = {
     python = { "black" },
     markdown = { "prettier" },
+    css = { "prettier" },
     javascript = { "prettier" },
   },
   -- Disable with a global or buffer-local variable

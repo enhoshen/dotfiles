@@ -34,8 +34,8 @@ mv-images-from-md() {
   mv $(basename $1) ${NAME}/
 }
 
-BASE=/mnt/i/timestamp
 md-compress-all() {
+  BASE=$(pwd)
   for i in $(ls ./); do
     [[ -d $i ]] && cd $i && md-png-compress
     cd ${BASE}
@@ -65,8 +65,9 @@ md-retab() {
   sed -i -E -e '/^\s*$/d' ${MD}
 }
 md-retab-all() {
+  BASE=$(pwd)
   for i in $(ls ./); do
-    [[ -d $i ]] && cd $i 
+    [[ -d $i ]] && cd $i
     for ii in $(ls *.md); do
       md-retab $ii
     done
