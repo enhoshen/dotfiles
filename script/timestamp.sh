@@ -56,9 +56,11 @@ retab-item() {
 md-retab() {
   # get image links from markdown file $1
   MD=$(basename $1)
-  # retab image items
+  # retab image items, image link has to be under images/ subfolder
+  # of the md file folder
   image_pattern="\!\[.*\]\(images"
-  timestamp_pattern="\* \[.*\]\("
+  # - [<text>]( or * [<text>](
+  timestamp_pattern="[\*-] \[.*\]\("
   retab-item ${image_pattern} 8 ${MD}
   # retab timestamp items
   retab-item ${timestamp_pattern} 4 ${MD}
