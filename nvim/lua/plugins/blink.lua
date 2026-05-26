@@ -20,8 +20,12 @@ return {
       },
     },
     sources = {
-      default = { "lsp", "omni", "snippets", "buffer", "path" },
+      default = { "lsp", "omni", "snippets", "buffer", "filemention", "path" },
       providers = {
+        filemention = {
+          name = "filemention",
+          module = "filemention.sources.blink",
+        },
         snippets = {
           opts = {
             search_paths = {

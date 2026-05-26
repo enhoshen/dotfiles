@@ -27,7 +27,7 @@ mv-images-from-md() {
   # $1: path of a markdown file *.md
   # create markdown file folder $1/images
   # then move images found in $1 originally stored
-  # under images to $1/images
+  # under images/ to $1/images
   NAME=$(basename $1 .md)
   mkdir ${NAME}/images/ -p
   for i in $(get-images-from-md $1); do mv $i ${NAME}/images/; done
