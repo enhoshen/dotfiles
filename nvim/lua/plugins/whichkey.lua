@@ -5,6 +5,7 @@ return {
     spec = {
       { "<Leader>gp", group = "Gpt prompt" },
       { "<Leader>m", group = "Make" },
+      { "<Leader>f", group = "file/find/floating" },
       { "<Leader>h", group = "Harpoon" },
       { "<Leader>D", group = "Diff" },
       { "<Leader>t", group = "Toggle", mode = { "n", "i", "v" } },

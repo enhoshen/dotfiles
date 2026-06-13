@@ -14,3 +14,6 @@ vim.keymap.set("n", "<leader>f:", ":History:<CR>", {
 vim.keymap.set("n", "<leader>ge", ":vnew | :term gemini<CR>", {
   desc = "Launch gemini in a new terminal tab",
 })
+vim.keymap.set("n", "<leader>o", ":!xdg-open %<CR>", {
+  desc = "Open current file using xdg-open as if pressing gx on current file uri",
+})
