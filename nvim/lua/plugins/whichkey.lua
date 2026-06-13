@@ -10,7 +10,8 @@ return {
       { "<Leader>D", group = "Diff" },
       { "<Leader>t", group = "Toggle", mode = { "n", "i", "v" } },
       { "<Leader>g", group = "Git/Gemini", mode = { "n", "i", "v" } },
-      { "<Leader>a", group = "Avante", mode = { "n", "i", "v" } },
+      -- { "<Leader>a", group = "Avante", mode = { "n", "i", "v" } },
+      { "<Leader>a", group = "Aerial", mode = { "n", "i", "v" } },
       {
         "<Leader>q",
         group = "quit/session/quickfix",
