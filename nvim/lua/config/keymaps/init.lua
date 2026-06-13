@@ -14,5 +14,6 @@ require("config.keymaps.quickfix")
 require("config.keymaps.grep")
 require("config.keymaps.copy")
 require("config.keymaps.note")
+require("config.keymaps.img-clip")
 
 -- to add key maps group, go to plugins/whichkey.lua
