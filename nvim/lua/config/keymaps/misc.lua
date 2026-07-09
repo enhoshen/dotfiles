@@ -11,8 +11,8 @@ vim.keymap.set("n", "<leader>fh", ":History<CR>", {
 vim.keymap.set("n", "<leader>f:", ":History:<CR>", {
   desc = "Find history commands with fzf-vim",
 })
-vim.keymap.set("n", "<leader>ge", ":vnew | :term gemini<CR>", {
-  desc = "Launch gemini in a new terminal tab",
+vim.keymap.set("n", "<leader>ge", ":vnew | :term agy<CR>", {
+  desc = "Launch Antigravity in a new terminal tab",
 })
 vim.keymap.set("n", "<leader>o", ":!xdg-open %<CR>", {
   desc = "Open current file using xdg-open as if pressing gx on current file uri",

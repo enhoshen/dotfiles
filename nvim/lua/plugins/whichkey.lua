@@ -2,6 +2,9 @@
 return {
   "folke/which-key.nvim",
   opts = {
+    win = {
+      width = 100,
+    },
     spec = {
       { "<Leader>gp", group = "Gpt prompt" },
       { "<Leader>m", group = "Make" },

@@ -8,7 +8,7 @@ if grep -q WSL /proc/version; then
   # cmd.exe /C start "$(echo "$wslpath" | sed 's/\\/\\\\/g')"
   # cmd.exe /C start "$1"
   echo $wslpath
-  wslview $wslpath
+  wslview "$wslpath" || wslview "$1"
 else
   # If not in WSL, use the original xdg-open
   /usr/bin/xdg-open "$1" # Or wherever the real xdg-open is
