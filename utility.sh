@@ -186,6 +186,7 @@ compress_video() {
   compress $1 $q webm
 }
 compress_video_gpu() {
+  ext=$1
   q=$2
   if [[ ! $2 ]]; then
     q=5

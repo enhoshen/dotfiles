@@ -24,6 +24,8 @@ return {
       { "<Leader>/", group = "Grep", mode = { "n", "i", "v" } },
       { "<Leader>?", group = "Note", mode = { "n", "i", "v" } },
       { "<Leader>p", group = "Paste", mode = { "n", "i", "v" } },
+      { "<Leader>]", group = "Navigate Next", mode = { "n", "i", "v" } },
+      { "<Leader>[", group = "Navigate Prev", mode = { "n", "i", "v" } },
     },
   },
 }
