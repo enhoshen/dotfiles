@@ -1,3 +1,4 @@
+-- legacy
 -- originally from https://alpha2phi.medium.com/neovim-for-beginners-lsp-part-1-b3a17ddbe611
 local M = {}
 
@@ -57,7 +58,9 @@ function M.setup()
   require("config.lsp.installer").setup(servers, opts)
 end
 
+-- built-in support
+vim.lsp.enable("copilot")
+
 -- Configure key mappings
 require("config.lsp.keymaps")
-
 return M
