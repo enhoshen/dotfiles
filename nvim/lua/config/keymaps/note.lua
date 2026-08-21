@@ -13,3 +13,6 @@ add_note("]s to jump to next misspelled word")
 add_note("[lazyvim] <leader>ss to list LSP symbols for easy code navigation")
 add_note("za to toggle fold under cursor, fold keys start with z")
 add_note("<leader>ft for floating terminal(lazygit)")
+add_note(
+  "<a-w> to cycle windows in a Snacks picker, then ? for help. <c-q> to send items to quickfix"
+)
