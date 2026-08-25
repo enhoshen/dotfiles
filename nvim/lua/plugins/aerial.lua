@@ -1,7 +1,10 @@
 return {
   "stevearc/aerial.nvim",
   opts = {
-    backends = { "lsp", "treesitter", "markdown", "asciidoc", "man" },
+    backends = {
+      ["_"] = { "lsp", "treesitter", "markdown", "asciidoc", "man" },
+      markdown = { "treesitter" },
+    },
     layout = {
       default_direction = "prefer_left",
     },
