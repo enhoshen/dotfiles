@@ -17,3 +17,8 @@ vim.keymap.set("n", "<leader>ge", ":vnew | :term agy<CR>", {
 vim.keymap.set("n", "<leader>o", ":!xdg-open %<CR>", {
   desc = "Open current file using xdg-open as if pressing gx on current file uri",
 })
+vim.keymap.set("n", "<leader>S", function()
+  require("persistence").save()
+end, {
+  desc = "Save session with persistence",
+})
