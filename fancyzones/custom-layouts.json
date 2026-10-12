@@ -232,9 +232,9 @@
             "height": 1385
           },
           {
-            "X": 1087,
+            "X": 2116,
             "Y": 0,
-            "width": 1840,
+            "width": 811,
             "height": 2130
           },
           {
@@ -246,8 +246,50 @@
           {
             "X": 2927,
             "Y": 0,
-            "width": 531,
+            "width": 575,
             "height": 2130
+          },
+          {
+            "X": 1292,
+            "Y": 0,
+            "width": 824,
+            "height": 2130
+          }
+        ],
+        "sensitivity-radius": 20
+      }
+    },
+    {
+      "uuid": "{19D33481-58D1-4FD5-AFFA-683986296E9A}",
+      "name": "video edit",
+      "type": "canvas",
+      "info": {
+        "ref-width": 3840,
+        "ref-height": 2130,
+        "zones": [
+          {
+            "X": 3119,
+            "Y": 16,
+            "width": 721,
+            "height": 1713
+          },
+          {
+            "X": 1787,
+            "Y": 16,
+            "width": 1705,
+            "height": 1093
+          },
+          {
+            "X": 1986,
+            "Y": 1273,
+            "width": 1182,
+            "height": 778
+          },
+          {
+            "X": 2396,
+            "Y": 810,
+            "width": 911,
+            "height": 807
           }
         ],
         "sensitivity-radius": 20

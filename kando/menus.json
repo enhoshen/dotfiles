@@ -1623,6 +1623,16 @@
                   },
                   {
                     "type": "hotkey",
+                    "name": "4",
+                    "icon": "4️⃣",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "hotkey": "ControlLeft+AltLeft+MetaLeft+Digit4",
+                      "delayed": true
+                    }
+                  },
+                  {
+                    "type": "hotkey",
                     "name": "1",
                     "icon": "1️⃣",
                     "iconTheme": "emoji",
