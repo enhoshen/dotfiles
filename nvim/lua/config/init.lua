@@ -24,3 +24,6 @@ require("config.conform")
 
 -- oil
 require("config.oil")
+
+-- clipboard
+require("config.clipboard")
