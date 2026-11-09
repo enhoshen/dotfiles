@@ -158,7 +158,7 @@ compress() {
   q=$2
   o=$3
   if [[ ! $q ]]; then
-    q=80
+    q=95
   fi
   if [[ ! $o ]]; then
     o=webp
@@ -174,14 +174,14 @@ compress() {
 compress_img() {
   q=$2
   if [[ ! $2 ]]; then
-    q=80
+    q=95
   fi
   compress $1 $q webp
 }
 compress_video() {
   q=$2
   if [[ ! $2 ]]; then
-    q=80
+    q=95
   fi
   compress $1 $q webm
 }
