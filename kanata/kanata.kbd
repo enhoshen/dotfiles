@@ -180,6 +180,8 @@
   k down
   u bspc
   o del
+  h pgup
+  n pgdn
 )
 ;; sub layer
 ;; rarely or niche layer switching goes here
